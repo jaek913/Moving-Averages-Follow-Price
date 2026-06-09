@@ -1,0 +1,14 @@
+# Replication environment — "Moving Averages Follow Price"
+#
+# The prior iteration's results were computed in Python 3.11 with pandas 2.1,
+# numpy 1.26, and scipy 1.11 (manuscript Appendix B.13); those pins are carried
+# over for the rebuild. The GARCH-calibrated synthetic control additionally
+# requires the `arch` package.
+#
+# Install with:   pip install -r requirements.txt
+# Python:         3.11
+
+pandas~=2.1.0
+numpy~=1.26.0
+scipy~=1.11.0
+arch~=6.3      # GARCH(1,1) with Student-t innovations; synthetic_control.py
