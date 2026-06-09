@@ -1,0 +1,8 @@
+# Line-ending policy: text files are stored AND checked out with LF.
+# This keeps working-copy hashes (MD5/SHA-256) stable across git operations
+# on Windows — the project's verify-before-concluding discipline depends on
+# byte-stable files on disk.
+* text=auto eol=lf
+*.png binary
+*.pdf binary
+*.xlsx binary
