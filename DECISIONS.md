@@ -24,3 +24,15 @@ The git timestamps in this repo therefore document **when the port happened**, n
 **Subtitle decision.** Adopted the recommended subtitle: "A Proof and Empirical Decomposition of Moving-Average Convergence: Adaptation versus Mean Reversion."
 
 **Commit-order rule honored.** THESIS.md + DESIGN.md land (and are committed) before the first analysis commit in this repo.
+
+---
+
+## 2026-06-09 — E1 committed; cross-machine float-epsilon finding sets the tolerance policy
+
+**E1 (core decomposition) is committed and reproduced on the canonical store.** Commit `b273fb4`: `analysis/decomposition.py` (MD5 `26ce61da9f8864cc5b1821d0832a678e`) + `analysis/outputs/decomposition.json`, generated on the author's machine. Headline block reproduces the prior iteration exactly: aggregate S_W range 63.5%–166.8%, 44/44 > 50%, 33/44 > 100%, SPX/Hull-50 = 89.9% / 260 events.
+
+**Finding (recorded, not smoothed): the same script on the same byte-identical inputs produces JSON differing across machines at machine epsilon.** Claude's reference run (`5dd4f31b0e30a33414150ea22132e446`) vs. the author's committed run (`a98e6d7af660743cc1dc1addd4f5fbf0`): input SHA-256s, params, summary, and all 44 event counts identical; 14 float fields differ, max |Δ| = 2.2e-16 on aggregates and 3.5e-13 on one mean — floating-point summation-order differences between numpy/pandas builds. At paper precision (0.1 pp; unit event counts) the runs are identical.
+
+**Decisions:**
+1. The JSON generated on the author's machine from the canonical project-local store is the canonical committed output; Claude-environment runs are pre-checks.
+2. Phase 3 policy: `claims.lock` tolerances for floating-point values are **relative (~1e-12)**, never exact-float equality; event counts and other integers remain exact. `verify.py` compares within tolerance.
