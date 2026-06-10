@@ -89,10 +89,14 @@ adapt to roll gaps mechanically — see DESIGN.md §0).
 
 Used only by the Schelling Point test (E5). File identities pinned from the
 original replication log; see the DESIGN.md amendment of 2026-06-09. min_history
-by timeframe: daily 252, hourly 500, 5-minute 2,000, monthly 60 (B.7).
+by timeframe: daily 252, hourly 500, 5-minute 2,000, monthly 60 (B.7). The
+Schelling daily layer = the 11 core instruments with NDX replaced by NQ
+(`NQ.1D` below; verified to reproduce the workbook's NQ daily rows exactly),
+plus ES and NKD from the extension table.
 
 | Key | TradingView ticker | Export file | Obs | Start | End | SHA-256 (full) |
 |---|---|---|---|---|---|---|
+| NQ.1D    | CME_MINI:NQ1! | `CME_MINI_NQ1!, 1D_de2b2.csv`  |  6,753 | 1999-06-30 | 2026-03-13 | `105b8be21760373023f21aa58777933d4299fcfa6a8bdd591e260fb562538375` |
 | NQ.60    | CME_MINI:NQ1! | `CME_MINI_NQ1!, 60_985ba.csv`  | 24,757 | 2022-01-02 | 2026-03-13 | `cb78020d2e0af9dd6d08c8009e375f51fc87d4966680ce61042f51213862c2c7` |
 | NI225.60 | TVC:NI225     | `TVC_NI225, 60_b5054.csv`      | 20,848 | 2014-01-05 | 2026-03-13 | `0d5756d747cdcbdd7f81565e28bbfe767b28d9d3d5feb6cfd9cfecb0262211b9` |
 | DAX.60   | XETR:DAX      | `XETR_DLY_DAX, 60_82c16.csv`   | 20,964 | 2017-01-02 | 2026-03-13 | `d5f30c75a50c611e4c6e9d86585b8c0b7577a7a45fb5fb260bd91fcdb4ce9745` |

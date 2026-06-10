@@ -43,6 +43,8 @@ MANIFEST = [
     ("6J",    "CME_6J1!, 1D_01e58.csv",        6373, "f342d871ee4af468f323633e7f857725da67efc82259b3e1d28bb2384b21006c"),
     ("ES",    "CME_MINI_ES1!, 1D_40b30.csv",   7210, "b81fc7a91bd0ee202291b8bfc9411f812f7f99042f167fd87819026fb2d67bab"),
     ("NKD",   "CME_NKD1!, 1D_92650.csv",       5574, "c8468adf2dac6bbf9ec385bfefb69414a3e0e26a639722bccfaface33875afd0"),
+    # --- Schelling (E5) daily layer addition: NQ replaces NDX in B.7 ---------
+    ("NQ.1D",    "CME_MINI_NQ1!, 1D_de2b2.csv",   6753, "105b8be21760373023f21aa58777933d4299fcfa6a8bdd591e260fb562538375"),
     # --- Schelling (E5) hourly layer: 12 instruments -------------------------
     ("NQ.60",    "CME_MINI_NQ1!, 60_985ba.csv",  24757, "cb78020d2e0af9dd6d08c8009e375f51fc87d4966680ce61042f51213862c2c7"),
     ("NI225.60", "TVC_NI225, 60_b5054.csv",      20848, "0d5756d747cdcbdd7f81565e28bbfe767b28d9d3d5feb6cfd9cfecb0262211b9"),
