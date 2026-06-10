@@ -111,3 +111,51 @@ The paper correctly avoids t-tests on the non-normal individual-S_W distribution
 ## Summary of resolution
 
 All 15 findings actioned: 4.1 rebutted on substance (falsifier reachable; calibration committed) with its actionable half fixed (three sentences reanchored, calibration paragraph added); 2.1/2.2/2.4/4.2 confirmed against code/data and fixed; the remaining MINORs fixed by caveat or citation. Three items are explicitly deferred to a named Phase-5 limitations/backlog (roll-window exclusion check, PE-vol block permutation, SMA-200 synthetic null) rather than claimed as done. Because the load-bearing finding was rebutted (not conceded) on its central claim, the thesis and the 50% falsifier are retained; the manuscript edits remove overreach and add the calibration the reviewer asked for.
+
+---
+
+# Adversarial Review — Round 2 (final round, verbatim verdict)
+
+## 1. Does the calibration refute Finding 4.1's central claim?
+
+**Yes — on the S_W column. The "approximately unfalsifiable" claim is withdrawn.**
+
+The decisive evidence is the S_W sweep: the paper's unmodified operator, fed an explicit attraction dial, is monotone decreasing (within sampling noise) from ~92% at β=0 to 33% at β=0.20, crossing 50% at β ≈ 0.087. That is a finite, coherent, simulable reversion process — displacement half-life ln2/0.087 ≈ 8 trading days — and it sits squarely inside the hypothesis class the paper targets: the strong-form technical-analysis claim that price "bounces off" its MA is a fast-reversion claim of roughly this order. The bar is therefore reachable by the hypothesis under test, and my Round-1 assertion that it was "unreachable by any economically realistic reversion process" was wrong as stated. The calibration also adds discriminative content I did not credit: the observed real aggregates (≈90–167%) sit in the β ≲ 0.01 region of the curve, whereas even moderate attraction (β = 0.03, half-life ≈ 23 days) would print ≈58%. The data are now informative against moderate attraction at this horizon, not merely consistent with its absence. My residual point — that S_W > 50% remains compatible with mild genuine attraction — survives, but the revised §2.1 and §7 now say exactly that (the decomposition bounds the mechanical share; the direction test adjudicates existence), which was the remedy Finding 4.1 demanded. Noted but not disqualifying: 8 paths give per-β SE of roughly 5–7 pp (visible in the β=0→0.01 and 0.03→0.05 non-monotonicities), so the 50% crossing is β ≈ 0.09 give or take a few hundredths; and the calibration is single-spec (Hull-50), single attraction form. Adequate for the qualitative reachability demonstration it serves.
+
+**No — on the toward-rate column, which is defective as labeled.** At β = 0 the DGP is a pure random walk. The displacement x(t) is a function of past prices only, and future increments are independent of the past; therefore the B.4 next-bar price-direction toward rate is exactly 50% in expectation, with sampling error well under 1 pp at this sample size. The printed value at β = 0 is 0.6396 — mathematically impossible for the B.4 operator. The column must be a different statistic, almost certainly a filter-inclusive gap-shrink rate (P(|x(t+1)| < |x(t)|)), which exceeds 50% under a random walk precisely because the filter adapts every bar. Three consequences: (i) the new §5.4 sentence — "the realized next-bar toward-rate stays pinned at roughly 64–71%" — mislabels the statistic and contradicts the paper's own §5.2 real-data toward rates (~47–54%) and its own Theorem-2 logic; (ii) the inference drawn from it ("the toward-rate is measurement-saturated and nearly uninformative... which is why we rest the headline on the aggregate share") is an artifact of measuring the wrong toward rate — the genuine B.4 toward rate under this DGP starts at exactly 50% at β = 0 and rises smoothly with β (per-bar P(toward | x = d) = Φ(βd/σ)), i.e., it is informative; and (iii) the mislabeled statistic conflates price movement with filter adaptation — the paper's own founding confound, reproduced inside the paragraph written to resolve the load-bearing finding. The check is mechanical: run the B.4 operator on the β = 0 paths; it will print ~50%. None of this rescues Finding 4.1 — the rebuttal stands entirely on the S_W column — but the sentence as printed is a factual error introduced by the fix, and it appears verbatim in the hash-pinned manuscript I am asked to certify. Disposition should also register the calibration's headline numbers (β-crossing, the 58%/52%/33% values) in claims.lock; they are load-bearing for the falsifier's meaning and currently carry no LB tag.
+
+## 2. Are the 14 MINOR fixes adequate?
+
+Verified against the revised manuscript line by line. Adequate as implemented: 1.1, 1.2, 2.1, 2.2, 2.3, 2.4, 3.2, 3.3, 3.4, 4.2, 4.3, 5.1, 5.2. The deferral of three items to a named limitations backlog (roll exclusion, block permutation, SMA-200 null) is acceptable practice — deferred and disclosed, not claimed.
+
+**Incompletely implemented — three items:**
+
+1. **5.3/4.1 — §6.1 not reframed.** The response record states §6.1 was changed from "determines whether the correlation reflects genuine price dynamics" to attribution-identity language. The manuscript's §6.1 retains the original sentence verbatim. This is one of the three over-claims the author conceded; the record says fixed, the hash says not.
+2. **3.1 — §6.3 residual.** §6.3 still asserts the finding "surviv[es] Bonferroni correction across 38 tests and all permutation controls" with no serial-dependence caveat — inconsistent with the implemented softening in the abstract and §5.7.
+3. **Pass 6 — bibliography.** Working (1960) and Miller, Muthuswamy & Whaley (1994) are cited in §2.1 text but absent from the References list, contrary to the paper's own citation-verification protocol.
+
+## Conclusion
+
+**DO NOT CERTIFY — on implementation, not substance.** Specific finding-numbered reasons:
+
+1. **Finding 4.1 (fix implementation):** the §5.4 calibration paragraph contains a factually erroneous sentence — the "toward-rate pinned at 64–71%" column cannot be the B.4 next-bar toward rate (the β=0 row proves a different, filter-inclusive operator), and the uninformativeness inference drawn from it is wrong. Relabel the statistic or recompute the true B.4 toward rate per β; register the calibration's headline numbers in claims.lock.
+2. **Finding 5.3/4.1:** the §6.1 reframe recorded as FIXED is absent from the hash-pinned manuscript.
+3. **Finding 3.1:** §6.3 retains the uncaveated "surviving Bonferroni across 38 tests" claim.
+4. **Finding 6 (Pass 6):** two in-text citations (Working 1960; Miller, Muthuswamy & Whaley 1994) lack References entries.
+
+For the disposition record, and stated without ambiguity: the load-bearing rebuttal succeeds. The falsifier is reachable (β ≈ 0.087 crossing), S_W is the responsive statistic, my Round-1 "approximately unfalsifiable" claim is withdrawn, and the thesis with its 50% bar stands. All four remaining defects are line-edit scale, none changes a conclusion, and each is mechanically checkable — but under a standard whose certification attaches to an exact byte hash, I cannot certify a manuscript containing one false sentence inside the paragraph that resolves the load-bearing finding and one conceded over-claim recorded as fixed but still present. The escalation path is well-suited here: author makes the four edits, re-pins the hash, and documents the disposition; no further review reasoning is required.
+
+---
+
+# Author Disposition (Round 2 — final, per the cap)
+
+**Verdict accepted in full.** All four defects are real; the central one (the mislabeled toward-rate) was an error introduced by the author side in the Round-1 fix, and the reviewer's prescribed mechanical check was run before this disposition was written: the true B.4 operator on the β=0 paths prints **50.56%** — exactly as the reviewer predicted by independence — and rises smoothly to 64.5% at β=0.20. The mislabeled column was the filter-inclusive gap-shrink rate (63.96% at β=0), i.e., the paper's own founding confound reproduced inside the fix, precisely as the reviewer diagnosed.
+
+**Disposition actions (all mechanical, MD5-gated, ratified by commit):**
+
+1. `analysis/falsifier_calibration.py` corrected: now computes and reports BOTH statistics under their proper names (`b4_toward_rate`, `gap_shrink_rate`), plus the B.4 rate at the S_W crossing (≈57.5%) and at β=0 (50.56%); deterministic output regenerated (S_W column byte-stable, unchanged). The corrected story is stronger than the erroneous one: falsification corresponds to a sustained B.4 toward rate near 57.5%, observed real toward rates are 47–54%, and observed aggregates map to β ≲ 0.01 — the two statistics are mutually consistent and jointly informative.
+2. §5.4 calibration paragraph rewritten with correct labels, the corrected inference, the direction-test equivalent of the falsifier, and an explicit disclosure that the earlier revision mislabeled the statistic and was caught in adversarial review.
+3. §6.1 reframed (the conceded edit, now actually implemented). §6.3 Bonferroni sentence caveated. Working (1960) and Miller, Muthuswamy & Whaley (1994) added to References.
+4. **LB-021** registered in `claims.lock`: the calibration's headline values (crossing β, B.4 at β=0, B.4 at crossing, S_W endpoints) with rel-1e-12 tolerance and signed CIC; selftest fixture regenerated; the calibration script is now under the full verify.py contract (re-run and compared on every full verification).
+
+**Status after disposition:** verify.py full re-run GREEN (21 claims, 51 checks, 0 skips) with the corrected manuscript and ledger. The review record, both rounds, and this disposition are committed verbatim. Per the cap there is no third round; the reviewer's substantive certification of the thesis, the falsifier, and all conclusions — stated without ambiguity in their Round-2 conclusion — stands as the review's final substantive word, and the four implementation defects it conditioned on are closed by this disposition.

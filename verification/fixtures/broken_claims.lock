@@ -2,7 +2,7 @@
   "schema": "Research-to-Publication Standard v1.2, Phase 3 (claims.lock) -- DELIBERATELY BROKEN SELFTEST FIXTURE",
   "project": "Moving Averages Follow Price",
   "generated": "2026-06-10",
-  "tolerance_policy": "DECISIONS.md 2026-06-09: deterministic floats rel 1e-12; optimizer-dependent (GARCH MLE) abs 0.1 (pp scale); integers/booleans exact. Author-machine JSON canonical. Ledger float values were drawn from the cross-machine-verified canonical outputs and agree with the author's committed analysis/outputs JSONs within the established machine-epsilon class (<= 4.4e-16 on 8 values; DECISIONS.md), far inside every tolerance.",
+  "tolerance_policy": "DECISIONS.md 2026-06-09: deterministic floats rel 1e-12; optimizer-dependent (GARCH MLE) abs 0.1 (pp scale); integers/booleans exact. Author-machine JSON canonical. Ledger float values were drawn from the cross-machine-verified canonical outputs and agree with the author's committed analysis/outputs JSONs within the established machine-epsilon class (<= 4.4e-16 on 8 values; DECISIONS.md), far inside every tolerance. LB-021 added at Phase 5a disposition (adversarial review Round 2), ratified by JAE at commit.",
   "json_path_syntax": "dot keys; [int] list index; [?field=value&field2=value] unique list query",
   "datasets": {
     "SPX": {
@@ -993,6 +993,50 @@
         "signed_by": "Claude (Phase 2/3 build verification); ratified by JAE at commit",
         "signed": true,
         "note": "adjudicated row-by-row vs original artifact (DECISIONS 2026-06-09); era chain invariant asserts equality with decompose(); offset 0 asserts equality with E1; cross-machine 8 diffs at 4.4e-16."
+      }
+    },
+    {
+      "id": "LB-021",
+      "text": "Falsifier calibration: aggregate S_W is monotone decreasing in injected attraction and crosses 50% at beta ~ 0.087, where the B.4 toward rate is ~57.5%; the B.4 toward rate at beta=0 is ~50% (independence), confirming the falsifier is reachable and the decomposition responsive.",
+      "section": "5.4",
+      "script": "analysis/falsifier_calibration.py",
+      "output": "analysis/outputs/falsifier_calibration.json",
+      "tolerance": {
+        "rel": 1e-12
+      },
+      "checks": [
+        {
+          "json_path": "sub50_crossing_beta",
+          "value": 0.08686790359137707
+        },
+        {
+          "json_path": "b4_toward_at_beta0",
+          "value": 0.5056464419577997
+        },
+        {
+          "json_path": "b4_toward_at_crossing",
+          "value": 0.5747175006803544
+        },
+        {
+          "json_path": "rows[?beta=0.0].agg_sw",
+          "value": 0.917379142978558
+        },
+        {
+          "json_path": "rows[?beta=0.2].agg_sw",
+          "value": 0.32985727795363595
+        }
+      ],
+      "cic": {
+        "reexecutes_to_claim": true,
+        "index_row_alignment": true,
+        "nan_gap_handling_explicit": true,
+        "no_look_ahead": true,
+        "overlap_subsample_consistent": true,
+        "no_cross_boundary_computation": true,
+        "input_integrity_vs_claim": true,
+        "signed_by": "Claude (Phase 2/3 build verification); ratified by JAE at commit",
+        "signed": true,
+        "note": "added at Phase 5a disposition (review Round 2): registers the falsifier-calibration headline values; B.4 column verified at ~50% under beta=0 (independence check the reviewer prescribed); seed 20260610; deterministic byte-stable output; gap_shrink_rate explicitly labeled as the filter-inclusive statistic it is."
       }
     }
   ]

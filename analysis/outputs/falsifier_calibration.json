@@ -8,52 +8,62 @@
   "rows": [
     {
       "beta": 0.0,
-      "toward_rate": 0.6395782124423598,
+      "b4_toward_rate": 0.5056464419577997,
+      "gap_shrink_rate": 0.6395782124423598,
       "agg_sw": 0.917379142978558,
       "mean_events": 106.375
     },
     {
       "beta": 0.01,
-      "toward_rate": 0.6478097345635261,
+      "b4_toward_rate": 0.5146531612623375,
+      "gap_shrink_rate": 0.6478097345635261,
       "agg_sw": 0.9191269128197732,
       "mean_events": 107.25
     },
     {
       "beta": 0.02,
-      "toward_rate": 0.6381033115949151,
+      "b4_toward_rate": 0.5143035353559783,
+      "gap_shrink_rate": 0.6381033115949151,
       "agg_sw": 0.7658741535090334,
       "mean_events": 107.375
     },
     {
       "beta": 0.03,
-      "toward_rate": 0.6479931679010782,
+      "b4_toward_rate": 0.5214203995488452,
+      "gap_shrink_rate": 0.6479931679010782,
       "agg_sw": 0.5823393630286116,
       "mean_events": 108.125
     },
     {
       "beta": 0.05,
-      "toward_rate": 0.6620747153538789,
+      "b4_toward_rate": 0.55030333615402,
+      "gap_shrink_rate": 0.6620747153538789,
       "agg_sw": 0.5930681791587289,
       "mean_events": 108.25
     },
     {
       "beta": 0.08,
-      "toward_rate": 0.6667461099385066,
+      "b4_toward_rate": 0.5696491363298459,
+      "gap_shrink_rate": 0.6667461099385066,
       "agg_sw": 0.517528416109255,
       "mean_events": 108.75
     },
     {
       "beta": 0.12,
-      "toward_rate": 0.6868640504654376,
+      "b4_toward_rate": 0.5991682714375202,
+      "gap_shrink_rate": 0.6868640504654376,
       "agg_sw": 0.4154395275508153,
       "mean_events": 110.125
     },
     {
       "beta": 0.2,
-      "toward_rate": 0.7132020439821971,
+      "b4_toward_rate": 0.6454153514834207,
+      "gap_shrink_rate": 0.7132020439821971,
       "agg_sw": 0.32985727795363595,
       "mean_events": 111.5
     }
   ],
-  "sub50_crossing_beta": 0.08686790359137707
+  "sub50_crossing_beta": 0.08686790359137707,
+  "b4_toward_at_crossing": 0.5747175006803544,
+  "b4_toward_at_beta0": 0.5056464419577997
 }
