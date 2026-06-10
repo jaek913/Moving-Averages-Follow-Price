@@ -1,0 +1,3375 @@
+{
+  "design_ref": "DESIGN.md section E5; B.7",
+  "experiment": "E5_schelling_point",
+  "inputs": {
+    "6E.1D": {
+      "file": "CME_6E1!, 1D_9dd8b.csv",
+      "sha256": "4422e3a4631493125d31eaa3906e3bb74351c2b9b90ede76bd3dd53651b06c5f"
+    },
+    "6E.5": {
+      "file": "CME_6E1!, 5_d72d6.csv",
+      "sha256": "182f84d3ff659ce269be2da6af8005e2b164ff3afabc3c5d35c510d427b4300a"
+    },
+    "6E.60": {
+      "file": "CME_6E1!, 60_df31a.csv",
+      "sha256": "bd832acaff17c155d64fa963b3eb95ffac6ad6e3175f353dacb75030f8c5f2d9"
+    },
+    "6J.1D": {
+      "file": "CME_6J1!, 1D_01e58.csv",
+      "sha256": "f342d871ee4af468f323633e7f857725da67efc82259b3e1d28bb2384b21006c"
+    },
+    "6J.5": {
+      "file": "CME_6J1!, 5_c0f96.csv",
+      "sha256": "eb9fa9fe87e55b6b1142f9d86208e5c7db447cc90d569f70771978205a403044"
+    },
+    "6J.60": {
+      "file": "CME_6J1!, 60_5c795.csv",
+      "sha256": "0c129e5897ddf7e44e1d416a211063c672003912b98abbf0b21f295a5a98acbd"
+    },
+    "CL.1D": {
+      "file": "NYMEX_CL1!, 1D_de4b1.csv",
+      "sha256": "f32fb49cd7653c01cbcd91e43a58615811be04f4ed84c22d4b061711c96494f4"
+    },
+    "CL.5": {
+      "file": "NYMEX_CL1!, 5_a29b4.csv",
+      "sha256": "49babb3e90a39e54c26f66fd9bdd77672f88a1a13c79ef7c52b2962064956c69"
+    },
+    "CL.60": {
+      "file": "NYMEX_CL1!, 60_72c46.csv",
+      "sha256": "76c86cdd31cde67275a79e83f5115c9c3abd28fe2ade7317d903701e2e64d123"
+    },
+    "DAX.1D": {
+      "file": "XETR_DLY_DAX, 1D_cd703.csv",
+      "sha256": "4531616311c17b8cbd5781ba20717ac5a93c31d348282474fff9c39f7c144491"
+    },
+    "DAX.60": {
+      "file": "XETR_DLY_DAX, 60_82c16.csv",
+      "sha256": "d5f30c75a50c611e4c6e9d86585b8c0b7577a7a45fb5fb260bd91fcdb4ce9745"
+    },
+    "ES.1D": {
+      "file": "CME_MINI_ES1!, 1D_40b30.csv",
+      "sha256": "b81fc7a91bd0ee202291b8bfc9411f812f7f99042f167fd87819026fb2d67bab"
+    },
+    "ES.5": {
+      "file": "CME_MINI_ES1!, 5_28d89.csv",
+      "sha256": "4c42d1c46421ed8696f8998ab855fe1ac6cb4f9a2f20d24a90bb8f027b689e12"
+    },
+    "ES.60": {
+      "file": "CME_MINI_ES1!, 60_127a6.csv",
+      "sha256": "af9636e77793376e4eeae541b5c3d440619f0f89d6473d5fa3df34f5f8716b87"
+    },
+    "FTSE.1D": {
+      "file": "IG_FTSE, 1D_c9679.csv",
+      "sha256": "ae76f4a65e6c65e96ea141fe4d23e8348a7033d9e8348a46efd681c5dbf31e1c"
+    },
+    "FTSE.60": {
+      "file": "IG_FTSE, 60_6e958.csv",
+      "sha256": "80e3bc00085f1d4cf197b87f550d6fac38238b37bafbad496221e360930f44bf"
+    },
+    "GC.1D": {
+      "file": "COMEX_GC1!, 1D_1e2f0.csv",
+      "sha256": "cd71339445b1c5107c808b8dad76b77383aadada26b0b240a086d323430e67d0"
+    },
+    "GC.1M": {
+      "file": "COMEX_GC1!, 1M_958cd.csv",
+      "sha256": "998151626467226d5578a9a1e827f5175d4a5854576122f6210cc1b443d1ef1c"
+    },
+    "GC.5": {
+      "file": "COMEX_GC1!, 5_f87e8.csv",
+      "sha256": "0348a5ba6186b9b90b47050bbff9031fd67c593ad0852669230da1722d820e39"
+    },
+    "GC.60": {
+      "file": "COMEX_GC1!, 60_26eca.csv",
+      "sha256": "ea5c1db35ae672c21babff92906bb111a11337420e120ea2a11d62567cc345e0"
+    },
+    "HSI.1D": {
+      "file": "HKEX_DLY_HSI1!, 1D_57a14.csv",
+      "sha256": "840dbd3fce9da09b06d5e4aa459a8070ed352735230bd171bbcc2546e69ef99c"
+    },
+    "HSI.60": {
+      "file": "HKEX_DLY_HSI1!, 60_7c166.csv",
+      "sha256": "f3ee58c0f215c592947a2e6e471bfa87a2a5acabe9f7eab8c3a7f0607b1c732e"
+    },
+    "NI225.1D": {
+      "file": "TVC_NI225, 1D_8be07.csv",
+      "sha256": "271da7a404086ff9c939daf8c8ff18cf3eb4d45c60214a3e5e53a42f1ee70228"
+    },
+    "NI225.60": {
+      "file": "TVC_NI225, 60_b5054.csv",
+      "sha256": "0d5756d747cdcbdd7f81565e28bbfe767b28d9d3d5feb6cfd9cfecb0262211b9"
+    },
+    "NKD.1D": {
+      "file": "CME_NKD1!, 1D_92650.csv",
+      "sha256": "c8468adf2dac6bbf9ec385bfefb69414a3e0e26a639722bccfaface33875afd0"
+    },
+    "NKD.5": {
+      "file": "CME_NKD1!, 5_f1b66.csv",
+      "sha256": "52ccdc7ab16bd231131be0c73f318248320f767415add2f282561472910f6411"
+    },
+    "NKD.60": {
+      "file": "CME_NKD1!, 60_ffee5.csv",
+      "sha256": "eb2be2bbfaf556329630e47396e413181ad6d003867c45596ef3177d247d0bb3"
+    },
+    "NQ.1D": {
+      "file": "CME_MINI_NQ1!, 1D_de2b2.csv",
+      "sha256": "105b8be21760373023f21aa58777933d4299fcfa6a8bdd591e260fb562538375"
+    },
+    "NQ.5": {
+      "file": "CME_MINI_NQ1!, 5_c2781.csv",
+      "sha256": "68a8c0e43f6182e65d56ac9c08dc65a3cb186c478bff5c5fa619b5c1cb82bed7"
+    },
+    "NQ.60": {
+      "file": "CME_MINI_NQ1!, 60_985ba.csv",
+      "sha256": "cb78020d2e0af9dd6d08c8009e375f51fc87d4966680ce61042f51213862c2c7"
+    },
+    "SPX.1D": {
+      "file": "SP_SPX, 1D_5871b.csv",
+      "sha256": "c75e8fb61149f5ba606ebe5a3881db40a1015ff49e322a590cf6e7a7d537cbe7"
+    },
+    "SPX.1M": {
+      "file": "SP_SPX, 1M_9ba20.csv",
+      "sha256": "895f28d799cda2b1c8971a62964beb95186c3db69f7cebe2f848272f94370206"
+    },
+    "ZN.1D": {
+      "file": "CBOT_ZN1!, 1D_3436b.csv",
+      "sha256": "d2d88f9c7614e0c9995952a885f1a297c4fc6eb1a3dfcbef6e593b45fcd44840"
+    },
+    "ZN.5": {
+      "file": "CBOT_ZN1!, 5_bdc1e.csv",
+      "sha256": "371db6204f513861aaa2b19d398494bce6ae6ebc583e456281d6d19387073d0c"
+    },
+    "ZN.60": {
+      "file": "CBOT_ZN1!, 60_81641.csv",
+      "sha256": "09d2f935b27a4467bb468e75a98cf076adce3022cd1ad1e4f75dfb235c11c56d"
+    }
+  },
+  "params": {
+    "min_events": 200,
+    "min_history": {
+      "1D": 252,
+      "1M": 60,
+      "5": 2000,
+      "60": 500
+    },
+    "neighbor_offsets": [
+      -5,
+      -3,
+      3,
+      5
+    ],
+    "popular_windows": [
+      20,
+      50,
+      100,
+      200
+    ],
+    "threshold_pct": 75
+  },
+  "rows": [
+    {
+      "delta_pp": 0.09875996416471367,
+      "included": true,
+      "instrument": "SPX",
+      "mean_neighbor_rate": 50.71909420827776,
+      "n": 3607,
+      "neighbor_ns": {
+        "SMA-15": 3714,
+        "SMA-17": 3727,
+        "SMA-23": 3641,
+        "SMA-25": 3583
+      },
+      "neighbor_rates": {
+        "SMA-15": 50.78082929456112,
+        "SMA-17": 50.65736517306144,
+        "SMA-23": 50.81021697335897,
+        "SMA-25": 50.627965392129504
+      },
+      "rate_popular": 50.81785417244247,
+      "timeframe": "1D",
+      "window": "SMA-20"
+    },
+    {
+      "delta_pp": -0.0023489883062310923,
+      "included": true,
+      "instrument": "SPX",
+      "mean_neighbor_rate": 49.29292787593393,
+      "n": 3524,
+      "neighbor_ns": {
+        "SMA-45": 3517,
+        "SMA-47": 3527,
+        "SMA-53": 3520,
+        "SMA-55": 3513
+      },
+      "neighbor_rates": {
+        "SMA-45": 49.47398350867216,
+        "SMA-47": 49.56053303090445,
+        "SMA-53": 49.14772727272727,
+        "SMA-55": 48.98946769143183
+      },
+      "rate_popular": 49.290578887627696,
+      "timeframe": "1D",
+      "window": "SMA-50"
+    },
+    {
+      "delta_pp": -0.14034384844287473,
+      "included": true,
+      "instrument": "SPX",
+      "mean_neighbor_rate": 48.38390356741243,
+      "n": 3416,
+      "neighbor_ns": {
+        "SMA-103": 3403,
+        "SMA-105": 3386,
+        "SMA-95": 3419,
+        "SMA-97": 3410
+      },
+      "neighbor_rates": {
+        "SMA-103": 48.10461357625624,
+        "SMA-105": 48.22799763733018,
+        "SMA-95": 48.63995320269085,
+        "SMA-97": 48.56304985337243
+      },
+      "rate_popular": 48.24355971896956,
+      "timeframe": "1D",
+      "window": "SMA-100"
+    },
+    {
+      "delta_pp": 0.17146666745917827,
+      "included": true,
+      "instrument": "SPX",
+      "mean_neighbor_rate": 47.59452497509948,
+      "n": 3111,
+      "neighbor_ns": {
+        "SMA-195": 3136,
+        "SMA-197": 3121,
+        "SMA-203": 3083,
+        "SMA-205": 3073
+      },
+      "neighbor_rates": {
+        "SMA-195": 47.640306122448976,
+        "SMA-197": 47.74110861903236,
+        "SMA-203": 47.51865066493675,
+        "SMA-205": 47.47803449397983
+      },
+      "rate_popular": 47.76599164255866,
+      "timeframe": "1D",
+      "window": "SMA-200"
+    },
+    {
+      "delta_pp": -0.0471113626181463,
+      "included": true,
+      "instrument": "NQ",
+      "mean_neighbor_rate": 52.356456153165944,
+      "n": 931,
+      "neighbor_ns": {
+        "SMA-15": 936,
+        "SMA-17": 930,
+        "SMA-23": 943,
+        "SMA-25": 927
+      },
+      "neighbor_rates": {
+        "SMA-15": 52.88461538461539,
+        "SMA-17": 53.333333333333336,
+        "SMA-23": 51.64369034994698,
+        "SMA-25": 51.56418554476807
+      },
+      "rate_popular": 52.3093447905478,
+      "timeframe": "1D",
+      "window": "SMA-20"
+    },
+    {
+      "delta_pp": -0.6922336310801,
+      "included": true,
+      "instrument": "NQ",
+      "mean_neighbor_rate": 48.404651931733696,
+      "n": 918,
+      "neighbor_ns": {
+        "SMA-45": 904,
+        "SMA-47": 912,
+        "SMA-53": 934,
+        "SMA-55": 936
+      },
+      "neighbor_rates": {
+        "SMA-45": 49.00442477876106,
+        "SMA-47": 48.46491228070175,
+        "SMA-53": 47.85867237687366,
+        "SMA-55": 48.29059829059829
+      },
+      "rate_popular": 47.712418300653596,
+      "timeframe": "1D",
+      "window": "SMA-50"
+    },
+    {
+      "delta_pp": 0.4391404199024862,
+      "included": true,
+      "instrument": "NQ",
+      "mean_neighbor_rate": 49.05806628400813,
+      "n": 895,
+      "neighbor_ns": {
+        "SMA-103": 897,
+        "SMA-105": 887,
+        "SMA-95": 886,
+        "SMA-97": 889
+      },
+      "neighbor_rates": {
+        "SMA-103": 49.163879598662206,
+        "SMA-105": 48.92897406989854,
+        "SMA-95": 48.645598194130926,
+        "SMA-97": 49.493813273340834
+      },
+      "rate_popular": 49.497206703910614,
+      "timeframe": "1D",
+      "window": "SMA-100"
+    },
+    {
+      "delta_pp": 0.3402471332538326,
+      "included": true,
+      "instrument": "NQ",
+      "mean_neighbor_rate": 46.13278191238932,
+      "n": 964,
+      "neighbor_ns": {
+        "SMA-195": 968,
+        "SMA-197": 970,
+        "SMA-203": 961,
+        "SMA-205": 955
+      },
+      "neighbor_rates": {
+        "SMA-195": 46.17768595041322,
+        "SMA-197": 46.391752577319586,
+        "SMA-203": 46.09781477627472,
+        "SMA-205": 45.86387434554974
+      },
+      "rate_popular": 46.47302904564315,
+      "timeframe": "1D",
+      "window": "SMA-200"
+    },
+    {
+      "delta_pp": -0.35130374439611245,
+      "included": true,
+      "instrument": "NI225",
+      "mean_neighbor_rate": 49.121407812513425,
+      "n": 4228,
+      "neighbor_ns": {
+        "SMA-15": 4369,
+        "SMA-17": 4327,
+        "SMA-23": 4183,
+        "SMA-25": 4159
+      },
+      "neighbor_rates": {
+        "SMA-15": 49.71389333943694,
+        "SMA-17": 49.45689854402588,
+        "SMA-23": 48.64929476452307,
+        "SMA-25": 48.665544602067804
+      },
+      "rate_popular": 48.77010406811731,
+      "timeframe": "1D",
+      "window": "SMA-20"
+    },
+    {
+      "delta_pp": -0.09415909116557941,
+      "included": true,
+      "instrument": "NI225",
+      "mean_neighbor_rate": 47.999663231448096,
+      "n": 4106,
+      "neighbor_ns": {
+        "SMA-45": 4105,
+        "SMA-47": 4096,
+        "SMA-53": 4083,
+        "SMA-55": 4039
+      },
+      "neighbor_rates": {
+        "SMA-45": 48.11205846528624,
+        "SMA-47": 47.94921875,
+        "SMA-53": 47.930443301494,
+        "SMA-55": 48.00693240901213
+      },
+      "rate_popular": 47.90550414028252,
+      "timeframe": "1D",
+      "window": "SMA-50"
+    },
+    {
+      "delta_pp": -0.14049841207856417,
+      "included": true,
+      "instrument": "NI225",
+      "mean_neighbor_rate": 47.011441024387054,
+      "n": 3851,
+      "neighbor_ns": {
+        "SMA-103": 3831,
+        "SMA-105": 3818,
+        "SMA-95": 3890,
+        "SMA-97": 3872
+      },
+      "neighbor_rates": {
+        "SMA-103": 46.985121378230225,
+        "SMA-105": 46.935568360398115,
+        "SMA-95": 47.095115681233935,
+        "SMA-97": 47.02995867768595
+      },
+      "rate_popular": 46.87094261230849,
+      "timeframe": "1D",
+      "window": "SMA-100"
+    },
+    {
+      "delta_pp": 0.10140428910548849,
+      "included": true,
+      "instrument": "NI225",
+      "mean_neighbor_rate": 45.712738219699716,
+      "n": 3691,
+      "neighbor_ns": {
+        "SMA-195": 3655,
+        "SMA-197": 3665,
+        "SMA-203": 3711,
+        "SMA-205": 3724
+      },
+      "neighbor_rates": {
+        "SMA-195": 45.690834473324216,
+        "SMA-197": 45.56616643929058,
+        "SMA-203": 45.83670169765562,
+        "SMA-205": 45.757250268528466
+      },
+      "rate_popular": 45.814142508805205,
+      "timeframe": "1D",
+      "window": "SMA-200"
+    },
+    {
+      "delta_pp": 0.3966535342927031,
+      "included": true,
+      "instrument": "DAX",
+      "mean_neighbor_rate": 50.107296343124894,
+      "n": 3671,
+      "neighbor_ns": {
+        "SMA-15": 3700,
+        "SMA-17": 3715,
+        "SMA-23": 3661,
+        "SMA-25": 3676
+      },
+      "neighbor_rates": {
+        "SMA-15": 50.24324324324324,
+        "SMA-17": 50.41722745625841,
+        "SMA-23": 49.98634252936356,
+        "SMA-25": 49.78237214363438
+      },
+      "rate_popular": 50.5039498774176,
+      "timeframe": "1D",
+      "window": "SMA-20"
+    },
+    {
+      "delta_pp": 0.13866729988944826,
+      "included": true,
+      "instrument": "DAX",
+      "mean_neighbor_rate": 49.0938511765176,
+      "n": 3518,
+      "neighbor_ns": {
+        "SMA-45": 3551,
+        "SMA-47": 3537,
+        "SMA-53": 3555,
+        "SMA-55": 3579
+      },
+      "neighbor_rates": {
+        "SMA-45": 49.338214587440156,
+        "SMA-47": 49.33559513712186,
+        "SMA-53": 48.917018284106895,
+        "SMA-55": 48.78457669740151
+      },
+      "rate_popular": 49.23251847640705,
+      "timeframe": "1D",
+      "window": "SMA-50"
+    },
+    {
+      "delta_pp": -0.06169051386793711,
+      "included": true,
+      "instrument": "DAX",
+      "mean_neighbor_rate": 48.159441138694376,
+      "n": 3601,
+      "neighbor_ns": {
+        "SMA-103": 3629,
+        "SMA-105": 3648,
+        "SMA-95": 3595,
+        "SMA-97": 3599
+      },
+      "neighbor_rates": {
+        "SMA-103": 47.974648663543675,
+        "SMA-105": 47.97149122807018,
+        "SMA-95": 48.28929068150209,
+        "SMA-97": 48.40233398166157
+      },
+      "rate_popular": 48.09775062482644,
+      "timeframe": "1D",
+      "window": "SMA-100"
+    },
+    {
+      "delta_pp": -0.05062682746720526,
+      "included": true,
+      "instrument": "DAX",
+      "mean_neighbor_rate": 48.44212082964823,
+      "n": 3668,
+      "neighbor_ns": {
+        "SMA-195": 3683,
+        "SMA-197": 3686,
+        "SMA-203": 3656,
+        "SMA-205": 3644
+      },
+      "neighbor_rates": {
+        "SMA-195": 48.520228074938906,
+        "SMA-197": 48.45360824742268,
+        "SMA-203": 48.35886214442013,
+        "SMA-205": 48.4357848518112
+      },
+      "rate_popular": 48.39149400218103,
+      "timeframe": "1D",
+      "window": "SMA-200"
+    },
+    {
+      "delta_pp": 0.4842137491936569,
+      "included": true,
+      "instrument": "FTSE",
+      "mean_neighbor_rate": 54.862046638617976,
+      "n": 1805,
+      "neighbor_ns": {
+        "SMA-15": 1788,
+        "SMA-17": 1808,
+        "SMA-23": 1790,
+        "SMA-25": 1783
+      },
+      "neighbor_rates": {
+        "SMA-15": 54.19463087248322,
+        "SMA-17": 54.64601769911504,
+        "SMA-23": 55.25139664804469,
+        "SMA-25": 55.35614133482894
+      },
+      "rate_popular": 55.34626038781163,
+      "timeframe": "1D",
+      "window": "SMA-20"
+    },
+    {
+      "delta_pp": -0.11382556474598005,
+      "included": true,
+      "instrument": "FTSE",
+      "mean_neighbor_rate": 53.82880729434403,
+      "n": 1642,
+      "neighbor_ns": {
+        "SMA-45": 1665,
+        "SMA-47": 1664,
+        "SMA-53": 1637,
+        "SMA-55": 1615
+      },
+      "neighbor_rates": {
+        "SMA-45": 54.414414414414416,
+        "SMA-47": 54.44711538461539,
+        "SMA-53": 53.5125229077581,
+        "SMA-55": 52.94117647058823
+      },
+      "rate_popular": 53.71498172959805,
+      "timeframe": "1D",
+      "window": "SMA-50"
+    },
+    {
+      "delta_pp": -0.05105428592221273,
+      "included": true,
+      "instrument": "FTSE",
+      "mean_neighbor_rate": 51.67035369107753,
+      "n": 1513,
+      "neighbor_ns": {
+        "SMA-103": 1513,
+        "SMA-105": 1518,
+        "SMA-95": 1522,
+        "SMA-97": 1522
+      },
+      "neighbor_rates": {
+        "SMA-103": 51.42101784534038,
+        "SMA-105": 51.58102766798419,
+        "SMA-95": 52.16819973718791,
+        "SMA-97": 51.51116951379763
+      },
+      "rate_popular": 51.61929940515532,
+      "timeframe": "1D",
+      "window": "SMA-100"
+    },
+    {
+      "delta_pp": 0.08144667557308338,
+      "included": true,
+      "instrument": "FTSE",
+      "mean_neighbor_rate": 51.0463728732991,
+      "n": 1330,
+      "neighbor_ns": {
+        "SMA-195": 1343,
+        "SMA-197": 1338,
+        "SMA-203": 1318,
+        "SMA-205": 1312
+      },
+      "neighbor_rates": {
+        "SMA-195": 50.85629188384215,
+        "SMA-197": 50.97159940209268,
+        "SMA-203": 51.138088012139605,
+        "SMA-205": 51.21951219512195
+      },
+      "rate_popular": 51.12781954887218,
+      "timeframe": "1D",
+      "window": "SMA-200"
+    },
+    {
+      "delta_pp": -0.17519356872733027,
+      "included": true,
+      "instrument": "HSI",
+      "mean_neighbor_rate": 52.635926553020525,
+      "n": 1910,
+      "neighbor_ns": {
+        "SMA-15": 1962,
+        "SMA-17": 1951,
+        "SMA-23": 1859,
+        "SMA-25": 1826
+      },
+      "neighbor_rates": {
+        "SMA-15": 53.46585117227319,
+        "SMA-17": 52.33213736545361,
+        "SMA-23": 52.55513717052179,
+        "SMA-25": 52.190580503833516
+      },
+      "rate_popular": 52.460732984293195,
+      "timeframe": "1D",
+      "window": "SMA-20"
+    },
+    {
+      "delta_pp": -0.4444702797356541,
+      "included": true,
+      "instrument": "HSI",
+      "mean_neighbor_rate": 51.64584327744733,
+      "n": 1748,
+      "neighbor_ns": {
+        "SMA-45": 1764,
+        "SMA-47": 1761,
+        "SMA-53": 1737,
+        "SMA-55": 1730
+      },
+      "neighbor_rates": {
+        "SMA-45": 51.64399092970522,
+        "SMA-47": 51.334469051675185,
+        "SMA-53": 51.92861255037421,
+        "SMA-55": 51.676300578034684
+      },
+      "rate_popular": 51.20137299771167,
+      "timeframe": "1D",
+      "window": "SMA-50"
+    },
+    {
+      "delta_pp": -0.11433021234667962,
+      "included": true,
+      "instrument": "HSI",
+      "mean_neighbor_rate": 51.16918253302178,
+      "n": 1659,
+      "neighbor_ns": {
+        "SMA-103": 1646,
+        "SMA-105": 1652,
+        "SMA-95": 1668,
+        "SMA-97": 1667
+      },
+      "neighbor_rates": {
+        "SMA-103": 51.215066828675575,
+        "SMA-105": 51.45278450363196,
+        "SMA-95": 51.199040767386094,
+        "SMA-97": 50.80983803239352
+      },
+      "rate_popular": 51.0548523206751,
+      "timeframe": "1D",
+      "window": "SMA-100"
+    },
+    {
+      "delta_pp": -0.09975044116680465,
+      "included": true,
+      "instrument": "HSI",
+      "mean_neighbor_rate": 50.27310358628815,
+      "n": 2019,
+      "neighbor_ns": {
+        "SMA-195": 1996,
+        "SMA-197": 2007,
+        "SMA-203": 2035,
+        "SMA-205": 2050
+      },
+      "neighbor_rates": {
+        "SMA-195": 50.450901803607216,
+        "SMA-197": 50.2740408570005,
+        "SMA-203": 50.221130221130224,
+        "SMA-205": 50.146341463414636
+      },
+      "rate_popular": 50.17335314512135,
+      "timeframe": "1D",
+      "window": "SMA-200"
+    },
+    {
+      "delta_pp": -0.2146655105926527,
+      "included": true,
+      "instrument": "CL",
+      "mean_neighbor_rate": 50.513351293149405,
+      "n": 3348,
+      "neighbor_ns": {
+        "SMA-15": 3335,
+        "SMA-17": 3333,
+        "SMA-23": 3360,
+        "SMA-25": 3359
+      },
+      "neighbor_rates": {
+        "SMA-15": 51.2143928035982,
+        "SMA-17": 50.705070507050706,
+        "SMA-23": 50.089285714285715,
+        "SMA-25": 50.044656147663
+      },
+      "rate_popular": 50.29868578255675,
+      "timeframe": "1D",
+      "window": "SMA-20"
+    },
+    {
+      "delta_pp": 0.1257691065388684,
+      "included": true,
+      "instrument": "CL",
+      "mean_neighbor_rate": 48.44139507256561,
+      "n": 3350,
+      "neighbor_ns": {
+        "SMA-45": 3350,
+        "SMA-47": 3356,
+        "SMA-53": 3331,
+        "SMA-55": 3344
+      },
+      "neighbor_rates": {
+        "SMA-45": 48.59701492537314,
+        "SMA-47": 48.68891537544696,
+        "SMA-53": 48.30381266886821,
+        "SMA-55": 48.17583732057416
+      },
+      "rate_popular": 48.56716417910448,
+      "timeframe": "1D",
+      "window": "SMA-50"
+    },
+    {
+      "delta_pp": -0.002596967337915146,
+      "included": true,
+      "instrument": "CL",
+      "mean_neighbor_rate": 49.34428975730657,
+      "n": 3190,
+      "neighbor_ns": {
+        "SMA-103": 3179,
+        "SMA-105": 3171,
+        "SMA-95": 3194,
+        "SMA-97": 3191
+      },
+      "neighbor_rates": {
+        "SMA-103": 49.38659955960994,
+        "SMA-105": 49.290444654683064,
+        "SMA-95": 49.31120851596744,
+        "SMA-97": 49.38890629896584
+      },
+      "rate_popular": 49.341692789968654,
+      "timeframe": "1D",
+      "window": "SMA-100"
+    },
+    {
+      "delta_pp": 0.04667923162112686,
+      "included": true,
+      "instrument": "CL",
+      "mean_neighbor_rate": 48.564885616467734,
+      "n": 3061,
+      "neighbor_ns": {
+        "SMA-195": 3082,
+        "SMA-197": 3078,
+        "SMA-203": 3054,
+        "SMA-205": 3050
+      },
+      "neighbor_rates": {
+        "SMA-195": 48.57235561323816,
+        "SMA-197": 48.57050032488629,
+        "SMA-203": 48.52652259332024,
+        "SMA-205": 48.59016393442623
+      },
+      "rate_popular": 48.61156484808886,
+      "timeframe": "1D",
+      "window": "SMA-200"
+    },
+    {
+      "delta_pp": -0.3545193667739639,
+      "included": true,
+      "instrument": "GC",
+      "mean_neighbor_rate": 52.054953520174834,
+      "n": 2764,
+      "neighbor_ns": {
+        "SMA-15": 2804,
+        "SMA-17": 2796,
+        "SMA-23": 2757,
+        "SMA-25": 2732
+      },
+      "neighbor_rates": {
+        "SMA-15": 52.603423680456494,
+        "SMA-17": 52.5035765379113,
+        "SMA-23": 51.83170112441059,
+        "SMA-25": 51.281112737920935
+      },
+      "rate_popular": 51.70043415340087,
+      "timeframe": "1D",
+      "window": "SMA-20"
+    },
+    {
+      "delta_pp": -0.03035923515697192,
+      "included": true,
+      "instrument": "GC",
+      "mean_neighbor_rate": 50.088566452851964,
+      "n": 2577,
+      "neighbor_ns": {
+        "SMA-45": 2610,
+        "SMA-47": 2590,
+        "SMA-53": 2549,
+        "SMA-55": 2555
+      },
+      "neighbor_rates": {
+        "SMA-45": 49.88505747126437,
+        "SMA-47": 50.077220077220076,
+        "SMA-53": 50.25500196155355,
+        "SMA-55": 50.136986301369866
+      },
+      "rate_popular": 50.05820721769499,
+      "timeframe": "1D",
+      "window": "SMA-50"
+    },
+    {
+      "delta_pp": 0.08869719035611467,
+      "included": true,
+      "instrument": "GC",
+      "mean_neighbor_rate": 49.18546290918764,
+      "n": 2411,
+      "neighbor_ns": {
+        "SMA-103": 2403,
+        "SMA-105": 2400,
+        "SMA-95": 2420,
+        "SMA-97": 2414
+      },
+      "neighbor_rates": {
+        "SMA-103": 49.06367041198502,
+        "SMA-105": 49.333333333333336,
+        "SMA-95": 49.256198347107436,
+        "SMA-97": 49.088649544324774
+      },
+      "rate_popular": 49.27416009954376,
+      "timeframe": "1D",
+      "window": "SMA-100"
+    },
+    {
+      "delta_pp": 0.09201550698872296,
+      "included": true,
+      "instrument": "GC",
+      "mean_neighbor_rate": 48.03085138720923,
+      "n": 2344,
+      "neighbor_ns": {
+        "SMA-195": 2344,
+        "SMA-197": 2343,
+        "SMA-203": 2351,
+        "SMA-205": 2358
+      },
+      "neighbor_rates": {
+        "SMA-195": 48.03754266211604,
+        "SMA-197": 47.88732394366197,
+        "SMA-203": 48.02211824755423,
+        "SMA-205": 48.17642069550467
+      },
+      "rate_popular": 48.122866894197955,
+      "timeframe": "1D",
+      "window": "SMA-200"
+    },
+    {
+      "delta_pp": -0.2820517762122705,
+      "included": true,
+      "instrument": "ZN",
+      "mean_neighbor_rate": 51.33760733176783,
+      "n": 1800,
+      "neighbor_ns": {
+        "SMA-15": 1824,
+        "SMA-17": 1794,
+        "SMA-23": 1768,
+        "SMA-25": 1786
+      },
+      "neighbor_rates": {
+        "SMA-15": 51.20614035087719,
+        "SMA-17": 51.95094760312151,
+        "SMA-23": 50.96153846153846,
+        "SMA-25": 51.23180291153415
+      },
+      "rate_popular": 51.05555555555556,
+      "timeframe": "1D",
+      "window": "SMA-20"
+    },
+    {
+      "delta_pp": 0.2961991857079411,
+      "included": true,
+      "instrument": "ZN",
+      "mean_neighbor_rate": 49.30196384529091,
+      "n": 1742,
+      "neighbor_ns": {
+        "SMA-45": 1767,
+        "SMA-47": 1766,
+        "SMA-53": 1739,
+        "SMA-55": 1736
+      },
+      "neighbor_rates": {
+        "SMA-45": 48.89643463497453,
+        "SMA-47": 49.43374858437146,
+        "SMA-53": 49.453709028177116,
+        "SMA-55": 49.423963133640555
+      },
+      "rate_popular": 49.598163030998855,
+      "timeframe": "1D",
+      "window": "SMA-50"
+    },
+    {
+      "delta_pp": -0.5875181258085007,
+      "included": true,
+      "instrument": "ZN",
+      "mean_neighbor_rate": 49.03579398787747,
+      "n": 1740,
+      "neighbor_ns": {
+        "SMA-103": 1737,
+        "SMA-105": 1745,
+        "SMA-95": 1724,
+        "SMA-97": 1738
+      },
+      "neighbor_rates": {
+        "SMA-103": 48.762233736327,
+        "SMA-105": 48.882521489971346,
+        "SMA-95": 49.303944315545245,
+        "SMA-97": 49.19447640966629
+      },
+      "rate_popular": 48.44827586206897,
+      "timeframe": "1D",
+      "window": "SMA-100"
+    },
+    {
+      "delta_pp": -0.21958798419245795,
+      "included": true,
+      "instrument": "ZN",
+      "mean_neighbor_rate": 49.454882101839516,
+      "n": 1700,
+      "neighbor_ns": {
+        "SMA-195": 1701,
+        "SMA-197": 1700,
+        "SMA-203": 1691,
+        "SMA-205": 1692
+      },
+      "neighbor_rates": {
+        "SMA-195": 49.50029394473839,
+        "SMA-197": 49.1764705882353,
+        "SMA-203": 49.5564754583087,
+        "SMA-205": 49.586288416075654
+      },
+      "rate_popular": 49.23529411764706,
+      "timeframe": "1D",
+      "window": "SMA-200"
+    },
+    {
+      "delta_pp": -0.7755538791454413,
+      "included": true,
+      "instrument": "6E",
+      "mean_neighbor_rate": 50.730710829818086,
+      "n": 1115,
+      "neighbor_ns": {
+        "SMA-15": 1120,
+        "SMA-17": 1112,
+        "SMA-23": 1138,
+        "SMA-25": 1133
+      },
+      "neighbor_rates": {
+        "SMA-15": 52.32142857142857,
+        "SMA-17": 51.34892086330935,
+        "SMA-23": 49.384885764499124,
+        "SMA-25": 49.86760812003531
+      },
+      "rate_popular": 49.955156950672645,
+      "timeframe": "1D",
+      "window": "SMA-20"
+    },
+    {
+      "delta_pp": 0.5384720602270718,
+      "included": true,
+      "instrument": "6E",
+      "mean_neighbor_rate": 49.37349977075884,
+      "n": 1136,
+      "neighbor_ns": {
+        "SMA-45": 1140,
+        "SMA-47": 1140,
+        "SMA-53": 1137,
+        "SMA-55": 1132
+      },
+      "neighbor_rates": {
+        "SMA-45": 48.771929824561404,
+        "SMA-47": 49.824561403508774,
+        "SMA-53": 49.6042216358839,
+        "SMA-55": 49.293286219081274
+      },
+      "rate_popular": 49.91197183098591,
+      "timeframe": "1D",
+      "window": "SMA-50"
+    },
+    {
+      "delta_pp": -0.04373801287226797,
+      "included": true,
+      "instrument": "6E",
+      "mean_neighbor_rate": 48.61516658430084,
+      "n": 1260,
+      "neighbor_ns": {
+        "SMA-103": 1264,
+        "SMA-105": 1272,
+        "SMA-95": 1238,
+        "SMA-97": 1245
+      },
+      "neighbor_rates": {
+        "SMA-103": 48.575949367088604,
+        "SMA-105": 48.66352201257862,
+        "SMA-95": 48.62681744749596,
+        "SMA-97": 48.59437751004016
+      },
+      "rate_popular": 48.57142857142857,
+      "timeframe": "1D",
+      "window": "SMA-100"
+    },
+    {
+      "delta_pp": -0.18975015934866235,
+      "included": true,
+      "instrument": "6E",
+      "mean_neighbor_rate": 49.94936554396405,
+      "n": 1248,
+      "neighbor_ns": {
+        "SMA-195": 1254,
+        "SMA-197": 1242,
+        "SMA-203": 1243,
+        "SMA-205": 1244
+      },
+      "neighbor_rates": {
+        "SMA-195": 50.15948963317384,
+        "SMA-197": 49.9194847020934,
+        "SMA-203": 49.798873692679,
+        "SMA-205": 49.91961414790997
+      },
+      "rate_popular": 49.75961538461539,
+      "timeframe": "1D",
+      "window": "SMA-200"
+    },
+    {
+      "delta_pp": 0.5540853850519838,
+      "included": true,
+      "instrument": "6J",
+      "mean_neighbor_rate": 49.95986468836946,
+      "n": 1362,
+      "neighbor_ns": {
+        "SMA-15": 1340,
+        "SMA-17": 1361,
+        "SMA-23": 1357,
+        "SMA-25": 1366
+      },
+      "neighbor_rates": {
+        "SMA-15": 49.1044776119403,
+        "SMA-17": 49.66936076414401,
+        "SMA-23": 50.62638172439204,
+        "SMA-25": 50.43923865300147
+      },
+      "rate_popular": 50.51395007342144,
+      "timeframe": "1D",
+      "window": "SMA-20"
+    },
+    {
+      "delta_pp": 0.010160204126165695,
+      "included": true,
+      "instrument": "6J",
+      "mean_neighbor_rate": 49.00277376456002,
+      "n": 1469,
+      "neighbor_ns": {
+        "SMA-45": 1442,
+        "SMA-47": 1461,
+        "SMA-53": 1492,
+        "SMA-55": 1509
+      },
+      "neighbor_rates": {
+        "SMA-45": 49.237170596393895,
+        "SMA-47": 49.007529089664615,
+        "SMA-53": 48.793565683646115,
+        "SMA-55": 48.972829688535455
+      },
+      "rate_popular": 49.012933968686184,
+      "timeframe": "1D",
+      "window": "SMA-50"
+    },
+    {
+      "delta_pp": 0.13313610207065807,
+      "included": true,
+      "instrument": "6J",
+      "mean_neighbor_rate": 48.53398624926222,
+      "n": 1463,
+      "neighbor_ns": {
+        "SMA-103": 1443,
+        "SMA-105": 1435,
+        "SMA-95": 1494,
+        "SMA-97": 1486
+      },
+      "neighbor_rates": {
+        "SMA-103": 48.57934857934858,
+        "SMA-105": 48.710801393728225,
+        "SMA-95": 48.393574297188756,
+        "SMA-97": 48.45222072678331
+      },
+      "rate_popular": 48.66712235133288,
+      "timeframe": "1D",
+      "window": "SMA-100"
+    },
+    {
+      "delta_pp": 0.007381349484070654,
+      "included": true,
+      "instrument": "6J",
+      "mean_neighbor_rate": 47.786736297574755,
+      "n": 1360,
+      "neighbor_ns": {
+        "SMA-195": 1360,
+        "SMA-197": 1361,
+        "SMA-203": 1368,
+        "SMA-205": 1379
+      },
+      "neighbor_rates": {
+        "SMA-195": 47.64705882352941,
+        "SMA-197": 47.759000734753855,
+        "SMA-203": 47.880116959064324,
+        "SMA-205": 47.860768672951416
+      },
+      "rate_popular": 47.794117647058826,
+      "timeframe": "1D",
+      "window": "SMA-200"
+    },
+    {
+      "delta_pp": 0.029756800687870566,
+      "included": true,
+      "instrument": "ES",
+      "mean_neighbor_rate": 52.09790277378021,
+      "n": 1410,
+      "neighbor_ns": {
+        "SMA-15": 1457,
+        "SMA-17": 1423,
+        "SMA-23": 1408,
+        "SMA-25": 1390
+      },
+      "neighbor_rates": {
+        "SMA-15": 52.09334248455731,
+        "SMA-17": 51.651440618411804,
+        "SMA-23": 52.27272727272727,
+        "SMA-25": 52.37410071942446
+      },
+      "rate_popular": 52.12765957446808,
+      "timeframe": "1D",
+      "window": "SMA-20"
+    },
+    {
+      "delta_pp": -0.1886417273681218,
+      "included": true,
+      "instrument": "ES",
+      "mean_neighbor_rate": 51.51607535568671,
+      "n": 1469,
+      "neighbor_ns": {
+        "SMA-45": 1445,
+        "SMA-47": 1453,
+        "SMA-53": 1464,
+        "SMA-55": 1469
+      },
+      "neighbor_rates": {
+        "SMA-45": 51.280276816608996,
+        "SMA-47": 51.13558155540262,
+        "SMA-53": 51.91256830601093,
+        "SMA-55": 51.7358747447243
+      },
+      "rate_popular": 51.32743362831859,
+      "timeframe": "1D",
+      "window": "SMA-50"
+    },
+    {
+      "delta_pp": 0.037227449642394106,
+      "included": true,
+      "instrument": "ES",
+      "mean_neighbor_rate": 48.9423643870923,
+      "n": 1470,
+      "neighbor_ns": {
+        "SMA-103": 1466,
+        "SMA-105": 1458,
+        "SMA-95": 1466,
+        "SMA-97": 1472
+      },
+      "neighbor_rates": {
+        "SMA-103": 48.70395634379263,
+        "SMA-105": 49.039780521262,
+        "SMA-95": 48.97680763983629,
+        "SMA-97": 49.04891304347826
+      },
+      "rate_popular": 48.97959183673469,
+      "timeframe": "1D",
+      "window": "SMA-100"
+    },
+    {
+      "delta_pp": -0.011459477975037657,
+      "included": true,
+      "instrument": "ES",
+      "mean_neighbor_rate": 47.475698749756575,
+      "n": 1538,
+      "neighbor_ns": {
+        "SMA-195": 1533,
+        "SMA-197": 1532,
+        "SMA-203": 1544,
+        "SMA-205": 1550
+      },
+      "neighbor_rates": {
+        "SMA-195": 47.61904761904762,
+        "SMA-197": 47.51958224543081,
+        "SMA-203": 47.409326424870464,
+        "SMA-205": 47.354838709677416
+      },
+      "rate_popular": 47.46423927178154,
+      "timeframe": "1D",
+      "window": "SMA-200"
+    },
+    {
+      "delta_pp": 0.19545239857153263,
+      "included": true,
+      "instrument": "NKD",
+      "mean_neighbor_rate": 51.75649955338042,
+      "n": 1332,
+      "neighbor_ns": {
+        "SMA-15": 1357,
+        "SMA-17": 1337,
+        "SMA-23": 1323,
+        "SMA-25": 1313
+      },
+      "neighbor_rates": {
+        "SMA-15": 52.616064848931465,
+        "SMA-17": 51.90725504861631,
+        "SMA-23": 51.398337112622826,
+        "SMA-25": 51.104341203351105
+      },
+      "rate_popular": 51.951951951951955,
+      "timeframe": "1D",
+      "window": "SMA-20"
+    },
+    {
+      "delta_pp": 0.33782794166544505,
+      "included": true,
+      "instrument": "NKD",
+      "mean_neighbor_rate": 50.20368830382192,
+      "n": 1385,
+      "neighbor_ns": {
+        "SMA-45": 1366,
+        "SMA-47": 1369,
+        "SMA-53": 1388,
+        "SMA-55": 1387
+      },
+      "neighbor_rates": {
+        "SMA-45": 50.95168374816984,
+        "SMA-47": 50.54784514243974,
+        "SMA-53": 49.783861671469744,
+        "SMA-55": 49.53136265320836
+      },
+      "rate_popular": 50.541516245487365,
+      "timeframe": "1D",
+      "window": "SMA-50"
+    },
+    {
+      "delta_pp": -0.1900815009440464,
+      "included": true,
+      "instrument": "NKD",
+      "mean_neighbor_rate": 48.88896625930836,
+      "n": 1345,
+      "neighbor_ns": {
+        "SMA-103": 1347,
+        "SMA-105": 1347,
+        "SMA-95": 1350,
+        "SMA-97": 1354
+      },
+      "neighbor_rates": {
+        "SMA-103": 49.14625092798812,
+        "SMA-105": 49.220489977728285,
+        "SMA-95": 48.51851851851852,
+        "SMA-97": 48.67060561299852
+      },
+      "rate_popular": 48.698884758364315,
+      "timeframe": "1D",
+      "window": "SMA-100"
+    },
+    {
+      "delta_pp": 0.10348162485454537,
+      "included": true,
+      "instrument": "NKD",
+      "mean_neighbor_rate": 49.14497107187401,
+      "n": 1131,
+      "neighbor_ns": {
+        "SMA-195": 1132,
+        "SMA-197": 1133,
+        "SMA-203": 1121,
+        "SMA-205": 1119
+      },
+      "neighbor_rates": {
+        "SMA-195": 49.20494699646643,
+        "SMA-197": 49.249779346866724,
+        "SMA-203": 48.974130240856375,
+        "SMA-205": 49.151027703306525
+      },
+      "rate_popular": 49.248452696728556,
+      "timeframe": "1D",
+      "window": "SMA-200"
+    },
+    {
+      "delta_pp": -0.016298774821663642,
+      "included": true,
+      "instrument": "NQ",
+      "mean_neighbor_rate": 47.91525432497954,
+      "n": 4117,
+      "neighbor_ns": {
+        "SMA-15": 4222,
+        "SMA-17": 4186,
+        "SMA-23": 4101,
+        "SMA-25": 4041
+      },
+      "neighbor_rates": {
+        "SMA-15": 47.98673614400758,
+        "SMA-17": 47.87386526516961,
+        "SMA-23": 47.84198975859547,
+        "SMA-25": 47.95842613214551
+      },
+      "rate_popular": 47.89895555015788,
+      "timeframe": "60",
+      "window": "SMA-20"
+    },
+    {
+      "delta_pp": 0.26669568655753295,
+      "included": true,
+      "instrument": "NQ",
+      "mean_neighbor_rate": 49.77407626234162,
+      "n": 3679,
+      "neighbor_ns": {
+        "SMA-45": 3767,
+        "SMA-47": 3751,
+        "SMA-53": 3681,
+        "SMA-55": 3685
+      },
+      "neighbor_rates": {
+        "SMA-45": 49.34961507831165,
+        "SMA-47": 49.74673420421221,
+        "SMA-53": 49.95925020374898,
+        "SMA-55": 50.040705563093624
+      },
+      "rate_popular": 50.040771948899156,
+      "timeframe": "60",
+      "window": "SMA-50"
+    },
+    {
+      "delta_pp": -0.0882841707909563,
+      "included": true,
+      "instrument": "NQ",
+      "mean_neighbor_rate": 50.69267977518656,
+      "n": 3640,
+      "neighbor_ns": {
+        "SMA-103": 3626,
+        "SMA-105": 3618,
+        "SMA-95": 3646,
+        "SMA-97": 3631
+      },
+      "neighbor_rates": {
+        "SMA-103": 51.02040816326531,
+        "SMA-105": 50.85682697622996,
+        "SMA-95": 50.38398244651673,
+        "SMA-97": 50.50950151473423
+      },
+      "rate_popular": 50.604395604395606,
+      "timeframe": "60",
+      "window": "SMA-100"
+    },
+    {
+      "delta_pp": -0.06617155410772568,
+      "included": true,
+      "instrument": "NQ",
+      "mean_neighbor_rate": 51.28848964441546,
+      "n": 3477,
+      "neighbor_ns": {
+        "SMA-195": 3501,
+        "SMA-197": 3490,
+        "SMA-203": 3457,
+        "SMA-205": 3450
+      },
+      "neighbor_rates": {
+        "SMA-195": 51.15681233933162,
+        "SMA-197": 51.260744985673355,
+        "SMA-203": 51.345096904830775,
+        "SMA-205": 51.391304347826086
+      },
+      "rate_popular": 51.22231809030774,
+      "timeframe": "60",
+      "window": "SMA-200"
+    },
+    {
+      "delta_pp": 0.4403622371966023,
+      "included": true,
+      "instrument": "NI225",
+      "mean_neighbor_rate": 48.93152210976252,
+      "n": 5015,
+      "neighbor_ns": {
+        "SMA-15": 5032,
+        "SMA-17": 5038,
+        "SMA-23": 4984,
+        "SMA-25": 4997
+      },
+      "neighbor_rates": {
+        "SMA-15": 48.509538950715424,
+        "SMA-17": 48.749503771337835,
+        "SMA-23": 49.217495987158905,
+        "SMA-25": 49.2495497298379
+      },
+      "rate_popular": 49.37188434695912,
+      "timeframe": "60",
+      "window": "SMA-20"
+    },
+    {
+      "delta_pp": -0.021366336558060084,
+      "included": true,
+      "instrument": "NI225",
+      "mean_neighbor_rate": 48.875430979065406,
+      "n": 5105,
+      "neighbor_ns": {
+        "SMA-45": 5082,
+        "SMA-47": 5087,
+        "SMA-53": 5165,
+        "SMA-55": 5188
+      },
+      "neighbor_rates": {
+        "SMA-45": 48.83903974813066,
+        "SMA-47": 49.164537055238846,
+        "SMA-53": 48.71248789932236,
+        "SMA-55": 48.78565921356978
+      },
+      "rate_popular": 48.854064642507346,
+      "timeframe": "60",
+      "window": "SMA-50"
+    },
+    {
+      "delta_pp": 0.018093777529074373,
+      "included": true,
+      "instrument": "NI225",
+      "mean_neighbor_rate": 49.68058795505096,
+      "n": 5310,
+      "neighbor_ns": {
+        "SMA-103": 5345,
+        "SMA-105": 5350,
+        "SMA-95": 5296,
+        "SMA-97": 5309
+      },
+      "neighbor_rates": {
+        "SMA-103": 49.74742750233863,
+        "SMA-105": 49.6822429906542,
+        "SMA-95": 49.603474320241695,
+        "SMA-97": 49.6892070069693
+      },
+      "rate_popular": 49.698681732580035,
+      "timeframe": "60",
+      "window": "SMA-100"
+    },
+    {
+      "delta_pp": 0.03778256982592154,
+      "included": true,
+      "instrument": "NI225",
+      "mean_neighbor_rate": 49.62132927834065,
+      "n": 5427,
+      "neighbor_ns": {
+        "SMA-195": 5395,
+        "SMA-197": 5405,
+        "SMA-203": 5432,
+        "SMA-205": 5428
+      },
+      "neighbor_rates": {
+        "SMA-195": 49.56441149212233,
+        "SMA-197": 49.62072155411656,
+        "SMA-203": 49.65022091310751,
+        "SMA-205": 49.64996315401621
+      },
+      "rate_popular": 49.659111848166575,
+      "timeframe": "60",
+      "window": "SMA-200"
+    },
+    {
+      "delta_pp": 0.0532616297382944,
+      "included": true,
+      "instrument": "DAX",
+      "mean_neighbor_rate": 49.96451298810742,
+      "n": 5626,
+      "neighbor_ns": {
+        "SMA-15": 5646,
+        "SMA-17": 5629,
+        "SMA-23": 5624,
+        "SMA-25": 5631
+      },
+      "neighbor_rates": {
+        "SMA-15": 49.94686503719447,
+        "SMA-17": 49.88452655889145,
+        "SMA-23": 50.01778093883357,
+        "SMA-25": 50.00887941751021
+      },
+      "rate_popular": 50.01777461784572,
+      "timeframe": "60",
+      "window": "SMA-20"
+    },
+    {
+      "delta_pp": -0.06591673171758572,
+      "included": true,
+      "instrument": "DAX",
+      "mean_neighbor_rate": 50.12737415050599,
+      "n": 5695,
+      "neighbor_ns": {
+        "SMA-45": 5666,
+        "SMA-47": 5693,
+        "SMA-53": 5711,
+        "SMA-55": 5746
+      },
+      "neighbor_rates": {
+        "SMA-45": 50.21178962230851,
+        "SMA-47": 50.07904444054102,
+        "SMA-53": 50.1838557170373,
+        "SMA-55": 50.03480682213714
+      },
+      "rate_popular": 50.06145741878841,
+      "timeframe": "60",
+      "window": "SMA-50"
+    },
+    {
+      "delta_pp": 0.03202600989305182,
+      "included": true,
+      "instrument": "DAX",
+      "mean_neighbor_rate": 49.14665317213846,
+      "n": 5966,
+      "neighbor_ns": {
+        "SMA-103": 5954,
+        "SMA-105": 5933,
+        "SMA-95": 5966,
+        "SMA-97": 5986
+      },
+      "neighbor_rates": {
+        "SMA-103": 49.19381928115553,
+        "SMA-105": 49.2836676217765,
+        "SMA-95": 49.061347636607444,
+        "SMA-97": 49.04777814901437
+      },
+      "rate_popular": 49.17867918203151,
+      "timeframe": "60",
+      "window": "SMA-100"
+    },
+    {
+      "delta_pp": 0.08426817502991213,
+      "included": true,
+      "instrument": "DAX",
+      "mean_neighbor_rate": 48.0300175392558,
+      "n": 6125,
+      "neighbor_ns": {
+        "SMA-195": 6154,
+        "SMA-197": 6156,
+        "SMA-203": 6132,
+        "SMA-205": 6126
+      },
+      "neighbor_rates": {
+        "SMA-195": 47.95255118622035,
+        "SMA-197": 48.05068226120858,
+        "SMA-203": 48.043052837573384,
+        "SMA-205": 48.0737838720209
+      },
+      "rate_popular": 48.114285714285714,
+      "timeframe": "60",
+      "window": "SMA-200"
+    },
+    {
+      "delta_pp": 0.026923255535947987,
+      "included": true,
+      "instrument": "FTSE",
+      "mean_neighbor_rate": 49.523607934875386,
+      "n": 3671,
+      "neighbor_ns": {
+        "SMA-15": 3610,
+        "SMA-17": 3639,
+        "SMA-23": 3687,
+        "SMA-25": 3694
+      },
+      "neighbor_rates": {
+        "SMA-15": 49.11357340720222,
+        "SMA-17": 48.83209672987084,
+        "SMA-23": 49.932194195823165,
+        "SMA-25": 50.21656740660531
+      },
+      "rate_popular": 49.550531190411334,
+      "timeframe": "60",
+      "window": "SMA-20"
+    },
+    {
+      "delta_pp": -0.029479882587565953,
+      "included": true,
+      "instrument": "FTSE",
+      "mean_neighbor_rate": 49.27690528528099,
+      "n": 3787,
+      "neighbor_ns": {
+        "SMA-45": 3761,
+        "SMA-47": 3768,
+        "SMA-53": 3819,
+        "SMA-55": 3834
+      },
+      "neighbor_rates": {
+        "SMA-45": 49.61446423823451,
+        "SMA-47": 49.28343949044586,
+        "SMA-53": 49.07043728724797,
+        "SMA-55": 49.13928012519562
+      },
+      "rate_popular": 49.24742540269342,
+      "timeframe": "60",
+      "window": "SMA-50"
+    },
+    {
+      "delta_pp": 0.020103357920945086,
+      "included": true,
+      "instrument": "FTSE",
+      "mean_neighbor_rate": 49.220836896731356,
+      "n": 4084,
+      "neighbor_ns": {
+        "SMA-103": 4082,
+        "SMA-105": 4087,
+        "SMA-95": 4059,
+        "SMA-97": 4072
+      },
+      "neighbor_rates": {
+        "SMA-103": 49.21607055365017,
+        "SMA-105": 49.22926351847321,
+        "SMA-95": 49.19931017491993,
+        "SMA-97": 49.23870333988212
+      },
+      "rate_popular": 49.2409402546523,
+      "timeframe": "60",
+      "window": "SMA-100"
+    },
+    {
+      "delta_pp": 0.1350897515950038,
+      "included": true,
+      "instrument": "FTSE",
+      "mean_neighbor_rate": 48.59372380772703,
+      "n": 4248,
+      "neighbor_ns": {
+        "SMA-195": 4230,
+        "SMA-197": 4238,
+        "SMA-203": 4247,
+        "SMA-205": 4244
+      },
+      "neighbor_rates": {
+        "SMA-195": 48.652482269503544,
+        "SMA-197": 48.6078338839075,
+        "SMA-203": 48.57546503414175,
+        "SMA-205": 48.539114043355326
+      },
+      "rate_popular": 48.728813559322035,
+      "timeframe": "60",
+      "window": "SMA-200"
+    },
+    {
+      "delta_pp": -0.44826169943603844,
+      "included": true,
+      "instrument": "HSI",
+      "mean_neighbor_rate": 49.526191503124316,
+      "n": 3362,
+      "neighbor_ns": {
+        "SMA-15": 3387,
+        "SMA-17": 3379,
+        "SMA-23": 3378,
+        "SMA-25": 3368
+      },
+      "neighbor_rates": {
+        "SMA-15": 49.6014171833481,
+        "SMA-17": 49.452500739863865,
+        "SMA-23": 49.67436352871522,
+        "SMA-25": 49.37648456057007
+      },
+      "rate_popular": 49.07792980368828,
+      "timeframe": "60",
+      "window": "SMA-20"
+    },
+    {
+      "delta_pp": 0.15522953550289742,
+      "included": true,
+      "instrument": "HSI",
+      "mean_neighbor_rate": 49.20634910640076,
+      "n": 3446,
+      "neighbor_ns": {
+        "SMA-45": 3417,
+        "SMA-47": 3427,
+        "SMA-53": 3481,
+        "SMA-55": 3474
+      },
+      "neighbor_rates": {
+        "SMA-45": 49.04887328065555,
+        "SMA-47": 49.372629121680774,
+        "SMA-53": 49.267451881643204,
+        "SMA-55": 49.13644214162349
+      },
+      "rate_popular": 49.361578641903655,
+      "timeframe": "60",
+      "window": "SMA-50"
+    },
+    {
+      "delta_pp": -0.06444257482758786,
+      "included": true,
+      "instrument": "HSI",
+      "mean_neighbor_rate": 49.17341131569817,
+      "n": 3423,
+      "neighbor_ns": {
+        "SMA-103": 3416,
+        "SMA-105": 3422,
+        "SMA-95": 3414,
+        "SMA-97": 3418
+      },
+      "neighbor_rates": {
+        "SMA-103": 49.09250585480094,
+        "SMA-105": 49.09409701928697,
+        "SMA-95": 49.26772114821324,
+        "SMA-97": 49.23932124049151
+      },
+      "rate_popular": 49.10896874087058,
+      "timeframe": "60",
+      "window": "SMA-100"
+    },
+    {
+      "delta_pp": 0.02939892874523764,
+      "included": true,
+      "instrument": "HSI",
+      "mean_neighbor_rate": 48.43557871656028,
+      "n": 3355,
+      "neighbor_ns": {
+        "SMA-195": 3350,
+        "SMA-197": 3354,
+        "SMA-203": 3353,
+        "SMA-205": 3338
+      },
+      "neighbor_rates": {
+        "SMA-195": 48.776119402985074,
+        "SMA-197": 48.6881335718545,
+        "SMA-203": 48.25529376677602,
+        "SMA-205": 48.02276812462552
+      },
+      "rate_popular": 48.46497764530552,
+      "timeframe": "60",
+      "window": "SMA-200"
+    },
+    {
+      "delta_pp": 0.1350248819871851,
+      "included": true,
+      "instrument": "CL",
+      "mean_neighbor_rate": 51.36409328379765,
+      "n": 4536,
+      "neighbor_ns": {
+        "SMA-15": 4603,
+        "SMA-17": 4594,
+        "SMA-23": 4499,
+        "SMA-25": 4461
+      },
+      "neighbor_rates": {
+        "SMA-15": 51.531609819682814,
+        "SMA-17": 51.87200696560731,
+        "SMA-23": 51.12247166036897,
+        "SMA-25": 50.9302846895315
+      },
+      "rate_popular": 51.499118165784836,
+      "timeframe": "60",
+      "window": "SMA-20"
+    },
+    {
+      "delta_pp": 0.028353925239379407,
+      "included": true,
+      "instrument": "CL",
+      "mean_neighbor_rate": 51.20340881094813,
+      "n": 4181,
+      "neighbor_ns": {
+        "SMA-45": 4258,
+        "SMA-47": 4237,
+        "SMA-53": 4161,
+        "SMA-55": 4157
+      },
+      "neighbor_rates": {
+        "SMA-45": 51.26820103334899,
+        "SMA-47": 51.33349067736606,
+        "SMA-53": 51.23768324921894,
+        "SMA-55": 50.97426028385855
+      },
+      "rate_popular": 51.23176273618751,
+      "timeframe": "60",
+      "window": "SMA-50"
+    },
+    {
+      "delta_pp": -0.21676581059676892,
+      "included": true,
+      "instrument": "CL",
+      "mean_neighbor_rate": 50.58897424732133,
+      "n": 4030,
+      "neighbor_ns": {
+        "SMA-103": 4035,
+        "SMA-105": 4036,
+        "SMA-95": 4023,
+        "SMA-97": 4036
+      },
+      "neighbor_rates": {
+        "SMA-103": 50.48327137546468,
+        "SMA-105": 50.54509415262636,
+        "SMA-95": 50.608998260004974,
+        "SMA-97": 50.718533201189295
+      },
+      "rate_popular": 50.37220843672456,
+      "timeframe": "60",
+      "window": "SMA-100"
+    },
+    {
+      "delta_pp": -0.07008077366593568,
+      "included": true,
+      "instrument": "CL",
+      "mean_neighbor_rate": 50.42436648795165,
+      "n": 4375,
+      "neighbor_ns": {
+        "SMA-195": 4355,
+        "SMA-197": 4364,
+        "SMA-203": 4405,
+        "SMA-205": 4413
+      },
+      "neighbor_rates": {
+        "SMA-195": 50.26406429391504,
+        "SMA-197": 50.43538038496792,
+        "SMA-203": 50.533484676503974,
+        "SMA-205": 50.46453659641967
+      },
+      "rate_popular": 50.354285714285716,
+      "timeframe": "60",
+      "window": "SMA-200"
+    },
+    {
+      "delta_pp": -0.30158563490302015,
+      "included": true,
+      "instrument": "GC",
+      "mean_neighbor_rate": 49.59648723105985,
+      "n": 6453,
+      "neighbor_ns": {
+        "SMA-15": 6429,
+        "SMA-17": 6423,
+        "SMA-23": 6522,
+        "SMA-25": 6562
+      },
+      "neighbor_rates": {
+        "SMA-15": 49.75890496189143,
+        "SMA-17": 49.727541647205356,
+        "SMA-23": 49.46335479914137,
+        "SMA-25": 49.43614751600122
+      },
+      "rate_popular": 49.294901596156826,
+      "timeframe": "60",
+      "window": "SMA-20"
+    },
+    {
+      "delta_pp": -0.10764991572665394,
+      "included": true,
+      "instrument": "GC",
+      "mean_neighbor_rate": 48.776462086586804,
+      "n": 6836,
+      "neighbor_ns": {
+        "SMA-45": 6805,
+        "SMA-47": 6823,
+        "SMA-53": 6845,
+        "SMA-55": 6858
+      },
+      "neighbor_rates": {
+        "SMA-45": 48.86113152094048,
+        "SMA-47": 48.96673017734135,
+        "SMA-53": 48.648648648648646,
+        "SMA-55": 48.62933799941674
+      },
+      "rate_popular": 48.66881217086015,
+      "timeframe": "60",
+      "window": "SMA-50"
+    },
+    {
+      "delta_pp": -0.03715510133037725,
+      "included": true,
+      "instrument": "GC",
+      "mean_neighbor_rate": 47.899089142694265,
+      "n": 7156,
+      "neighbor_ns": {
+        "SMA-103": 7168,
+        "SMA-105": 7178,
+        "SMA-95": 7174,
+        "SMA-97": 7157
+      },
+      "neighbor_rates": {
+        "SMA-103": 47.79575892857143,
+        "SMA-105": 47.784898300362215,
+        "SMA-95": 47.97881237803178,
+        "SMA-97": 48.036886963811654
+      },
+      "rate_popular": 47.86193404136389,
+      "timeframe": "60",
+      "window": "SMA-100"
+    },
+    {
+      "delta_pp": 0.05498446817131253,
+      "included": true,
+      "instrument": "GC",
+      "mean_neighbor_rate": 47.759700846514,
+      "n": 6864,
+      "neighbor_ns": {
+        "SMA-195": 6903,
+        "SMA-197": 6891,
+        "SMA-203": 6845,
+        "SMA-205": 6832
+      },
+      "neighbor_rates": {
+        "SMA-195": 47.689410401274806,
+        "SMA-197": 47.71441010013061,
+        "SMA-203": 47.83053323593864,
+        "SMA-205": 47.804449648711945
+      },
+      "rate_popular": 47.81468531468531,
+      "timeframe": "60",
+      "window": "SMA-200"
+    },
+    {
+      "delta_pp": 0.4178919202067064,
+      "included": true,
+      "instrument": "ZN",
+      "mean_neighbor_rate": 48.677188375485365,
+      "n": 3923,
+      "neighbor_ns": {
+        "SMA-15": 4035,
+        "SMA-17": 4000,
+        "SMA-23": 3842,
+        "SMA-25": 3863
+      },
+      "neighbor_rates": {
+        "SMA-15": 48.674101610904586,
+        "SMA-17": 48.85,
+        "SMA-23": 48.77667881311817,
+        "SMA-25": 48.40797307791872
+      },
+      "rate_popular": 49.09508029569207,
+      "timeframe": "60",
+      "window": "SMA-20"
+    },
+    {
+      "delta_pp": 0.03943003444324944,
+      "included": true,
+      "instrument": "ZN",
+      "mean_neighbor_rate": 48.712604691546986,
+      "n": 3686,
+      "neighbor_ns": {
+        "SMA-45": 3719,
+        "SMA-47": 3700,
+        "SMA-53": 3715,
+        "SMA-55": 3702
+      },
+      "neighbor_rates": {
+        "SMA-45": 48.66899704221565,
+        "SMA-47": 48.67567567567568,
+        "SMA-53": 48.748317631224765,
+        "SMA-55": 48.75742841707185
+      },
+      "rate_popular": 48.752034725990235,
+      "timeframe": "60",
+      "window": "SMA-50"
+    },
+    {
+      "delta_pp": 0.10566836977154281,
+      "included": true,
+      "instrument": "ZN",
+      "mean_neighbor_rate": 48.11395652829859,
+      "n": 3679,
+      "neighbor_ns": {
+        "SMA-103": 3679,
+        "SMA-105": 3667,
+        "SMA-95": 3710,
+        "SMA-97": 3713
+      },
+      "neighbor_rates": {
+        "SMA-103": 48.0837184017396,
+        "SMA-105": 48.02290700845378,
+        "SMA-95": 48.19407008086253,
+        "SMA-97": 48.15513062213843
+      },
+      "rate_popular": 48.21962489807013,
+      "timeframe": "60",
+      "window": "SMA-100"
+    },
+    {
+      "delta_pp": 0.04879329737723026,
+      "included": true,
+      "instrument": "ZN",
+      "mean_neighbor_rate": 47.690457742844686,
+      "n": 3605,
+      "neighbor_ns": {
+        "SMA-195": 3586,
+        "SMA-197": 3591,
+        "SMA-203": 3631,
+        "SMA-205": 3629
+      },
+      "neighbor_rates": {
+        "SMA-195": 47.79698828778584,
+        "SMA-197": 47.758284600389864,
+        "SMA-203": 47.700358028091436,
+        "SMA-205": 47.5062000551116
+      },
+      "rate_popular": 47.739251040221916,
+      "timeframe": "60",
+      "window": "SMA-200"
+    },
+    {
+      "delta_pp": 0.3141378680260729,
+      "included": true,
+      "instrument": "6E",
+      "mean_neighbor_rate": 51.07629594732432,
+      "n": 4495,
+      "neighbor_ns": {
+        "SMA-15": 4534,
+        "SMA-17": 4525,
+        "SMA-23": 4453,
+        "SMA-25": 4471
+      },
+      "neighbor_rates": {
+        "SMA-15": 51.16894574327305,
+        "SMA-17": 50.93922651933702,
+        "SMA-23": 51.268807545474964,
+        "SMA-25": 50.928203981212256
+      },
+      "rate_popular": 51.39043381535039,
+      "timeframe": "60",
+      "window": "SMA-20"
+    },
+    {
+      "delta_pp": 0.003178444434489336,
+      "included": true,
+      "instrument": "6E",
+      "mean_neighbor_rate": 50.280204008524024,
+      "n": 4411,
+      "neighbor_ns": {
+        "SMA-45": 4428,
+        "SMA-47": 4412,
+        "SMA-53": 4420,
+        "SMA-55": 4391
+      },
+      "neighbor_rates": {
+        "SMA-45": 50.40650406504065,
+        "SMA-47": 50.453309156844966,
+        "SMA-53": 50.13574660633484,
+        "SMA-55": 50.12525620587566
+      },
+      "rate_popular": 50.28338245295851,
+      "timeframe": "60",
+      "window": "SMA-50"
+    },
+    {
+      "delta_pp": 0.018517384358005984,
+      "included": true,
+      "instrument": "6E",
+      "mean_neighbor_rate": 50.34186392231486,
+      "n": 4301,
+      "neighbor_ns": {
+        "SMA-103": 4320,
+        "SMA-105": 4319,
+        "SMA-95": 4308,
+        "SMA-97": 4301
+      },
+      "neighbor_rates": {
+        "SMA-103": 50.50925925925926,
+        "SMA-105": 50.35887937022459,
+        "SMA-95": 50.34818941504178,
+        "SMA-97": 50.15112764473378
+      },
+      "rate_popular": 50.36038130667286,
+      "timeframe": "60",
+      "window": "SMA-100"
+    },
+    {
+      "delta_pp": -0.0031509086446916967,
+      "included": true,
+      "instrument": "6E",
+      "mean_neighbor_rate": 49.88517072931482,
+      "n": 4238,
+      "neighbor_ns": {
+        "SMA-195": 4259,
+        "SMA-197": 4254,
+        "SMA-203": 4239,
+        "SMA-205": 4233
+      },
+      "neighbor_rates": {
+        "SMA-195": 49.89434139469359,
+        "SMA-197": 49.882463563704746,
+        "SMA-203": 49.9174333569238,
+        "SMA-205": 49.84644460193716
+      },
+      "rate_popular": 49.88201982067013,
+      "timeframe": "60",
+      "window": "SMA-200"
+    },
+    {
+      "delta_pp": 0.04795886428208718,
+      "included": true,
+      "instrument": "6J",
+      "mean_neighbor_rate": 48.91636794814599,
+      "n": 5214,
+      "neighbor_ns": {
+        "SMA-15": 5326,
+        "SMA-17": 5272,
+        "SMA-23": 5202,
+        "SMA-25": 5146
+      },
+      "neighbor_rates": {
+        "SMA-15": 49.00488171235449,
+        "SMA-17": 48.786039453717756,
+        "SMA-23": 48.88504421376394,
+        "SMA-25": 48.989506412747765
+      },
+      "rate_popular": 48.96432681242808,
+      "timeframe": "60",
+      "window": "SMA-20"
+    },
+    {
+      "delta_pp": 0.052637906870870665,
+      "included": true,
+      "instrument": "6J",
+      "mean_neighbor_rate": 49.215847660547084,
+      "n": 5058,
+      "neighbor_ns": {
+        "SMA-45": 5061,
+        "SMA-47": 5076,
+        "SMA-53": 5067,
+        "SMA-55": 5074
+      },
+      "neighbor_rates": {
+        "SMA-45": 49.00217348350129,
+        "SMA-47": 49.054373522458626,
+        "SMA-53": 49.41780146043023,
+        "SMA-55": 49.38904217579819
+      },
+      "rate_popular": 49.268485567417954,
+      "timeframe": "60",
+      "window": "SMA-50"
+    },
+    {
+      "delta_pp": 0.010558576382294405,
+      "included": true,
+      "instrument": "6J",
+      "mean_neighbor_rate": 49.60730143970781,
+      "n": 4972,
+      "neighbor_ns": {
+        "SMA-103": 4954,
+        "SMA-105": 4936,
+        "SMA-95": 5000,
+        "SMA-97": 4998
+      },
+      "neighbor_rates": {
+        "SMA-103": 49.57610012111425,
+        "SMA-105": 49.47325769854133,
+        "SMA-95": 49.76,
+        "SMA-97": 49.61984793917567
+      },
+      "rate_popular": 49.617860016090106,
+      "timeframe": "60",
+      "window": "SMA-100"
+    },
+    {
+      "delta_pp": 0.03983067894994008,
+      "included": true,
+      "instrument": "6J",
+      "mean_neighbor_rate": 48.85827100117225,
+      "n": 4583,
+      "neighbor_ns": {
+        "SMA-195": 4581,
+        "SMA-197": 4594,
+        "SMA-203": 4571,
+        "SMA-205": 4560
+      },
+      "neighbor_rates": {
+        "SMA-195": 48.8103034271993,
+        "SMA-197": 48.91162385720505,
+        "SMA-203": 48.82957777291621,
+        "SMA-205": 48.88157894736842
+      },
+      "rate_popular": 48.89810168012219,
+      "timeframe": "60",
+      "window": "SMA-200"
+    },
+    {
+      "delta_pp": 0.10003679695194734,
+      "included": true,
+      "instrument": "ES",
+      "mean_neighbor_rate": 48.478162255180756,
+      "n": 4220,
+      "neighbor_ns": {
+        "SMA-15": 4266,
+        "SMA-17": 4271,
+        "SMA-23": 4200,
+        "SMA-25": 4147
+      },
+      "neighbor_rates": {
+        "SMA-15": 48.757618377871545,
+        "SMA-17": 48.20885038632639,
+        "SMA-23": 48.38095238095238,
+        "SMA-25": 48.5652278755727
+      },
+      "rate_popular": 48.5781990521327,
+      "timeframe": "60",
+      "window": "SMA-20"
+    },
+    {
+      "delta_pp": -0.10574075756302648,
+      "included": true,
+      "instrument": "ES",
+      "mean_neighbor_rate": 49.922686364257586,
+      "n": 3824,
+      "neighbor_ns": {
+        "SMA-45": 3900,
+        "SMA-47": 3878,
+        "SMA-53": 3773,
+        "SMA-55": 3765
+      },
+      "neighbor_rates": {
+        "SMA-45": 49.84615384615385,
+        "SMA-47": 49.87106756059825,
+        "SMA-53": 49.960243837794856,
+        "SMA-55": 50.0132802124834
+      },
+      "rate_popular": 49.81694560669456,
+      "timeframe": "60",
+      "window": "SMA-50"
+    },
+    {
+      "delta_pp": -0.1989322432323064,
+      "included": true,
+      "instrument": "ES",
+      "mean_neighbor_rate": 50.18530455176324,
+      "n": 3669,
+      "neighbor_ns": {
+        "SMA-103": 3646,
+        "SMA-105": 3635,
+        "SMA-95": 3683,
+        "SMA-97": 3676
+      },
+      "neighbor_rates": {
+        "SMA-103": 50.219418540866705,
+        "SMA-105": 50.45392022008253,
+        "SMA-95": 50.06787944610372,
+        "SMA-97": 50.0
+      },
+      "rate_popular": 49.98637230853093,
+      "timeframe": "60",
+      "window": "SMA-100"
+    },
+    {
+      "delta_pp": -0.05719736531746378,
+      "included": true,
+      "instrument": "ES",
+      "mean_neighbor_rate": 49.51356759113291,
+      "n": 3587,
+      "neighbor_ns": {
+        "SMA-195": 3595,
+        "SMA-197": 3606,
+        "SMA-203": 3593,
+        "SMA-205": 3598
+      },
+      "neighbor_rates": {
+        "SMA-195": 49.73574408901252,
+        "SMA-197": 49.58402662229617,
+        "SMA-203": 49.34595045922627,
+        "SMA-205": 49.38854919399667
+      },
+      "rate_popular": 49.45637022581545,
+      "timeframe": "60",
+      "window": "SMA-200"
+    },
+    {
+      "delta_pp": -0.014732803499882152,
+      "included": true,
+      "instrument": "NKD",
+      "mean_neighbor_rate": 48.07315204748614,
+      "n": 5820,
+      "neighbor_ns": {
+        "SMA-15": 5895,
+        "SMA-17": 5863,
+        "SMA-23": 5835,
+        "SMA-25": 5831
+      },
+      "neighbor_rates": {
+        "SMA-15": 48.583545377438504,
+        "SMA-17": 48.13235544942862,
+        "SMA-23": 48.05484147386461,
+        "SMA-25": 47.521865889212826
+      },
+      "rate_popular": 48.05841924398626,
+      "timeframe": "60",
+      "window": "SMA-20"
+    },
+    {
+      "delta_pp": 0.1521809693023286,
+      "included": true,
+      "instrument": "NKD",
+      "mean_neighbor_rate": 47.86397071609093,
+      "n": 5696,
+      "neighbor_ns": {
+        "SMA-45": 5730,
+        "SMA-47": 5708,
+        "SMA-53": 5688,
+        "SMA-55": 5668
+      },
+      "neighbor_rates": {
+        "SMA-45": 47.67888307155323,
+        "SMA-47": 47.82761037140855,
+        "SMA-53": 47.94303797468354,
+        "SMA-55": 48.00635144671842
+      },
+      "rate_popular": 48.01615168539326,
+      "timeframe": "60",
+      "window": "SMA-50"
+    },
+    {
+      "delta_pp": 0.09077579664209878,
+      "included": true,
+      "instrument": "NKD",
+      "mean_neighbor_rate": 47.93391556138259,
+      "n": 5670,
+      "neighbor_ns": {
+        "SMA-103": 5691,
+        "SMA-105": 5683,
+        "SMA-95": 5662,
+        "SMA-97": 5664
+      },
+      "neighbor_rates": {
+        "SMA-103": 47.93533649622211,
+        "SMA-105": 47.932430054548654,
+        "SMA-95": 47.88060755916637,
+        "SMA-97": 47.98728813559322
+      },
+      "rate_popular": 48.02469135802469,
+      "timeframe": "60",
+      "window": "SMA-100"
+    },
+    {
+      "delta_pp": -0.040940957848398796,
+      "included": true,
+      "instrument": "NKD",
+      "mean_neighbor_rate": 47.989743058275046,
+      "n": 6094,
+      "neighbor_ns": {
+        "SMA-195": 6063,
+        "SMA-197": 6065,
+        "SMA-203": 6111,
+        "SMA-205": 6112
+      },
+      "neighbor_rates": {
+        "SMA-195": 47.9465611083622,
+        "SMA-197": 47.99670239076669,
+        "SMA-203": 48.01178203240059,
+        "SMA-205": 48.003926701570684
+      },
+      "rate_popular": 47.94880210042665,
+      "timeframe": "60",
+      "window": "SMA-200"
+    },
+    {
+      "delta_pp": 0.05281926548953919,
+      "included": true,
+      "instrument": "ES",
+      "mean_neighbor_rate": 49.14368033673799,
+      "n": 6285,
+      "neighbor_ns": {
+        "SMA-15": 6193,
+        "SMA-17": 6234,
+        "SMA-23": 6315,
+        "SMA-25": 6318
+      },
+      "neighbor_rates": {
+        "SMA-15": 49.2975940578072,
+        "SMA-17": 49.4064805903112,
+        "SMA-23": 48.915281076801264,
+        "SMA-25": 48.95536562203229
+      },
+      "rate_popular": 49.196499602227526,
+      "timeframe": "5",
+      "window": "SMA-20"
+    },
+    {
+      "delta_pp": 0.015607399184943915,
+      "included": true,
+      "instrument": "ES",
+      "mean_neighbor_rate": 48.75514611294788,
+      "n": 6264,
+      "neighbor_ns": {
+        "SMA-45": 6272,
+        "SMA-47": 6261,
+        "SMA-53": 6289,
+        "SMA-55": 6281
+      },
+      "neighbor_rates": {
+        "SMA-45": 48.692602040816325,
+        "SMA-47": 48.77815045519885,
+        "SMA-53": 48.68818572110033,
+        "SMA-55": 48.86164623467601
+      },
+      "rate_popular": 48.77075351213282,
+      "timeframe": "5",
+      "window": "SMA-50"
+    },
+    {
+      "delta_pp": 0.14502180112034324,
+      "included": true,
+      "instrument": "ES",
+      "mean_neighbor_rate": 49.53980121488095,
+      "n": 6187,
+      "neighbor_ns": {
+        "SMA-103": 6173,
+        "SMA-105": 6182,
+        "SMA-95": 6204,
+        "SMA-97": 6199
+      },
+      "neighbor_rates": {
+        "SMA-103": 49.635509476753604,
+        "SMA-105": 49.72500808799741,
+        "SMA-95": 49.38749194068343,
+        "SMA-97": 49.41119535408937
+      },
+      "rate_popular": 49.684823016001296,
+      "timeframe": "5",
+      "window": "SMA-100"
+    },
+    {
+      "delta_pp": -0.07556429885197957,
+      "included": true,
+      "instrument": "ES",
+      "mean_neighbor_rate": 49.015178998544386,
+      "n": 6177,
+      "neighbor_ns": {
+        "SMA-195": 6176,
+        "SMA-197": 6180,
+        "SMA-203": 6183,
+        "SMA-205": 6186
+      },
+      "neighbor_rates": {
+        "SMA-195": 49.04468911917098,
+        "SMA-197": 49.029126213592235,
+        "SMA-203": 48.98916383632541,
+        "SMA-205": 48.99773682508891
+      },
+      "rate_popular": 48.939614699692406,
+      "timeframe": "5",
+      "window": "SMA-200"
+    },
+    {
+      "delta_pp": 0.3136218487167781,
+      "included": true,
+      "instrument": "NQ",
+      "mean_neighbor_rate": 50.694409621534,
+      "n": 6101,
+      "neighbor_ns": {
+        "SMA-15": 6080,
+        "SMA-17": 6110,
+        "SMA-23": 6055,
+        "SMA-25": 6045
+      },
+      "neighbor_rates": {
+        "SMA-15": 51.266447368421055,
+        "SMA-17": 50.9328968903437,
+        "SMA-23": 50.42113955408753,
+        "SMA-25": 50.157154673283706
+      },
+      "rate_popular": 51.00803147025078,
+      "timeframe": "5",
+      "window": "SMA-20"
+    },
+    {
+      "delta_pp": -0.08633105490907411,
+      "included": true,
+      "instrument": "NQ",
+      "mean_neighbor_rate": 50.794454121814496,
+      "n": 6143,
+      "neighbor_ns": {
+        "SMA-45": 6106,
+        "SMA-47": 6121,
+        "SMA-53": 6144,
+        "SMA-55": 6163
+      },
+      "neighbor_rates": {
+        "SMA-45": 50.65509335080249,
+        "SMA-47": 50.72700539127594,
+        "SMA-53": 50.895182291666664,
+        "SMA-55": 50.9005354535129
+      },
+      "rate_popular": 50.70812306690542,
+      "timeframe": "5",
+      "window": "SMA-50"
+    },
+    {
+      "delta_pp": -0.0964327181306075,
+      "included": true,
+      "instrument": "NQ",
+      "mean_neighbor_rate": 50.81290349578316,
+      "n": 6211,
+      "neighbor_ns": {
+        "SMA-103": 6215,
+        "SMA-105": 6214,
+        "SMA-95": 6205,
+        "SMA-97": 6214
+      },
+      "neighbor_rates": {
+        "SMA-103": 50.925181013676585,
+        "SMA-105": 50.88509816543289,
+        "SMA-95": 50.71716357775987,
+        "SMA-97": 50.72417122626327
+      },
+      "rate_popular": 50.71647077765255,
+      "timeframe": "5",
+      "window": "SMA-100"
+    },
+    {
+      "delta_pp": -0.00024865909936266917,
+      "included": true,
+      "instrument": "NQ",
+      "mean_neighbor_rate": 50.49465618057772,
+      "n": 6169,
+      "neighbor_ns": {
+        "SMA-195": 6160,
+        "SMA-197": 6165,
+        "SMA-203": 6168,
+        "SMA-205": 6171
+      },
+      "neighbor_rates": {
+        "SMA-195": 50.51948051948052,
+        "SMA-197": 50.49472830494728,
+        "SMA-203": 50.470168612191955,
+        "SMA-205": 50.49424728569114
+      },
+      "rate_popular": 50.49440752147836,
+      "timeframe": "5",
+      "window": "SMA-200"
+    },
+    {
+      "delta_pp": 0.15938306040045802,
+      "included": true,
+      "instrument": "GC",
+      "mean_neighbor_rate": 52.87453953873953,
+      "n": 6279,
+      "neighbor_ns": {
+        "SMA-15": 6353,
+        "SMA-17": 6359,
+        "SMA-23": 6243,
+        "SMA-25": 6237
+      },
+      "neighbor_rates": {
+        "SMA-15": 53.344876436329294,
+        "SMA-17": 53.13728573675106,
+        "SMA-23": 52.53884350472529,
+        "SMA-25": 52.47715247715248
+      },
+      "rate_popular": 53.03392259913999,
+      "timeframe": "5",
+      "window": "SMA-20"
+    },
+    {
+      "delta_pp": -0.06519960678136272,
+      "included": true,
+      "instrument": "GC",
+      "mean_neighbor_rate": 51.491494427498495,
+      "n": 6275,
+      "neighbor_ns": {
+        "SMA-45": 6190,
+        "SMA-47": 6223,
+        "SMA-53": 6304,
+        "SMA-55": 6280
+      },
+      "neighbor_rates": {
+        "SMA-45": 51.74474959612278,
+        "SMA-47": 51.614976699341156,
+        "SMA-53": 51.36421319796954,
+        "SMA-55": 51.24203821656051
+      },
+      "rate_popular": 51.42629482071713,
+      "timeframe": "5",
+      "window": "SMA-50"
+    },
+    {
+      "delta_pp": 0.1252972500535492,
+      "included": true,
+      "instrument": "GC",
+      "mean_neighbor_rate": 50.400205068339034,
+      "n": 6470,
+      "neighbor_ns": {
+        "SMA-103": 6480,
+        "SMA-105": 6484,
+        "SMA-95": 6447,
+        "SMA-97": 6458
+      },
+      "neighbor_rates": {
+        "SMA-103": 50.29320987654321,
+        "SMA-105": 50.416409623689084,
+        "SMA-95": 50.4885993485342,
+        "SMA-97": 50.402601424589655
+      },
+      "rate_popular": 50.52550231839258,
+      "timeframe": "5",
+      "window": "SMA-100"
+    },
+    {
+      "delta_pp": -0.08888328411101298,
+      "included": true,
+      "instrument": "GC",
+      "mean_neighbor_rate": 49.403288833393155,
+      "n": 6199,
+      "neighbor_ns": {
+        "SMA-195": 6183,
+        "SMA-197": 6190,
+        "SMA-203": 6208,
+        "SMA-205": 6211
+      },
+      "neighbor_rates": {
+        "SMA-195": 49.57140546660197,
+        "SMA-197": 49.49919224555735,
+        "SMA-203": 49.27512886597938,
+        "SMA-205": 49.267428755433905
+      },
+      "rate_popular": 49.31440554928214,
+      "timeframe": "5",
+      "window": "SMA-200"
+    },
+    {
+      "delta_pp": 0.19120621066792864,
+      "included": true,
+      "instrument": "CL",
+      "mean_neighbor_rate": 48.653960598570734,
+      "n": 7014,
+      "neighbor_ns": {
+        "SMA-15": 6957,
+        "SMA-17": 7013,
+        "SMA-23": 7098,
+        "SMA-25": 7106
+      },
+      "neighbor_rates": {
+        "SMA-15": 49.044128216185136,
+        "SMA-17": 48.88065022101811,
+        "SMA-23": 48.337559876021416,
+        "SMA-25": 48.35350408105826
+      },
+      "rate_popular": 48.84516680923866,
+      "timeframe": "5",
+      "window": "SMA-20"
+    },
+    {
+      "delta_pp": 0.013022252153028546,
+      "included": true,
+      "instrument": "CL",
+      "mean_neighbor_rate": 47.64366888279898,
+      "n": 7084,
+      "neighbor_ns": {
+        "SMA-45": 7112,
+        "SMA-47": 7090,
+        "SMA-53": 7097,
+        "SMA-55": 7093
+      },
+      "neighbor_rates": {
+        "SMA-45": 47.694038245219346,
+        "SMA-47": 47.65867418899859,
+        "SMA-53": 47.653938283781876,
+        "SMA-55": 47.56802481319611
+      },
+      "rate_popular": 47.656691134952005,
+      "timeframe": "5",
+      "window": "SMA-50"
+    },
+    {
+      "delta_pp": 0.10722923427335473,
+      "included": true,
+      "instrument": "CL",
+      "mean_neighbor_rate": 47.69610363998639,
+      "n": 7261,
+      "neighbor_ns": {
+        "SMA-103": 7253,
+        "SMA-105": 7250,
+        "SMA-95": 7261,
+        "SMA-97": 7274
+      },
+      "neighbor_rates": {
+        "SMA-103": 47.70439818006342,
+        "SMA-105": 47.682758620689654,
+        "SMA-95": 47.66561079741083,
+        "SMA-97": 47.731646961781685
+      },
+      "rate_popular": 47.803332874259745,
+      "timeframe": "5",
+      "window": "SMA-100"
+    },
+    {
+      "delta_pp": 0.0680677667969718,
+      "included": true,
+      "instrument": "CL",
+      "mean_neighbor_rate": 46.90943291089346,
+      "n": 7378,
+      "neighbor_ns": {
+        "SMA-195": 7375,
+        "SMA-197": 7373,
+        "SMA-203": 7389,
+        "SMA-205": 7388
+      },
+      "neighbor_rates": {
+        "SMA-195": 46.91525423728814,
+        "SMA-197": 46.968669469686695,
+        "SMA-203": 46.86696440655028,
+        "SMA-205": 46.88684353004873
+      },
+      "rate_popular": 46.97750067769043,
+      "timeframe": "5",
+      "window": "SMA-200"
+    },
+    {
+      "delta_pp": -0.1034521832481019,
+      "included": true,
+      "instrument": "ZN",
+      "mean_neighbor_rate": 38.592061184915075,
+      "n": 5399,
+      "neighbor_ns": {
+        "SMA-15": 5372,
+        "SMA-17": 5362,
+        "SMA-23": 5413,
+        "SMA-25": 5416
+      },
+      "neighbor_rates": {
+        "SMA-15": 39.463886820551004,
+        "SMA-17": 39.03394255874674,
+        "SMA-23": 38.05653057454277,
+        "SMA-25": 37.813884785819795
+      },
+      "rate_popular": 38.48860900166697,
+      "timeframe": "5",
+      "window": "SMA-20"
+    },
+    {
+      "delta_pp": -0.031840602716350475,
+      "included": true,
+      "instrument": "ZN",
+      "mean_neighbor_rate": 36.93247870663613,
+      "n": 5485,
+      "neighbor_ns": {
+        "SMA-45": 5480,
+        "SMA-47": 5483,
+        "SMA-53": 5476,
+        "SMA-55": 5463
+      },
+      "neighbor_rates": {
+        "SMA-45": 37.13503649635037,
+        "SMA-47": 37.11471821995258,
+        "SMA-53": 36.760409057706354,
+        "SMA-55": 36.71975105253524
+      },
+      "rate_popular": 36.90063810391978,
+      "timeframe": "5",
+      "window": "SMA-50"
+    },
+    {
+      "delta_pp": -0.06733585300244016,
+      "included": true,
+      "instrument": "ZN",
+      "mean_neighbor_rate": 35.54343811309877,
+      "n": 5398,
+      "neighbor_ns": {
+        "SMA-103": 5402,
+        "SMA-105": 5406,
+        "SMA-95": 5408,
+        "SMA-97": 5397
+      },
+      "neighbor_rates": {
+        "SMA-103": 35.35727508330248,
+        "SMA-105": 35.47909729929708,
+        "SMA-95": 35.650887573964496,
+        "SMA-97": 35.68649249583102
+      },
+      "rate_popular": 35.47610226009633,
+      "timeframe": "5",
+      "window": "SMA-100"
+    },
+    {
+      "delta_pp": -0.025344157742516416,
+      "included": true,
+      "instrument": "ZN",
+      "mean_neighbor_rate": 34.00051061446377,
+      "n": 5557,
+      "neighbor_ns": {
+        "SMA-195": 5560,
+        "SMA-197": 5566,
+        "SMA-203": 5551,
+        "SMA-205": 5552
+      },
+      "neighbor_rates": {
+        "SMA-195": 34.13669064748201,
+        "SMA-197": 34.099892202659,
+        "SMA-203": 33.83174202846334,
+        "SMA-205": 33.93371757925072
+      },
+      "rate_popular": 33.975166456721254,
+      "timeframe": "5",
+      "window": "SMA-200"
+    },
+    {
+      "delta_pp": -0.01364609215768553,
+      "included": true,
+      "instrument": "6E",
+      "mean_neighbor_rate": 46.743271835424565,
+      "n": 5718,
+      "neighbor_ns": {
+        "SMA-15": 5755,
+        "SMA-17": 5751,
+        "SMA-23": 5699,
+        "SMA-25": 5694
+      },
+      "neighbor_rates": {
+        "SMA-15": 47.089487402258904,
+        "SMA-17": 46.84402712571727,
+        "SMA-23": 46.53447973328654,
+        "SMA-25": 46.50509308043554
+      },
+      "rate_popular": 46.72962574326688,
+      "timeframe": "5",
+      "window": "SMA-20"
+    },
+    {
+      "delta_pp": -0.38876826098589845,
+      "included": true,
+      "instrument": "6E",
+      "mean_neighbor_rate": 46.38665260513258,
+      "n": 5672,
+      "neighbor_ns": {
+        "SMA-45": 5629,
+        "SMA-47": 5652,
+        "SMA-53": 5715,
+        "SMA-55": 5672
+      },
+      "neighbor_rates": {
+        "SMA-45": 46.36702789127732,
+        "SMA-47": 46.24911535739561,
+        "SMA-53": 46.47419072615923,
+        "SMA-55": 46.456276445698165
+      },
+      "rate_popular": 45.997884344146684,
+      "timeframe": "5",
+      "window": "SMA-50"
+    },
+    {
+      "delta_pp": -0.08576759319266358,
+      "included": true,
+      "instrument": "6E",
+      "mean_neighbor_rate": 46.481761154272974,
+      "n": 5591,
+      "neighbor_ns": {
+        "SMA-103": 5579,
+        "SMA-105": 5572,
+        "SMA-95": 5615,
+        "SMA-97": 5602
+      },
+      "neighbor_rates": {
+        "SMA-103": 46.549560853199495,
+        "SMA-105": 46.51830581478823,
+        "SMA-95": 46.37577916295637,
+        "SMA-97": 46.4833987861478
+      },
+      "rate_popular": 46.39599356108031,
+      "timeframe": "5",
+      "window": "SMA-100"
+    },
+    {
+      "delta_pp": -0.06437366112551501,
+      "included": true,
+      "instrument": "6E",
+      "mean_neighbor_rate": 46.66581547368988,
+      "n": 5826,
+      "neighbor_ns": {
+        "SMA-195": 5820,
+        "SMA-197": 5827,
+        "SMA-203": 5822,
+        "SMA-205": 5820
+      },
+      "neighbor_rates": {
+        "SMA-195": 46.735395189003434,
+        "SMA-197": 46.64492877981809,
+        "SMA-203": 46.650635520439714,
+        "SMA-205": 46.63230240549828
+      },
+      "rate_popular": 46.60144181256437,
+      "timeframe": "5",
+      "window": "SMA-200"
+    },
+    {
+      "delta_pp": 0.13545661890994865,
+      "included": true,
+      "instrument": "6J",
+      "mean_neighbor_rate": 45.76435785233309,
+      "n": 5390,
+      "neighbor_ns": {
+        "SMA-15": 5353,
+        "SMA-17": 5378,
+        "SMA-23": 5416,
+        "SMA-25": 5405
+      },
+      "neighbor_rates": {
+        "SMA-15": 45.97422006351579,
+        "SMA-17": 45.85347712904426,
+        "SMA-23": 45.753323485967506,
+        "SMA-25": 45.47641073080481
+      },
+      "rate_popular": 45.89981447124304,
+      "timeframe": "5",
+      "window": "SMA-20"
+    },
+    {
+      "delta_pp": -0.16085847454104396,
+      "included": true,
+      "instrument": "6J",
+      "mean_neighbor_rate": 45.37180488275085,
+      "n": 5262,
+      "neighbor_ns": {
+        "SMA-45": 5282,
+        "SMA-47": 5290,
+        "SMA-53": 5248,
+        "SMA-55": 5235
+      },
+      "neighbor_rates": {
+        "SMA-45": 45.304808784551305,
+        "SMA-47": 45.36862003780718,
+        "SMA-53": 45.36966463414634,
+        "SMA-55": 45.44412607449857
+      },
+      "rate_popular": 45.21094640820981,
+      "timeframe": "5",
+      "window": "SMA-50"
+    },
+    {
+      "delta_pp": 0.14384216847025755,
+      "included": true,
+      "instrument": "6J",
+      "mean_neighbor_rate": 45.33790528814255,
+      "n": 5013,
+      "neighbor_ns": {
+        "SMA-103": 5008,
+        "SMA-105": 5016,
+        "SMA-95": 5001,
+        "SMA-97": 5009
+      },
+      "neighbor_rates": {
+        "SMA-103": 45.447284345047926,
+        "SMA-105": 45.334928229665074,
+        "SMA-95": 45.27094581083783,
+        "SMA-97": 45.298462767019366
+      },
+      "rate_popular": 45.48174745661281,
+      "timeframe": "5",
+      "window": "SMA-100"
+    },
+    {
+      "delta_pp": -0.1010741629287395,
+      "included": true,
+      "instrument": "6J",
+      "mean_neighbor_rate": 44.31796513230654,
+      "n": 5127,
+      "neighbor_ns": {
+        "SMA-195": 5146,
+        "SMA-197": 5133,
+        "SMA-203": 5115,
+        "SMA-205": 5101
+      },
+      "neighbor_rates": {
+        "SMA-195": 44.34512242518461,
+        "SMA-197": 44.398986947204364,
+        "SMA-203": 44.28152492668622,
+        "SMA-205": 44.24622623015095
+      },
+      "rate_popular": 44.2168909693778,
+      "timeframe": "5",
+      "window": "SMA-200"
+    },
+    {
+      "delta_pp": -0.049448817382028665,
+      "included": true,
+      "instrument": "NKD",
+      "mean_neighbor_rate": 49.02198578684621,
+      "n": 5207,
+      "neighbor_ns": {
+        "SMA-15": 5232,
+        "SMA-17": 5223,
+        "SMA-23": 5217,
+        "SMA-25": 5237
+      },
+      "neighbor_rates": {
+        "SMA-15": 49.120795107033636,
+        "SMA-17": 48.803369710894124,
+        "SMA-23": 49.185355568334295,
+        "SMA-25": 48.97842276112278
+      },
+      "rate_popular": 48.97253696946418,
+      "timeframe": "5",
+      "window": "SMA-20"
+    },
+    {
+      "delta_pp": 0.07098216271371882,
+      "included": true,
+      "instrument": "NKD",
+      "mean_neighbor_rate": 48.08325760336815,
+      "n": 5472,
+      "neighbor_ns": {
+        "SMA-45": 5429,
+        "SMA-47": 5439,
+        "SMA-53": 5463,
+        "SMA-55": 5479
+      },
+      "neighbor_rates": {
+        "SMA-45": 47.8909559771597,
+        "SMA-47": 48.189005331862475,
+        "SMA-53": 48.160351455244374,
+        "SMA-55": 48.09271764920606
+      },
+      "rate_popular": 48.15423976608187,
+      "timeframe": "5",
+      "window": "SMA-50"
+    },
+    {
+      "delta_pp": 0.007593216579081741,
+      "included": true,
+      "instrument": "NKD",
+      "mean_neighbor_rate": 48.39182475359189,
+      "n": 5498,
+      "neighbor_ns": {
+        "SMA-103": 5502,
+        "SMA-105": 5498,
+        "SMA-95": 5515,
+        "SMA-97": 5497
+      },
+      "neighbor_rates": {
+        "SMA-103": 48.45510723373319,
+        "SMA-105": 48.47217169879956,
+        "SMA-95": 48.32275611967362,
+        "SMA-97": 48.31726396216118
+      },
+      "rate_popular": 48.39941797017097,
+      "timeframe": "5",
+      "window": "SMA-100"
+    },
+    {
+      "delta_pp": 0.02830270639223187,
+      "included": true,
+      "instrument": "NKD",
+      "mean_neighbor_rate": 48.420106913468125,
+      "n": 5156,
+      "neighbor_ns": {
+        "SMA-195": 5176,
+        "SMA-197": 5157,
+        "SMA-203": 5123,
+        "SMA-205": 5114
+      },
+      "neighbor_rates": {
+        "SMA-195": 48.37712519319938,
+        "SMA-197": 48.43901493116153,
+        "SMA-203": 48.448174897520985,
+        "SMA-205": 48.416112631990615
+      },
+      "rate_popular": 48.44840961986036,
+      "timeframe": "5",
+      "window": "SMA-200"
+    },
+    {
+      "delta_pp": -0.023070950477240615,
+      "included": true,
+      "instrument": "SPX",
+      "mean_neighbor_rate": 41.88973761714391,
+      "n": 375,
+      "neighbor_ns": {
+        "SMA-15": 359,
+        "SMA-17": 368,
+        "SMA-23": 384,
+        "SMA-25": 381
+      },
+      "neighbor_rates": {
+        "SMA-15": 41.5041782729805,
+        "SMA-17": 42.391304347826086,
+        "SMA-23": 41.40625,
+        "SMA-25": 42.25721784776903
+      },
+      "rate_popular": 41.86666666666667,
+      "timeframe": "1M",
+      "window": "SMA-20"
+    },
+    {
+      "delta_pp": -0.1502708948059137,
+      "included": true,
+      "instrument": "SPX",
+      "mean_neighbor_rate": 41.900270894805914,
+      "n": 400,
+      "neighbor_ns": {
+        "SMA-45": 395,
+        "SMA-47": 400,
+        "SMA-53": 411,
+        "SMA-55": 417
+      },
+      "neighbor_rates": {
+        "SMA-45": 42.0253164556962,
+        "SMA-47": 42.0,
+        "SMA-53": 41.84914841849148,
+        "SMA-55": 41.726618705035975
+      },
+      "rate_popular": 41.75,
+      "timeframe": "1M",
+      "window": "SMA-50"
+    },
+    {
+      "delta_pp": 0.08052869604730262,
+      "included": true,
+      "instrument": "SPX",
+      "mean_neighbor_rate": 40.843563713193625,
+      "n": 606,
+      "neighbor_ns": {
+        "SMA-103": 614,
+        "SMA-105": 618,
+        "SMA-95": 575,
+        "SMA-97": 590
+      },
+      "neighbor_rates": {
+        "SMA-103": 41.042345276872965,
+        "SMA-105": 40.614886731391586,
+        "SMA-95": 40.869565217391305,
+        "SMA-97": 40.847457627118644
+      },
+      "rate_popular": 40.92409240924093,
+      "timeframe": "1M",
+      "window": "SMA-100"
+    },
+    {
+      "delta_pp": -0.13431004004760183,
+      "included": true,
+      "instrument": "SPX",
+      "mean_neighbor_rate": 39.55901393175657,
+      "n": 591,
+      "neighbor_ns": {
+        "SMA-195": 604,
+        "SMA-197": 599,
+        "SMA-203": 589,
+        "SMA-205": 584
+      },
+      "neighbor_rates": {
+        "SMA-195": 39.735099337748345,
+        "SMA-197": 39.89983305509182,
+        "SMA-203": 39.38879456706282,
+        "SMA-205": 39.21232876712329
+      },
+      "rate_popular": 39.424703891708965,
+      "timeframe": "1M",
+      "window": "SMA-200"
+    },
+    {
+      "delta_pp": NaN,
+      "included": false,
+      "instrument": "GC",
+      "mean_neighbor_rate": 47.79484626993218,
+      "n": 98,
+      "neighbor_ns": {
+        "SMA-15": 81,
+        "SMA-17": 84,
+        "SMA-23": 97,
+        "SMA-25": 97
+      },
+      "neighbor_rates": {
+        "SMA-15": 50.617283950617285,
+        "SMA-17": 48.80952380952381,
+        "SMA-23": 46.391752577319586,
+        "SMA-25": 45.36082474226804
+      },
+      "rate_popular": 47.95918367346939,
+      "timeframe": "1M",
+      "window": "SMA-20"
+    },
+    {
+      "delta_pp": NaN,
+      "included": false,
+      "instrument": "GC",
+      "mean_neighbor_rate": 43.1745848672631,
+      "n": 144,
+      "neighbor_ns": {
+        "SMA-45": 139,
+        "SMA-47": 143,
+        "SMA-53": 149,
+        "SMA-55": 153
+      },
+      "neighbor_rates": {
+        "SMA-45": 44.60431654676259,
+        "SMA-47": 42.65734265734266,
+        "SMA-53": 42.95302013422819,
+        "SMA-55": 42.48366013071895
+      },
+      "rate_popular": 43.75,
+      "timeframe": "1M",
+      "window": "SMA-50"
+    },
+    {
+      "delta_pp": -0.7292301194740247,
+      "included": true,
+      "instrument": "GC",
+      "mean_neighbor_rate": 43.110182500426404,
+      "n": 210,
+      "neighbor_ns": {
+        "SMA-103": 220,
+        "SMA-105": 220,
+        "SMA-95": 205,
+        "SMA-97": 208
+      },
+      "neighbor_rates": {
+        "SMA-103": 44.09090909090909,
+        "SMA-105": 44.09090909090909,
+        "SMA-95": 41.951219512195124,
+        "SMA-97": 42.30769230769231
+      },
+      "rate_popular": 42.38095238095238,
+      "timeframe": "1M",
+      "window": "SMA-100"
+    },
+    {
+      "delta_pp": NaN,
+      "included": false,
+      "instrument": "GC",
+      "mean_neighbor_rate": 43.88995388698631,
+      "n": 177,
+      "neighbor_ns": {
+        "SMA-195": 182,
+        "SMA-197": 181,
+        "SMA-203": 177,
+        "SMA-205": 173
+      },
+      "neighbor_rates": {
+        "SMA-195": 44.505494505494504,
+        "SMA-197": 44.19889502762431,
+        "SMA-203": 43.50282485875706,
+        "SMA-205": 43.35260115606936
+      },
+      "rate_popular": 43.50282485875706,
+      "timeframe": "1M",
+      "window": "SMA-200"
+    }
+  ],
+  "summary": {
+    "by_timeframe": {
+      "5-Minute": {
+        "mean": 0.002277608781742213,
+        "median": -0.0069473756285240995,
+        "n": 32,
+        "n_positive": 15,
+        "p_one_sided_popular_higher": 0.46047216370492955,
+        "p_two_sided": 0.9209443274098591,
+        "sd": 0.12876918697325168,
+        "sign_test_p": 0.860050065908581,
+        "t": 0.10005577590822193,
+        "wilcoxon_p": 0.91921989293769,
+        "wilcoxon_stat": 258.0
+      },
+      "Daily": {
+        "mean": -0.01579083125705038,
+        "median": -0.007028222656476402,
+        "n": 52,
+        "n_positive": 24,
+        "p_one_sided_popular_higher": 0.6579665470123819,
+        "p_two_sided": 0.6840669059752361,
+        "sd": 0.2782361854594984,
+        "sign_test_p": 0.6778086391424605,
+        "t": -0.4092541139857047,
+        "wilcoxon_p": 0.6358139413574304,
+        "wilcoxon_stat": 637.0
+      },
+      "Hourly": {
+        "mean": 0.020938356276905285,
+        "median": 0.023513306728446537,
+        "n": 48,
+        "n_positive": 29,
+        "p_one_sided_popular_higher": 0.17338790278202848,
+        "p_two_sided": 0.34677580556405696,
+        "sd": 0.15263749707013174,
+        "sign_test_p": 0.19341265286193737,
+        "t": 0.950390240791633,
+        "wilcoxon_p": 0.264022556961514,
+        "wilcoxon_stat": 478.0
+      },
+      "Monthly": {
+        "mean": -0.19127066175149565,
+        "median": -0.13431004004760183,
+        "n": 5,
+        "n_positive": 1,
+        "p_one_sided_popular_higher": 0.8770591562618937,
+        "p_two_sided": 0.24588168747621253,
+        "sd": 0.3148380159860724,
+        "sign_test_p": 0.375,
+        "t": -1.3584579372925323,
+        "wilcoxon_p": 0.1875,
+        "wilcoxon_stat": 2.0
+      }
+    },
+    "by_window": {
+      "SMA-100": {
+        "mean": -0.03750689323389074,
+        "median": -0.002596967337915146,
+        "n": 35,
+        "n_positive": 17,
+        "p_one_sided_popular_higher": 0.8622619647558726,
+        "p_two_sided": 0.27547607048825484,
+        "sd": 0.20019610817277195,
+        "sign_test_p": 0.9999999999999998,
+        "t": -1.1083820500466444,
+        "wilcoxon_p": 0.4708104995661415,
+        "wilcoxon_stat": 270.0
+      },
+      "SMA-20": {
+        "mean": 0.02870912134354054,
+        "median": 0.03885783248497887,
+        "n": 34,
+        "n_positive": 19,
+        "p_one_sided_popular_higher": 0.2818211413299262,
+        "p_two_sided": 0.5636422826598524,
+        "sd": 0.28697960972923575,
+        "sign_test_p": 0.6075913612730801,
+        "t": 0.5833219497908027,
+        "wilcoxon_p": 0.35160549916327,
+        "wilcoxon_stat": 242.0
+      },
+      "SMA-200": {
+        "mean": 0.005062532575961728,
+        "median": 0.0035663451923539924,
+        "n": 34,
+        "n_positive": 17,
+        "p_one_sided_popular_higher": 0.39254466974555685,
+        "p_two_sided": 0.7850893394911137,
+        "sd": 0.10737326190216694,
+        "sign_test_p": 1.1358337595593184,
+        "t": 0.274923043163359,
+        "wilcoxon_p": 0.9059782412368804,
+        "wilcoxon_stat": 290.0
+      },
+      "SMA-50": {
+        "mean": -0.0157366741733469,
+        "median": -0.011857662432145588,
+        "n": 34,
+        "n_positive": 16,
+        "p_one_sided_popular_higher": 0.6591211024362066,
+        "p_two_sided": 0.6817577951275868,
+        "sd": 0.22179356041378906,
+        "sign_test_p": 0.8641662404406816,
+        "t": -0.4137171066574187,
+        "wilcoxon_p": 0.6606290930649266,
+        "wilcoxon_stat": 271.0
+      }
+    },
+    "n_evaluated": 140,
+    "n_included": 137,
+    "overall": {
+      "mean": -0.005106218626400681,
+      "median": 0.003178444434489336,
+      "n": 137,
+      "n_positive": 69,
+      "p_one_sided_popular_higher": 0.6103019046794071,
+      "p_two_sided": 0.7793961906411857,
+      "sd": 0.21294926013129484,
+      "sign_test_p": 0.9999999999999993,
+      "t": -0.28066195986639014,
+      "wilcoxon_p": 0.9974285977716891,
+      "wilcoxon_stat": 4725.0
+    }
+  }
+}
