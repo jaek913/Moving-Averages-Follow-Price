@@ -36,3 +36,15 @@ The git timestamps in this repo therefore document **when the port happened**, n
 **Decisions:**
 1. The JSON generated on the author's machine from the canonical project-local store is the canonical committed output; Claude-environment runs are pre-checks.
 2. Phase 3 policy: `claims.lock` tolerances for floating-point values are **relative (~1e-12)**, never exact-float equality; event counts and other integers remain exact. `verify.py` compares within tolerance.
+
+---
+
+## 2026-06-09 — E2+E3 committed; tolerance policy refined per optimizer-dependence
+
+**E2 (direction test) and E3 (synthetic controls) committed** — commit `171ba1d` (scripts MD5 `0d8ec3ce78e78add0394c7e0232255c1` / `a989a3032e1a34cfb1be45a9a995c69f`, JSONs regenerated on the author's machine, plus the prior DECISIONS entry).
+
+**E2 reproduces the prior reconstruction value-for-value** (verified by running the old script side-by-side on identical data): Hull-50 attraction HSI 53.2 / GC 53.0 / 6E 54.0 with eight ~50%; SMA-200 repulsion SPX 47.8 / NDX 47.0 / NI225 45.8; only NI225 survives drift adjustment (z = −4.04). The paper's printed GC 52.9 and z −4.08 are the manuscript's values; the reconstruction's 53.0 / −4.04 were already adjudicated as within rounding in the prior iteration and are carried as the rebuild's canonical values. `direction_test.json` is **byte-identical** between the author's machine and the Claude pre-check — E2 is fully deterministic cross-machine.
+
+**E3 load-bearing checks green:** GARCH control mean 99.1% across 9 instruments (deterministic, D15 seeding) and large-sample i.i.d. expectation 100.57% (SE 0.89) — the aggregate-S_W metric is approximately unbiased under zero attraction. The seed-42 20-sim batch mean is **103.94%** in the rebuild (identical on both machines); the paper's printed 104.6% remains characterized as prior discrepancy D06 (one batch from the original environment, not the metric's expectation). The rebuild's canonical batch value is 103.94%.
+
+**Finding — tolerance policy refined.** Cross-machine comparison of `synthetic_control.json`: iid rows identical; large-sample rows differ at pure machine epsilon (max 2.2e-16); **GARCH rows differ up to 3.8e-2** in raw fitted/simulated values (persistence, per-instrument mean/sd) because scipy's MLE optimizer differs across versions — while every rounded summary value matches at 0.1 precision. Policy (supersedes the blanket ~1e-12 of the previous entry): per-claim tolerances in `claims.lock` — deterministic-arithmetic floats at relative ~1e-12; **optimizer-dependent quantities (GARCH MLE fits and their simulations) at absolute ~0.1 pp**; integers exact. The author-machine JSON remains canonical.
