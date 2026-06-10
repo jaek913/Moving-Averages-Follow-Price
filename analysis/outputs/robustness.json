@@ -1,0 +1,1527 @@
+{
+  "design_ref": "DESIGN.md section E7 (amended 2026-06-09)",
+  "experiment": "E7_robustness_battery",
+  "inputs": {
+    "6E": {
+      "file": "CME_6E1!, 1D_9dd8b.csv",
+      "sha256": "4422e3a4631493125d31eaa3906e3bb74351c2b9b90ede76bd3dd53651b06c5f"
+    },
+    "6J": {
+      "file": "CME_6J1!, 1D_01e58.csv",
+      "sha256": "f342d871ee4af468f323633e7f857725da67efc82259b3e1d28bb2384b21006c"
+    },
+    "CL": {
+      "file": "NYMEX_CL1!, 1D_de4b1.csv",
+      "sha256": "f32fb49cd7653c01cbcd91e43a58615811be04f4ed84c22d4b061711c96494f4"
+    },
+    "DAX": {
+      "file": "XETR_DLY_DAX, 1D_cd703.csv",
+      "sha256": "4531616311c17b8cbd5781ba20717ac5a93c31d348282474fff9c39f7c144491"
+    },
+    "ES": {
+      "file": "CME_MINI_ES1!, 1D_40b30.csv",
+      "sha256": "b81fc7a91bd0ee202291b8bfc9411f812f7f99042f167fd87819026fb2d67bab"
+    },
+    "FTSE": {
+      "file": "IG_FTSE, 1D_c9679.csv",
+      "sha256": "ae76f4a65e6c65e96ea141fe4d23e8348a7033d9e8348a46efd681c5dbf31e1c"
+    },
+    "GC": {
+      "file": "COMEX_GC1!, 1D_1e2f0.csv",
+      "sha256": "cd71339445b1c5107c808b8dad76b77383aadada26b0b240a086d323430e67d0"
+    },
+    "HSI": {
+      "file": "HKEX_DLY_HSI1!, 1D_57a14.csv",
+      "sha256": "840dbd3fce9da09b06d5e4aa459a8070ed352735230bd171bbcc2546e69ef99c"
+    },
+    "NI225": {
+      "file": "TVC_NI225, 1D_8be07.csv",
+      "sha256": "271da7a404086ff9c939daf8c8ff18cf3eb4d45c60214a3e5e53a42f1ee70228"
+    },
+    "NKD": {
+      "file": "CME_NKD1!, 1D_92650.csv",
+      "sha256": "c8468adf2dac6bbf9ec385bfefb69414a3e0e26a639722bccfaface33875afd0"
+    },
+    "NQ": {
+      "file": "CME_MINI_NQ1!, 1D_de2b2.csv",
+      "sha256": "105b8be21760373023f21aa58777933d4299fcfa6a8bdd591e260fb562538375"
+    },
+    "SPX": {
+      "file": "SP_SPX, 1D_5871b.csv",
+      "sha256": "c75e8fb61149f5ba606ebe5a3881db40a1015ff49e322a590cf6e7a7d537cbe7"
+    },
+    "ZN": {
+      "file": "CBOT_ZN1!, 1D_3436b.csv",
+      "sha256": "d2d88f9c7614e0c9995952a885f1a297c4fc6eb1a3dfcbef6e593b45fcd44840"
+    }
+  },
+  "params": {
+    "eight_specs": [
+      "Hull-20",
+      "Hull-50",
+      "Hull-100",
+      "SMA-20",
+      "SMA-50",
+      "SMA-100",
+      "SMA-200",
+      "EMA-50"
+    ],
+    "eras": [
+      "pre-1930",
+      "1930-1960",
+      "1960-1990",
+      "1990-2026"
+    ],
+    "filter_matched": {
+      "EMA-50": 75,
+      "Hull-50": 55,
+      "SMA-200": 200,
+      "SMA-50": 50
+    },
+    "horizon_grid": [
+      21,
+      63,
+      126,
+      252
+    ],
+    "isoos_instruments": [
+      "SPX",
+      "NQ",
+      "NI225",
+      "DAX",
+      "FTSE",
+      "HSI",
+      "CL",
+      "GC",
+      "ZN",
+      "6E",
+      "6J",
+      "ES",
+      "NKD"
+    ],
+    "n_offsets": 63,
+    "rolling_start_years": [
+      1931,
+      1936,
+      1941,
+      1946,
+      1951,
+      1956,
+      1961,
+      1966,
+      1971,
+      1976,
+      1981,
+      1986,
+      1991,
+      1996,
+      2001,
+      2006,
+      2011
+    ],
+    "threshold_grid": [
+      50,
+      75,
+      90
+    ]
+  },
+  "results": {
+    "eight_spec": {
+      "n_above_50": 8,
+      "range_pct": [
+        89.9,
+        114.2
+      ],
+      "rows": [
+        {
+          "agg": 0.9297382663066219,
+          "n": 297,
+          "spec": "Hull-20"
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "spec": "Hull-50"
+        },
+        {
+          "agg": 1.0099072714132111,
+          "n": 230,
+          "spec": "Hull-100"
+        },
+        {
+          "agg": 1.1415099462008658,
+          "n": 239,
+          "spec": "SMA-20"
+        },
+        {
+          "agg": 0.9621108513104096,
+          "n": 188,
+          "spec": "SMA-50"
+        },
+        {
+          "agg": 1.0283489478104209,
+          "n": 140,
+          "spec": "SMA-100"
+        },
+        {
+          "agg": 1.0900275377308406,
+          "n": 116,
+          "spec": "SMA-200"
+        },
+        {
+          "agg": 1.091927443370543,
+          "n": 197,
+          "spec": "EMA-50"
+        }
+      ]
+    },
+    "eras": {
+      "binning_rule": "span: event date AND horizon-end date inside era",
+      "modern_direction": {
+        "p": 0.008878221360101746,
+        "rate": 0.5305676855895196,
+        "total": 1832,
+        "z": 2.616708155689584
+      },
+      "rows": [
+        {
+          "agg": 3.0771842710604007,
+          "direction_p": 0.805540588667494,
+          "direction_z": -0.24618298195866523,
+          "era": "pre-1930",
+          "interpreted": false,
+          "n": 3,
+          "n_direction": 66,
+          "toward_rate": 0.48484848484848486
+        },
+        {
+          "agg": 0.8676307840267103,
+          "direction_p": 0.06250891619644805,
+          "direction_z": 1.8626685293361294,
+          "era": "1930-1960",
+          "interpreted": true,
+          "n": 63,
+          "n_direction": 558,
+          "toward_rate": 0.5394265232974911
+        },
+        {
+          "agg": 0.7084170470637619,
+          "direction_p": 0.21550220278719978,
+          "direction_z": -1.2385769657790666,
+          "era": "1960-1990",
+          "interpreted": true,
+          "n": 88,
+          "n_direction": 1262,
+          "toward_rate": 0.48256735340729
+        },
+        {
+          "agg": 0.8059977599233444,
+          "direction_p": 0.008878221360101746,
+          "direction_z": 2.616708155689584,
+          "era": "1990-2026",
+          "interpreted": true,
+          "n": 104,
+          "n_direction": 1832,
+          "toward_rate": 0.5305676855895196
+        }
+      ]
+    },
+    "filter_matched": {
+      "rows": [
+        {
+          "agg_h63": 0.8985461302819053,
+          "agg_matched": 1.0999171662576188,
+          "instrument": "SPX",
+          "matched_h": 55,
+          "n_h63": 260,
+          "n_matched": 282,
+          "spec": "Hull-50"
+        },
+        {
+          "agg_h63": 1.260716095539252,
+          "agg_matched": 0.8208952596132767,
+          "instrument": "NQ",
+          "matched_h": 55,
+          "n_h63": 64,
+          "n_matched": 68,
+          "spec": "Hull-50"
+        },
+        {
+          "agg_h63": 1.2339706832313955,
+          "agg_matched": 0.9958164561934979,
+          "instrument": "NI225",
+          "matched_h": 55,
+          "n_h63": 236,
+          "n_matched": 260,
+          "spec": "Hull-50"
+        },
+        {
+          "agg_h63": 1.0263375652176678,
+          "agg_matched": 1.0012665746523408,
+          "instrument": "DAX",
+          "matched_h": 55,
+          "n_h63": 183,
+          "n_matched": 205,
+          "spec": "Hull-50"
+        },
+        {
+          "agg_h63": 0.8034585810890374,
+          "agg_matched": 0.8532649573860909,
+          "instrument": "FTSE",
+          "matched_h": 55,
+          "n_h63": 97,
+          "n_matched": 107,
+          "spec": "Hull-50"
+        },
+        {
+          "agg_h63": 0.6347700527232512,
+          "agg_matched": 0.9817359546547225,
+          "instrument": "HSI",
+          "matched_h": 55,
+          "n_h63": 113,
+          "n_matched": 127,
+          "spec": "Hull-50"
+        },
+        {
+          "agg_h63": 1.0386789950651405,
+          "agg_matched": 1.1679462580989386,
+          "instrument": "CL",
+          "matched_h": 55,
+          "n_h63": 145,
+          "n_matched": 164,
+          "spec": "Hull-50"
+        },
+        {
+          "agg_h63": 1.4239483549574738,
+          "agg_matched": 0.8466844310528177,
+          "instrument": "GC",
+          "matched_h": 55,
+          "n_h63": 150,
+          "n_matched": 172,
+          "spec": "Hull-50"
+        },
+        {
+          "agg_h63": 0.74060980123342,
+          "agg_matched": 0.5762079765709274,
+          "instrument": "ZN",
+          "matched_h": 55,
+          "n_h63": 131,
+          "n_matched": 148,
+          "spec": "Hull-50"
+        },
+        {
+          "agg_h63": 1.2972132091384525,
+          "agg_matched": 1.2498669173929682,
+          "instrument": "6E",
+          "matched_h": 55,
+          "n_h63": 75,
+          "n_matched": 86,
+          "spec": "Hull-50"
+        },
+        {
+          "agg_h63": 1.0363877193110953,
+          "agg_matched": 1.259712310768522,
+          "instrument": "6J",
+          "matched_h": 55,
+          "n_h63": 76,
+          "n_matched": 86,
+          "spec": "Hull-50"
+        },
+        {
+          "agg_h63": 0.9621108513104096,
+          "agg_matched": 0.897727860928495,
+          "instrument": "SPX",
+          "matched_h": 50,
+          "n_h63": 188,
+          "n_matched": 223,
+          "spec": "SMA-50"
+        },
+        {
+          "agg_h63": 0.7533825679361587,
+          "agg_matched": 1.025292368620563,
+          "instrument": "NQ",
+          "matched_h": 50,
+          "n_h63": 49,
+          "n_matched": 60,
+          "spec": "SMA-50"
+        },
+        {
+          "agg_h63": 1.084625815281356,
+          "agg_matched": 1.1572571145560766,
+          "instrument": "NI225",
+          "matched_h": 50,
+          "n_h63": 175,
+          "n_matched": 210,
+          "spec": "SMA-50"
+        },
+        {
+          "agg_h63": 1.1902463955830507,
+          "agg_matched": 1.15002090199645,
+          "instrument": "DAX",
+          "matched_h": 50,
+          "n_h63": 150,
+          "n_matched": 177,
+          "spec": "SMA-50"
+        },
+        {
+          "agg_h63": 0.8223564702389128,
+          "agg_matched": 0.8290767388624292,
+          "instrument": "FTSE",
+          "matched_h": 50,
+          "n_h63": 82,
+          "n_matched": 94,
+          "spec": "SMA-50"
+        },
+        {
+          "agg_h63": 0.9973739028458906,
+          "agg_matched": 1.1056712262000805,
+          "instrument": "HSI",
+          "matched_h": 50,
+          "n_h63": 87,
+          "n_matched": 98,
+          "spec": "SMA-50"
+        },
+        {
+          "agg_h63": 0.9653655185436231,
+          "agg_matched": 0.9772284429437532,
+          "instrument": "CL",
+          "matched_h": 50,
+          "n_h63": 127,
+          "n_matched": 158,
+          "spec": "SMA-50"
+        },
+        {
+          "agg_h63": 1.1124237512850486,
+          "agg_matched": 0.9781575200501221,
+          "instrument": "GC",
+          "matched_h": 50,
+          "n_h63": 119,
+          "n_matched": 144,
+          "spec": "SMA-50"
+        },
+        {
+          "agg_h63": 1.1194566736330318,
+          "agg_matched": 1.049227975685719,
+          "instrument": "ZN",
+          "matched_h": 50,
+          "n_h63": 93,
+          "n_matched": 108,
+          "spec": "SMA-50"
+        },
+        {
+          "agg_h63": 1.2701311524920766,
+          "agg_matched": 1.331761764976962,
+          "instrument": "6E",
+          "matched_h": 50,
+          "n_h63": 55,
+          "n_matched": 62,
+          "spec": "SMA-50"
+        },
+        {
+          "agg_h63": 1.5288049981697918,
+          "agg_matched": 1.381052612346285,
+          "instrument": "6J",
+          "matched_h": 50,
+          "n_h63": 63,
+          "n_matched": 69,
+          "spec": "SMA-50"
+        },
+        {
+          "agg_h63": 1.091927443370543,
+          "agg_matched": 1.1118544973999016,
+          "instrument": "SPX",
+          "matched_h": 75,
+          "n_h63": 197,
+          "n_matched": 179,
+          "spec": "EMA-50"
+        },
+        {
+          "agg_h63": 0.9246454393915094,
+          "agg_matched": 1.1485689286389118,
+          "instrument": "NQ",
+          "matched_h": 75,
+          "n_h63": 50,
+          "n_matched": 45,
+          "spec": "EMA-50"
+        },
+        {
+          "agg_h63": 1.0741558979231058,
+          "agg_matched": 1.2341056649736246,
+          "instrument": "NI225",
+          "matched_h": 75,
+          "n_h63": 183,
+          "n_matched": 161,
+          "spec": "EMA-50"
+        },
+        {
+          "agg_h63": 1.2753976324088472,
+          "agg_matched": 1.3456410190354264,
+          "instrument": "DAX",
+          "matched_h": 75,
+          "n_h63": 161,
+          "n_matched": 142,
+          "spec": "EMA-50"
+        },
+        {
+          "agg_h63": 0.8310540590908475,
+          "agg_matched": 1.0276635992381271,
+          "instrument": "FTSE",
+          "matched_h": 75,
+          "n_h63": 86,
+          "n_matched": 76,
+          "spec": "EMA-50"
+        },
+        {
+          "agg_h63": 0.8288649683499574,
+          "agg_matched": 0.904292319844687,
+          "instrument": "HSI",
+          "matched_h": 75,
+          "n_h63": 92,
+          "n_matched": 81,
+          "spec": "EMA-50"
+        },
+        {
+          "agg_h63": 0.9547233910617785,
+          "agg_matched": 1.169150127722627,
+          "instrument": "CL",
+          "matched_h": 75,
+          "n_h63": 130,
+          "n_matched": 113,
+          "spec": "EMA-50"
+        },
+        {
+          "agg_h63": 1.2576205295679213,
+          "agg_matched": 1.3873554908461299,
+          "instrument": "GC",
+          "matched_h": 75,
+          "n_h63": 123,
+          "n_matched": 113,
+          "spec": "EMA-50"
+        },
+        {
+          "agg_h63": 1.0364049860647744,
+          "agg_matched": 0.9674270789453401,
+          "instrument": "ZN",
+          "matched_h": 75,
+          "n_h63": 99,
+          "n_matched": 88,
+          "spec": "EMA-50"
+        },
+        {
+          "agg_h63": 1.2195688236474203,
+          "agg_matched": 1.3652090485261228,
+          "instrument": "6E",
+          "matched_h": 75,
+          "n_h63": 60,
+          "n_matched": 51,
+          "spec": "EMA-50"
+        },
+        {
+          "agg_h63": 1.4172033010430838,
+          "agg_matched": 1.3700027173550167,
+          "instrument": "6J",
+          "matched_h": 75,
+          "n_h63": 62,
+          "n_matched": 55,
+          "spec": "EMA-50"
+        },
+        {
+          "agg_h63": 1.0900275377308406,
+          "agg_matched": 1.212828024584828,
+          "instrument": "SPX",
+          "matched_h": 200,
+          "n_h63": 116,
+          "n_matched": 61,
+          "spec": "SMA-200"
+        },
+        {
+          "agg_h63": 0.9132875695726094,
+          "agg_matched": 1.157726166916146,
+          "instrument": "NQ",
+          "matched_h": 200,
+          "n_h63": 34,
+          "n_matched": 18,
+          "spec": "SMA-200"
+        },
+        {
+          "agg_h63": 1.3304910423914516,
+          "agg_matched": 1.7360998966234533,
+          "instrument": "NI225",
+          "matched_h": 200,
+          "n_h63": 113,
+          "n_matched": 55,
+          "spec": "SMA-200"
+        },
+        {
+          "agg_h63": 1.2679023758370316,
+          "agg_matched": 1.4457451567673292,
+          "instrument": "DAX",
+          "matched_h": 200,
+          "n_h63": 106,
+          "n_matched": 49,
+          "spec": "SMA-200"
+        },
+        {
+          "agg_h63": 1.0573543406514616,
+          "agg_matched": 1.2380693723079115,
+          "instrument": "FTSE",
+          "matched_h": 200,
+          "n_h63": 48,
+          "n_matched": 22,
+          "spec": "SMA-200"
+        },
+        {
+          "agg_h63": 1.246341645044913,
+          "agg_matched": 1.085060931583919,
+          "instrument": "HSI",
+          "matched_h": 200,
+          "n_h63": 66,
+          "n_matched": 31,
+          "spec": "SMA-200"
+        },
+        {
+          "agg_h63": 1.025421950749526,
+          "agg_matched": 0.8283546478316027,
+          "instrument": "CL",
+          "matched_h": 200,
+          "n_h63": 92,
+          "n_matched": 38,
+          "spec": "SMA-200"
+        },
+        {
+          "agg_h63": 1.2413464359970405,
+          "agg_matched": 1.8865108476000485,
+          "instrument": "GC",
+          "matched_h": 200,
+          "n_h63": 76,
+          "n_matched": 34,
+          "spec": "SMA-200"
+        },
+        {
+          "agg_h63": 1.0945568227331064,
+          "agg_matched": 1.285266684430076,
+          "instrument": "ZN",
+          "matched_h": 200,
+          "n_h63": 61,
+          "n_matched": 32,
+          "spec": "SMA-200"
+        },
+        {
+          "agg_h63": 1.1872706037298355,
+          "agg_matched": 0.8831591013505491,
+          "instrument": "6E",
+          "matched_h": 200,
+          "n_h63": 43,
+          "n_matched": 21,
+          "spec": "SMA-200"
+        },
+        {
+          "agg_h63": 1.1515798911660076,
+          "agg_matched": 1.2945969525469398,
+          "instrument": "6J",
+          "matched_h": 200,
+          "n_h63": 43,
+          "n_matched": 19,
+          "spec": "SMA-200"
+        }
+      ],
+      "summary": {
+        "EMA-50": {
+          "matched_h": 75,
+          "mean_agg_h63_pct": 108.3,
+          "mean_agg_matched_pct": 118.5
+        },
+        "Hull-50": {
+          "matched_h": 55,
+          "mean_agg_h63_pct": 103.6,
+          "mean_agg_matched_pct": 98.7
+        },
+        "SMA-200": {
+          "matched_h": 200,
+          "mean_agg_h63_pct": 114.6,
+          "mean_agg_matched_pct": 127.8
+        },
+        "SMA-50": {
+          "matched_h": 50,
+          "mean_agg_h63_pct": 107.3,
+          "mean_agg_matched_pct": 108.0
+        }
+      }
+    },
+    "horizons": {
+      "above_50_by_horizon": {
+        "126": 10,
+        "21": 11,
+        "252": 8,
+        "63": 11
+      },
+      "rows": [
+        {
+          "agg": 0.9705951296413716,
+          "horizon": 21,
+          "instrument": "SPX",
+          "n": 546
+        },
+        {
+          "agg": 0.9596424573532142,
+          "horizon": 21,
+          "instrument": "NQ",
+          "n": 142
+        },
+        {
+          "agg": 1.0294535278020558,
+          "horizon": 21,
+          "instrument": "NI225",
+          "n": 552
+        },
+        {
+          "agg": 1.0018422263045723,
+          "horizon": 21,
+          "instrument": "DAX",
+          "n": 443
+        },
+        {
+          "agg": 0.9869360331431987,
+          "horizon": 21,
+          "instrument": "FTSE",
+          "n": 219
+        },
+        {
+          "agg": 0.9667486622265807,
+          "horizon": 21,
+          "instrument": "HSI",
+          "n": 256
+        },
+        {
+          "agg": 1.0167606559890123,
+          "horizon": 21,
+          "instrument": "CL",
+          "n": 363
+        },
+        {
+          "agg": 0.9854538865747123,
+          "horizon": 21,
+          "instrument": "GC",
+          "n": 355
+        },
+        {
+          "agg": 1.033333947796324,
+          "horizon": 21,
+          "instrument": "ZN",
+          "n": 287
+        },
+        {
+          "agg": 1.084038506895923,
+          "horizon": 21,
+          "instrument": "6E",
+          "n": 176
+        },
+        {
+          "agg": 0.8803653612745078,
+          "horizon": 21,
+          "instrument": "6J",
+          "n": 182
+        },
+        {
+          "agg": 0.8985461302819053,
+          "horizon": 63,
+          "instrument": "SPX",
+          "n": 260
+        },
+        {
+          "agg": 1.260716095539252,
+          "horizon": 63,
+          "instrument": "NQ",
+          "n": 64
+        },
+        {
+          "agg": 1.2339706832313955,
+          "horizon": 63,
+          "instrument": "NI225",
+          "n": 236
+        },
+        {
+          "agg": 1.0263375652176678,
+          "horizon": 63,
+          "instrument": "DAX",
+          "n": 183
+        },
+        {
+          "agg": 0.8034585810890374,
+          "horizon": 63,
+          "instrument": "FTSE",
+          "n": 97
+        },
+        {
+          "agg": 0.6347700527232512,
+          "horizon": 63,
+          "instrument": "HSI",
+          "n": 113
+        },
+        {
+          "agg": 1.0386789950651405,
+          "horizon": 63,
+          "instrument": "CL",
+          "n": 145
+        },
+        {
+          "agg": 1.4239483549574738,
+          "horizon": 63,
+          "instrument": "GC",
+          "n": 150
+        },
+        {
+          "agg": 0.74060980123342,
+          "horizon": 63,
+          "instrument": "ZN",
+          "n": 131
+        },
+        {
+          "agg": 1.2972132091384525,
+          "horizon": 63,
+          "instrument": "6E",
+          "n": 75
+        },
+        {
+          "agg": 1.0363877193110953,
+          "horizon": 63,
+          "instrument": "6J",
+          "n": 76
+        },
+        {
+          "agg": 0.8826851955285604,
+          "horizon": 126,
+          "instrument": "SPX",
+          "n": 152
+        },
+        {
+          "agg": 0.630314209261112,
+          "horizon": 126,
+          "instrument": "NQ",
+          "n": 37
+        },
+        {
+          "agg": 1.052321498922791,
+          "horizon": 126,
+          "instrument": "NI225",
+          "n": 130
+        },
+        {
+          "agg": 0.7624123399908909,
+          "horizon": 126,
+          "instrument": "DAX",
+          "n": 100
+        },
+        {
+          "agg": 0.0857321034200739,
+          "horizon": 126,
+          "instrument": "FTSE",
+          "n": 55
+        },
+        {
+          "agg": 1.0288169964634448,
+          "horizon": 126,
+          "instrument": "HSI",
+          "n": 62
+        },
+        {
+          "agg": 1.1124482963080213,
+          "horizon": 126,
+          "instrument": "CL",
+          "n": 77
+        },
+        {
+          "agg": 1.342757790514462,
+          "horizon": 126,
+          "instrument": "GC",
+          "n": 83
+        },
+        {
+          "agg": 0.5471971241230636,
+          "horizon": 126,
+          "instrument": "ZN",
+          "n": 72
+        },
+        {
+          "agg": 1.2528652168514756,
+          "horizon": 126,
+          "instrument": "6E",
+          "n": 42
+        },
+        {
+          "agg": 1.5360002992091322,
+          "horizon": 126,
+          "instrument": "6J",
+          "n": 43
+        },
+        {
+          "agg": 0.21516675332080348,
+          "horizon": 252,
+          "instrument": "SPX",
+          "n": 85
+        },
+        {
+          "agg": 1.2995835258672235,
+          "horizon": 252,
+          "instrument": "NQ",
+          "n": 21
+        },
+        {
+          "agg": 1.3639247729035062,
+          "horizon": 252,
+          "instrument": "NI225",
+          "n": 69
+        },
+        {
+          "agg": 1.2633770287484722,
+          "horizon": 252,
+          "instrument": "DAX",
+          "n": 52
+        },
+        {
+          "agg": 0.7984860623781521,
+          "horizon": 252,
+          "instrument": "FTSE",
+          "n": 29
+        },
+        {
+          "agg": 1.7888142009109644,
+          "horizon": 252,
+          "instrument": "HSI",
+          "n": 33
+        },
+        {
+          "agg": 2.089396310541288,
+          "horizon": 252,
+          "instrument": "CL",
+          "n": 40
+        },
+        {
+          "agg": 1.121206525144171,
+          "horizon": 252,
+          "instrument": "GC",
+          "n": 44
+        },
+        {
+          "agg": 0.15260147256534995,
+          "horizon": 252,
+          "instrument": "ZN",
+          "n": 39
+        },
+        {
+          "agg": 0.9082367425356492,
+          "horizon": 252,
+          "instrument": "6E",
+          "n": 22
+        },
+        {
+          "agg": -0.621743429396594,
+          "horizon": 252,
+          "instrument": "6J",
+          "n": 22
+        }
+      ]
+    },
+    "is_oos": {
+      "mean_is_pct": 106.3,
+      "mean_oos_pct": 100.9,
+      "n_both_above_50": 13,
+      "rows": [
+        {
+          "agg_is": 0.9884786273276971,
+          "agg_oos": 0.9324171376754441,
+          "instrument": "SPX",
+          "n_is": 110,
+          "n_oos": 156
+        },
+        {
+          "agg_is": 1.6698331294737316,
+          "agg_oos": 0.839546026936382,
+          "instrument": "NQ",
+          "n_is": 30,
+          "n_oos": 41
+        },
+        {
+          "agg_is": 1.2919668735487209,
+          "agg_oos": 1.0577940663948755,
+          "instrument": "NI225",
+          "n_is": 101,
+          "n_oos": 128
+        },
+        {
+          "agg_is": 0.9000616184899307,
+          "agg_oos": 1.0259859450420572,
+          "instrument": "DAX",
+          "n_is": 87,
+          "n_oos": 75
+        },
+        {
+          "agg_is": 1.0295116152858308,
+          "agg_oos": 0.6376102350207089,
+          "instrument": "FTSE",
+          "n_is": 49,
+          "n_oos": 55
+        },
+        {
+          "agg_is": 0.665358757171206,
+          "agg_oos": 0.8310040031274173,
+          "instrument": "HSI",
+          "n_is": 55,
+          "n_oos": 53
+        },
+        {
+          "agg_is": 0.9101871975414098,
+          "agg_oos": 1.5279776649357673,
+          "instrument": "CL",
+          "n_is": 73,
+          "n_oos": 65
+        },
+        {
+          "agg_is": 1.434724798741679,
+          "agg_oos": 1.3726268707544869,
+          "instrument": "GC",
+          "n_is": 64,
+          "n_oos": 81
+        },
+        {
+          "agg_is": 0.7992913638396174,
+          "agg_oos": 0.9190344204892215,
+          "instrument": "ZN",
+          "n_is": 66,
+          "n_oos": 67
+        },
+        {
+          "agg_is": 1.7026878742633014,
+          "agg_oos": 1.1489105180950117,
+          "instrument": "6E",
+          "n_is": 37,
+          "n_oos": 41
+        },
+        {
+          "agg_is": 0.7282915250400183,
+          "agg_oos": 1.0471602567633118,
+          "instrument": "6J",
+          "n_is": 38,
+          "n_oos": 36
+        },
+        {
+          "agg_is": 0.7074961036485706,
+          "agg_oos": 0.6750400133145847,
+          "instrument": "ES",
+          "n_is": 40,
+          "n_oos": 42
+        },
+        {
+          "agg_is": 0.9896595104619721,
+          "agg_oos": 1.1022244918228623,
+          "instrument": "NKD",
+          "n_is": 33,
+          "n_oos": 34
+        }
+      ]
+    },
+    "log_vs_level": {
+      "qualitatively_identical": true,
+      "rows": [
+        {
+          "agg_level": 1.0289251219775868,
+          "agg_log": 0.8985461302819053,
+          "n_level": 351,
+          "n_log": 260,
+          "spec": "Hull-50"
+        },
+        {
+          "agg_level": 0.8774243891776858,
+          "agg_log": 0.9621108513104096,
+          "n_level": 333,
+          "n_log": 188,
+          "spec": "SMA-50"
+        },
+        {
+          "agg_level": 1.40824276819079,
+          "agg_log": 1.0900275377308406,
+          "n_level": 296,
+          "n_log": 116,
+          "spec": "SMA-200"
+        },
+        {
+          "agg_level": 2.1042897691485924,
+          "agg_log": 1.091927443370543,
+          "n_level": 336,
+          "n_log": 197,
+          "spec": "EMA-50"
+        }
+      ]
+    },
+    "offsets": {
+      "range_pct": [
+        88.3,
+        90.0
+      ],
+      "rows": [
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 0
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 1
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 2
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 3
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 4
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 5
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 6
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 7
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 8
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 9
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 10
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 11
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 12
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 13
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 14
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 15
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 16
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 17
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 18
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 19
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 20
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 21
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 22
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 23
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 24
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 25
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 26
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 27
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 28
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 29
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 30
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 31
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 32
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 33
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 34
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 35
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 36
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 37
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 38
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 39
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 40
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 41
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 42
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 43
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 44
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 45
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 46
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 47
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 48
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 49
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 50
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 51
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 52
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 53
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 54
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 55
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 56
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "offset": 57
+        },
+        {
+          "agg": 0.8991102604324966,
+          "n": 260,
+          "offset": 58
+        },
+        {
+          "agg": 0.8962474566204678,
+          "n": 260,
+          "offset": 59
+        },
+        {
+          "agg": 0.9004554928167849,
+          "n": 260,
+          "offset": 60
+        },
+        {
+          "agg": 0.8924546399452078,
+          "n": 260,
+          "offset": 61
+        },
+        {
+          "agg": 0.8831359636633186,
+          "n": 260,
+          "offset": 62
+        }
+      ],
+      "sd_pp": 0.21
+    },
+    "rolling": {
+      "n_above_50": 13,
+      "n_windows": 18,
+      "n_with_events": 18,
+      "rows": [
+        {
+          "agg": 1.8014121772517901,
+          "median": 1.3964093116503102,
+          "n": 20,
+          "window": "1871-1936"
+        },
+        {
+          "agg": 0.9178734798400366,
+          "median": 1.2409543435314625,
+          "n": 23,
+          "window": "1931-1941"
+        },
+        {
+          "agg": 1.3480456891542416,
+          "median": 1.7470649170553705,
+          "n": 25,
+          "window": "1936-1946"
+        },
+        {
+          "agg": 0.4138532221520548,
+          "median": -0.023104257036434428,
+          "n": 28,
+          "window": "1941-1951"
+        },
+        {
+          "agg": 1.1857876665342126,
+          "median": 0.9434803216534113,
+          "n": 26,
+          "window": "1946-1956"
+        },
+        {
+          "agg": 0.6409205449523283,
+          "median": 0.5254815256586922,
+          "n": 31,
+          "window": "1951-1961"
+        },
+        {
+          "agg": 0.47722086951499615,
+          "median": -0.435856170616549,
+          "n": 26,
+          "window": "1956-1966"
+        },
+        {
+          "agg": 1.0798049019085287,
+          "median": 0.9276808328918521,
+          "n": 29,
+          "window": "1961-1971"
+        },
+        {
+          "agg": 1.4515535580109433,
+          "median": -0.13637252081407508,
+          "n": 29,
+          "window": "1966-1976"
+        },
+        {
+          "agg": 1.2976212321377152,
+          "median": 1.0,
+          "n": 29,
+          "window": "1971-1981"
+        },
+        {
+          "agg": 0.8846682967452499,
+          "median": 0.6056203241479486,
+          "n": 31,
+          "window": "1976-1986"
+        },
+        {
+          "agg": 0.8224814544200805,
+          "median": 0.581230564584113,
+          "n": 32,
+          "window": "1981-1991"
+        },
+        {
+          "agg": 0.08059846832351354,
+          "median": -0.06227003948528465,
+          "n": 25,
+          "window": "1986-1996"
+        },
+        {
+          "agg": -0.08044631606136787,
+          "median": -0.6232188121758401,
+          "n": 31,
+          "window": "1991-2001"
+        },
+        {
+          "agg": 1.187615481256146,
+          "median": 0.5113135858783422,
+          "n": 26,
+          "window": "1996-2006"
+        },
+        {
+          "agg": 1.0567013655326556,
+          "median": -0.49154948077037375,
+          "n": 24,
+          "window": "2001-2011"
+        },
+        {
+          "agg": 0.16934417573303542,
+          "median": 0.17276661473221028,
+          "n": 28,
+          "window": "2006-2016"
+        },
+        {
+          "agg": 1.0874612585267038,
+          "median": 0.7834756042725481,
+          "n": 26,
+          "window": "2011-2021"
+        }
+      ]
+    },
+    "sub_50_regions": [
+      "horizons: FTSE H=126 agg 8.6%",
+      "horizons: SPX H=252 agg 21.5%",
+      "horizons: ZN H=252 agg 15.3%",
+      "horizons: 6J H=252 agg -62.2%",
+      "rolling: 1941-1951 agg 41.4%",
+      "rolling: 1956-1966 agg 47.7%",
+      "rolling: 1986-1996 agg 8.1%",
+      "rolling: 1991-2001 agg -8.0%",
+      "rolling: 2006-2016 agg 16.9%"
+    ],
+    "thresholds": {
+      "all_above_50": true,
+      "rows": [
+        {
+          "agg": 1.0237790254852446,
+          "n": 358,
+          "threshold_pct": 50
+        },
+        {
+          "agg": 0.8985461302819053,
+          "n": 260,
+          "threshold_pct": 75
+        },
+        {
+          "agg": 0.6557740410125495,
+          "n": 113,
+          "threshold_pct": 90
+        }
+      ]
+    }
+  }
+}
