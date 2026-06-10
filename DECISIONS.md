@@ -76,3 +76,29 @@ The git timestamps in this repo therefore document **when the port happened**, n
 - IS/OOS: 24/26 half-cells exact; **13/13 above 50% in both halves**; mean IS 106.3 exact; mean OOS 100.9 vs 100.7 (gap = exactly the ZN residual's contribution).
 
 **Standing for Phase 3/4.** Claims to update in the manuscript: rolling 14/18 → rebuild value; H=126 9/11 → 10/11; era-method disclosure (B.9 text vs computation); NQ/NDX instrument-set disclosure; EMA-variant disclosure. The rebuild's JSON is canonical going forward. Thesis-relevant conclusions are unchanged under every ruling: the mechanical share exceeds 50% in aggregate everywhere the paper claimed it, and every sub-50% region is reported.
+
+---
+
+## 2026-06-10 — Phase 3 complete: ledger, checker, and RED-on-fixture selftest green on both machines
+
+**Deliverables** (commit `dd21661`): `claims.lock` (MD5 `56ccd1fc7f6409c15a3dc770a88493d8`) — 36 hashed datasets + 20 load-bearing claims carrying 46 mechanical value checks, each claim with its 7-point CIC flags signed; `verify.py` (MD5 `bed14dd5962601b429e93a4748b8f05b`) — the four contract checks (re-hash inputs; re-run every generating script and compare within tolerance; CIC signatures; paper {{LB-id}} anchors, SKIP until Phase 4), plus `--quick`, `--replicator` (fresh-vendor-export acceptance per the SOURCES.md schema), and `--selftest`; `verification/make_fixture.py` + the deliberately broken fixture (MD5 `1367e2e948e30b410eb007361bc2c8c0`, byte-identical when generated independently on both machines — three planted defects: corrupted dataset hash, corrupted claim value, unsigned CIC).
+
+**Verification.** Full-rerun mode GREEN on both the author machine and the Claude pre-check environment (all seven scripts regenerated from hashed data; 46/46 checks within tolerance); `--selftest` turned RED on the fixture with exactly the three planted failures on both machines, as the Standard requires. Ledger float values were drawn from the cross-machine-verified canonical outputs (documented in the lock's tolerance_policy; agreement with the author's committed JSONs is within the established ≤4.4e-16 epsilon class).
+
+**Environment pinned.** `requirements.txt`: Python 3.12.10, arch 6.3.0, numpy 1.26.4, openpyxl 3.1.5, pandas 2.3.3, scipy 1.16.3. DESIGN §3 anticipated Python 3.11; the actual author environment is 3.12.10 and the pin records reality (correction noted here rather than editing §3, per the append-only rule). Operational trap recorded: PowerShell `>` redirection writes UTF-16 — `requirements.txt` was regenerated as UTF-8; repo text files should never be produced via PowerShell redirection.
+
+**Claim-text note.** LB-010 (Schelling), LB-014 (H=126 10/11), and LB-019 (rolling 13/18) carry the REBUILD's canonical values where the v5 manuscript printed superseded ones; Phase 4 revises the prose to quote the ledger (the script is the truth; the paper quotes it).
+
+---
+
+## 2026-06-10 — Phase 4: manuscript revised to quote the ledger; CHECK4 live and green
+
+**Naming.** Per author directive, no paper-numbering scheme: the manuscript is `paper/Moving-Averages-Follow-Price.md` and the companion is `paper/Moving-Averages-Follow-Price_companion.md`, named by the paper's title.
+
+**Manuscript** (MD5 `89e9f33fedeadd4c75baef6f28b871f5`): produced from the v5 source (MD5 `ce836c756e93086252a5ad144147ae46`, prior-iteration repo) by 20 surgical edits applied by the deterministic transient build script `paper/_build_from_v5.py` (asserts source and output MD5s; deleted after the gate — provenance is this entry plus the conversation log). Every load-bearing number now quotes the ledger and carries its {{LB-id}} anchor (20 anchors, one per claim, at the primary claim sites in Sections 5.1–5.9). Substantive content changes: §5.1 and §5.3 synthetic-control values updated to the committed battery (103.9% iid; 100.57% ± 0.89 SE over 200 series; GARCH 99.1%); §5.4 H=126 count 9→10 of 11 and SMA-200 fixed-horizon mean 114.8→114.6, sub-50 cells named; §5.5 rewritten to the binned span rule with 1990–2026 at 80.6% and the pre-1930 era reported (307.7%, 3 events) rather than excluded; §5.6 rolling 14/18→13/18 with all five sub-50 windows named (1991–2001 = −8.0% the only negative) and OOS mean 100.7→100.9; §5.7 max ρ 0.629→0.626; §5.9 rewritten to canonical Schelling statistics (δ −0.005 pp, two-sided p 0.78, Wilcoxon 1.00, sign 69/137) with the unsupported power-analysis figure softened to a qualitative statement; B.9 corrected to the method the published values actually derive from; B.11 supersession note; B.13 actual pinned environment; new **B.14 Rebuild Reconciliation Notes** carrying the five adjudication disclosures; AI disclosure extended with the Standard-v1.2 rebuild process.
+
+**Named defect found and removed.** v5's §5.1 contradicted itself: paragraph 1 stated 33 of 44 combinations exceed 100% (correct, ledger LB-002) while paragraph 3 stated "28 (64%) exceed 100%" — a superseded-draft remnant. The sentence was removed; the section now states the ledger value once.
+
+**Companion** (MD5 `412184fb91cd5caf0bdca751fb21806e`): plain-English summary, education-not-advice framing, explicitly discloses that the rebuild moved one robustness count against the paper (14/18 → 13/18).
+
+**verify.py CHECK4 patch** (new MD5 `e393de400c91c96ff8b6df7eb5524344`, supersedes `bed14dd5...` committed at dd21661): the anchor check previously matched only `paper*.md` filenames, which the title-naming convention breaks; it now matches any `.md` in `paper/` excluding companions. Re-tested in the pre-check environment: `--quick` GREEN with **0 skips** with the manuscript present (all 20 anchors found); `--selftest` still RED-on-fixture; and the check proven to FAIL with 20 missing-anchor errors against an anchor-less manuscript. With this commit, the full four-check contract is live end-to-end.

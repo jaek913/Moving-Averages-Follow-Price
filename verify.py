@@ -13,7 +13,7 @@ THE CONTRACT
              committed analysis/outputs/*.json instead of re-running).
     CHECK 3  Every claim's 7-point CIC flags are all true and signed.
     CHECK 4  Every ledger value appears in the paper at its {{LB-id}} anchor
-             (SKIPPED until paper/ contains a paper*.md -- Phase 4).
+             (SKIPPED until paper/ contains a manuscript .md -- Phase 4).
 
     Exit 0 (green) only if all non-skipped checks pass.
 
@@ -213,10 +213,9 @@ def check4_paper(lock, fails, skips):
     papers = []
     if os.path.isdir(paper_dir):
         papers = [f for f in os.listdir(paper_dir)
-                  if f.startswith("paper") and f.endswith(".md")
-                  and "companion" not in f]
+                  if f.endswith(".md") and "companion" not in f.lower()]
     if not papers:
-        skips.append("CHECK4: no paper/paper*.md yet (Phase 4) -- skipped")
+        skips.append("CHECK4: no manuscript in paper/ yet (Phase 4) -- skipped")
         return
     text = ""
     for p in papers:
