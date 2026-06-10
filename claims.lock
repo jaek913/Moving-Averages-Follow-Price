@@ -1,0 +1,999 @@
+{
+  "schema": "Research-to-Publication Standard v1.2, Phase 3 (claims.lock)",
+  "project": "Moving Averages Follow Price",
+  "generated": "2026-06-10",
+  "tolerance_policy": "DECISIONS.md 2026-06-09: deterministic floats rel 1e-12; optimizer-dependent (GARCH MLE) abs 0.1 (pp scale); integers/booleans exact. Author-machine JSON canonical. Ledger float values were drawn from the cross-machine-verified canonical outputs and agree with the author's committed analysis/outputs JSONs within the established machine-epsilon class (<= 4.4e-16 on 8 values; DECISIONS.md), far inside every tolerance.",
+  "json_path_syntax": "dot keys; [int] list index; [?field=value&field2=value] unique list query",
+  "datasets": {
+    "SPX": {
+      "source": "TradingView CSV export (exchange-licensed; not committed)",
+      "identifier": "SP:SPX",
+      "file": "SP_SPX, 1D_5871b.csv",
+      "coverage": "1871-02-01..2026-03-12",
+      "rows": 25187,
+      "access_date": "exports 2025-11..2026-03; hashed 2026-06-09",
+      "sha256": "c75e8fb61149f5ba606ebe5a3881db40a1015ff49e322a590cf6e7a7d537cbe7"
+    },
+    "NDX": {
+      "source": "TradingView CSV export (exchange-licensed; not committed)",
+      "identifier": "NASDAQ:NDX",
+      "file": "NASDAQ_DLY_NDX, 1D_e6961.csv",
+      "coverage": "1985-01-31..2026-03-13",
+      "rows": 10359,
+      "access_date": "exports 2025-11..2026-03; hashed 2026-06-09",
+      "sha256": "0e93da6e7e3a97cbc377c5b8ad9930ae3261a28d22410322ee5c6e9ec250c1b5"
+    },
+    "NI225": {
+      "source": "TradingView CSV export (exchange-licensed; not committed)",
+      "identifier": "TVC:NI225",
+      "file": "TVC_NI225, 1D_8be07.csv",
+      "coverage": "1949-05-16..2026-03-13",
+      "rows": 19040,
+      "access_date": "exports 2025-11..2026-03; hashed 2026-06-09",
+      "sha256": "271da7a404086ff9c939daf8c8ff18cf3eb4d45c60214a3e5e53a42f1ee70228"
+    },
+    "DAX": {
+      "source": "TradingView CSV export (exchange-licensed; not committed)",
+      "identifier": "XETR:DAX",
+      "file": "XETR_DLY_DAX, 1D_cd703.csv",
+      "coverage": "1970-01-02..2026-03-13",
+      "rows": 14143,
+      "access_date": "exports 2025-11..2026-03; hashed 2026-06-09",
+      "sha256": "4531616311c17b8cbd5781ba20717ac5a93c31d348282474fff9c39f7c144491"
+    },
+    "FTSE": {
+      "source": "TradingView CSV export (exchange-licensed; not committed)",
+      "identifier": "IG:FTSE",
+      "file": "IG_FTSE, 1D_c9679.csv",
+      "coverage": "1995-01-03..2026-03-13",
+      "rows": 8615,
+      "access_date": "exports 2025-11..2026-03; hashed 2026-06-09",
+      "sha256": "ae76f4a65e6c65e96ea141fe4d23e8348a7033d9e8348a46efd681c5dbf31e1c"
+    },
+    "HSI": {
+      "source": "TradingView CSV export (exchange-licensed; not committed)",
+      "identifier": "HKEX:HSI",
+      "file": "HKEX_DLY_HSI1!, 1D_57a14.csv",
+      "coverage": "1987-04-21..2026-03-16",
+      "rows": 9585,
+      "access_date": "exports 2025-11..2026-03; hashed 2026-06-09",
+      "sha256": "840dbd3fce9da09b06d5e4aa459a8070ed352735230bd171bbcc2546e69ef99c"
+    },
+    "CL": {
+      "source": "TradingView CSV export (exchange-licensed; not committed)",
+      "identifier": "NYMEX:CL1!",
+      "file": "NYMEX_CL1!, 1D_de4b1.csv",
+      "coverage": "1983-03-30..2026-03-13",
+      "rows": 10798,
+      "access_date": "exports 2025-11..2026-03; hashed 2026-06-09",
+      "sha256": "f32fb49cd7653c01cbcd91e43a58615811be04f4ed84c22d4b061711c96494f4"
+    },
+    "GC": {
+      "source": "TradingView CSV export (exchange-licensed; not committed)",
+      "identifier": "COMEX:GC1!",
+      "file": "COMEX_GC1!, 1D_1e2f0.csv",
+      "coverage": "1975-01-02..2026-03-13",
+      "rows": 12878,
+      "access_date": "exports 2025-11..2026-03; hashed 2026-06-09",
+      "sha256": "cd71339445b1c5107c808b8dad76b77383aadada26b0b240a086d323430e67d0"
+    },
+    "ZN": {
+      "source": "TradingView CSV export (exchange-licensed; not committed)",
+      "identifier": "CBOT:ZN1!",
+      "file": "CBOT_ZN1!, 1D_3436b.csv",
+      "coverage": "1982-05-03..2026-03-13",
+      "rows": 11058,
+      "access_date": "exports 2025-11..2026-03; hashed 2026-06-09",
+      "sha256": "d2d88f9c7614e0c9995952a885f1a297c4fc6eb1a3dfcbef6e593b45fcd44840"
+    },
+    "6E": {
+      "source": "TradingView CSV export (exchange-licensed; not committed)",
+      "identifier": "CME:6E1!",
+      "file": "CME_6E1!, 1D_9dd8b.csv",
+      "coverage": "2000-09-12..2026-03-13",
+      "rows": 6451,
+      "access_date": "exports 2025-11..2026-03; hashed 2026-06-09",
+      "sha256": "4422e3a4631493125d31eaa3906e3bb74351c2b9b90ede76bd3dd53651b06c5f"
+    },
+    "6J": {
+      "source": "TradingView CSV export (exchange-licensed; not committed)",
+      "identifier": "CME:6J1!",
+      "file": "CME_6J1!, 1D_01e58.csv",
+      "coverage": "2000-09-13..2026-03-13",
+      "rows": 6373,
+      "access_date": "exports 2025-11..2026-03; hashed 2026-06-09",
+      "sha256": "f342d871ee4af468f323633e7f857725da67efc82259b3e1d28bb2384b21006c"
+    },
+    "ES": {
+      "source": "TradingView CSV export (exchange-licensed; not committed)",
+      "identifier": "CME_MINI:ES1!",
+      "file": "CME_MINI_ES1!, 1D_40b30.csv",
+      "coverage": "1997-09-09..2026-03-13",
+      "rows": 7210,
+      "access_date": "exports 2025-11..2026-03; hashed 2026-06-09",
+      "sha256": "b81fc7a91bd0ee202291b8bfc9411f812f7f99042f167fd87819026fb2d67bab"
+    },
+    "NKD": {
+      "source": "TradingView CSV export (exchange-licensed; not committed)",
+      "identifier": "CME:NKD1!",
+      "file": "CME_NKD1!, 1D_92650.csv",
+      "coverage": "2004-02-17..2026-03-13",
+      "rows": 5574,
+      "access_date": "exports 2025-11..2026-03; hashed 2026-06-09",
+      "sha256": "c8468adf2dac6bbf9ec385bfefb69414a3e0e26a639722bccfaface33875afd0"
+    },
+    "NQ.1D": {
+      "source": "TradingView CSV export (exchange-licensed; not committed)",
+      "identifier": "CME_MINI:NQ1!",
+      "file": "CME_MINI_NQ1!, 1D_de2b2.csv",
+      "coverage": "1999-06-30..2026-03-13",
+      "rows": 6753,
+      "access_date": "exports 2025-11..2026-03; hashed 2026-06-09",
+      "sha256": "105b8be21760373023f21aa58777933d4299fcfa6a8bdd591e260fb562538375"
+    },
+    "NQ.60": {
+      "source": "TradingView CSV export (exchange-licensed; not committed)",
+      "identifier": "CME_MINI:NQ1!",
+      "file": "CME_MINI_NQ1!, 60_985ba.csv",
+      "coverage": "2022-01-02..2026-03-13",
+      "rows": 24757,
+      "access_date": "exports 2025-11..2026-03; hashed 2026-06-09",
+      "sha256": "cb78020d2e0af9dd6d08c8009e375f51fc87d4966680ce61042f51213862c2c7"
+    },
+    "NI225.60": {
+      "source": "TradingView CSV export (exchange-licensed; not committed)",
+      "identifier": "TVC:NI225",
+      "file": "TVC_NI225, 60_b5054.csv",
+      "coverage": "2014-01-05..2026-03-13",
+      "rows": 20848,
+      "access_date": "exports 2025-11..2026-03; hashed 2026-06-09",
+      "sha256": "0d5756d747cdcbdd7f81565e28bbfe767b28d9d3d5feb6cfd9cfecb0262211b9"
+    },
+    "DAX.60": {
+      "source": "TradingView CSV export (exchange-licensed; not committed)",
+      "identifier": "XETR:DAX",
+      "file": "XETR_DLY_DAX, 60_82c16.csv",
+      "coverage": "2017-01-02..2026-03-13",
+      "rows": 20964,
+      "access_date": "exports 2025-11..2026-03; hashed 2026-06-09",
+      "sha256": "d5f30c75a50c611e4c6e9d86585b8c0b7577a7a45fb5fb260bd91fcdb4ce9745"
+    },
+    "FTSE.60": {
+      "source": "TradingView CSV export (exchange-licensed; not committed)",
+      "identifier": "IG:FTSE",
+      "file": "IG_FTSE, 60_6e958.csv",
+      "coverage": "2023-10-29..2026-03-13",
+      "rows": 14458,
+      "access_date": "exports 2025-11..2026-03; hashed 2026-06-09",
+      "sha256": "80e3bc00085f1d4cf197b87f550d6fac38238b37bafbad496221e360930f44bf"
+    },
+    "HSI.60": {
+      "source": "TradingView CSV export (exchange-licensed; not committed)",
+      "identifier": "HKEX:HSI1!",
+      "file": "HKEX_DLY_HSI1!, 60_7c166.csv",
+      "coverage": "2022-03-11..2026-03-13",
+      "rows": 17486,
+      "access_date": "exports 2025-11..2026-03; hashed 2026-06-09",
+      "sha256": "f3ee58c0f215c592947a2e6e471bfa87a2a5acabe9f7eab8c3a7f0607b1c732e"
+    },
+    "CL.60": {
+      "source": "TradingView CSV export (exchange-licensed; not committed)",
+      "identifier": "NYMEX:CL1!",
+      "file": "NYMEX_CL1!, 60_72c46.csv",
+      "coverage": "2022-01-02..2026-03-13",
+      "rows": 24815,
+      "access_date": "exports 2025-11..2026-03; hashed 2026-06-09",
+      "sha256": "76c86cdd31cde67275a79e83f5115c9c3abd28fe2ade7317d903701e2e64d123"
+    },
+    "GC.60": {
+      "source": "TradingView CSV export (exchange-licensed; not committed)",
+      "identifier": "COMEX:GC1!",
+      "file": "COMEX_GC1!, 60_26eca.csv",
+      "coverage": "2022-03-11..2026-03-13",
+      "rows": 23682,
+      "access_date": "exports 2025-11..2026-03; hashed 2026-06-09",
+      "sha256": "ea5c1db35ae672c21babff92906bb111a11337420e120ea2a11d62567cc345e0"
+    },
+    "ZN.60": {
+      "source": "TradingView CSV export (exchange-licensed; not committed)",
+      "identifier": "CBOT:ZN1!",
+      "file": "CBOT_ZN1!, 60_81641.csv",
+      "coverage": "2022-03-11..2026-03-13",
+      "rows": 23636,
+      "access_date": "exports 2025-11..2026-03; hashed 2026-06-09",
+      "sha256": "09d2f935b27a4467bb468e75a98cf076adce3022cd1ad1e4f75dfb235c11c56d"
+    },
+    "6E.60": {
+      "source": "TradingView CSV export (exchange-licensed; not committed)",
+      "identifier": "CME:6E1!",
+      "file": "CME_6E1!, 60_df31a.csv",
+      "coverage": "2022-03-13..2026-03-13",
+      "rows": 23715,
+      "access_date": "exports 2025-11..2026-03; hashed 2026-06-09",
+      "sha256": "bd832acaff17c155d64fa963b3eb95ffac6ad6e3175f353dacb75030f8c5f2d9"
+    },
+    "6J.60": {
+      "source": "TradingView CSV export (exchange-licensed; not committed)",
+      "identifier": "CME:6J1!",
+      "file": "CME_6J1!, 60_5c795.csv",
+      "coverage": "2022-03-13..2026-03-13",
+      "rows": 23715,
+      "access_date": "exports 2025-11..2026-03; hashed 2026-06-09",
+      "sha256": "0c129e5897ddf7e44e1d416a211063c672003912b98abbf0b21f295a5a98acbd"
+    },
+    "ES.60": {
+      "source": "TradingView CSV export (exchange-licensed; not committed)",
+      "identifier": "CME_MINI:ES1!",
+      "file": "CME_MINI_ES1!, 60_127a6.csv",
+      "coverage": "2022-01-02..2026-03-13",
+      "rows": 24757,
+      "access_date": "exports 2025-11..2026-03; hashed 2026-06-09",
+      "sha256": "af9636e77793376e4eeae541b5c3d440619f0f89d6473d5fa3df34f5f8716b87"
+    },
+    "NKD.60": {
+      "source": "TradingView CSV export (exchange-licensed; not committed)",
+      "identifier": "CME:NKD1!",
+      "file": "CME_NKD1!, 60_ffee5.csv",
+      "coverage": "2022-03-13..2026-03-13",
+      "rows": 23577,
+      "access_date": "exports 2025-11..2026-03; hashed 2026-06-09",
+      "sha256": "eb2be2bbfaf556329630e47396e413181ad6d003867c45596ef3177d247d0bb3"
+    },
+    "ES.5": {
+      "source": "TradingView CSV export (exchange-licensed; not committed)",
+      "identifier": "CME_MINI:ES1!",
+      "file": "CME_MINI_ES1!, 5_28d89.csv",
+      "coverage": "2025-11-23..2026-03-13",
+      "rows": 21116,
+      "access_date": "exports 2025-11..2026-03; hashed 2026-06-09",
+      "sha256": "4c42d1c46421ed8696f8998ab855fe1ac6cb4f9a2f20d24a90bb8f027b689e12"
+    },
+    "NQ.5": {
+      "source": "TradingView CSV export (exchange-licensed; not committed)",
+      "identifier": "CME_MINI:NQ1!",
+      "file": "CME_MINI_NQ1!, 5_c2781.csv",
+      "coverage": "2025-11-23..2026-03-13",
+      "rows": 21117,
+      "access_date": "exports 2025-11..2026-03; hashed 2026-06-09",
+      "sha256": "68a8c0e43f6182e65d56ac9c08dc65a3cb186c478bff5c5fa619b5c1cb82bed7"
+    },
+    "GC.5": {
+      "source": "TradingView CSV export (exchange-licensed; not committed)",
+      "identifier": "COMEX:GC1!",
+      "file": "COMEX_GC1!, 5_f87e8.csv",
+      "coverage": "2025-11-23..2026-03-13",
+      "rows": 21176,
+      "access_date": "exports 2025-11..2026-03; hashed 2026-06-09",
+      "sha256": "0348a5ba6186b9b90b47050bbff9031fd67c593ad0852669230da1722d820e39"
+    },
+    "CL.5": {
+      "source": "TradingView CSV export (exchange-licensed; not committed)",
+      "identifier": "NYMEX:CL1!",
+      "file": "NYMEX_CL1!, 5_a29b4.csv",
+      "coverage": "2025-11-23..2026-03-13",
+      "rows": 21180,
+      "access_date": "exports 2025-11..2026-03; hashed 2026-06-09",
+      "sha256": "49babb3e90a39e54c26f66fd9bdd77672f88a1a13c79ef7c52b2962064956c69"
+    },
+    "ZN.5": {
+      "source": "TradingView CSV export (exchange-licensed; not committed)",
+      "identifier": "CBOT:ZN1!",
+      "file": "CBOT_ZN1!, 5_bdc1e.csv",
+      "coverage": "2025-11-23..2026-03-13",
+      "rows": 20877,
+      "access_date": "exports 2025-11..2026-03; hashed 2026-06-09",
+      "sha256": "371db6204f513861aaa2b19d398494bce6ae6ebc583e456281d6d19387073d0c"
+    },
+    "6E.5": {
+      "source": "TradingView CSV export (exchange-licensed; not committed)",
+      "identifier": "CME:6E1!",
+      "file": "CME_6E1!, 5_d72d6.csv",
+      "coverage": "2025-11-30..2026-03-13",
+      "rows": 20059,
+      "access_date": "exports 2025-11..2026-03; hashed 2026-06-09",
+      "sha256": "182f84d3ff659ce269be2da6af8005e2b164ff3afabc3c5d35c510d427b4300a"
+    },
+    "6J.5": {
+      "source": "TradingView CSV export (exchange-licensed; not committed)",
+      "identifier": "CME:6J1!",
+      "file": "CME_6J1!, 5_c0f96.csv",
+      "coverage": "2025-11-30..2026-03-13",
+      "rows": 20059,
+      "access_date": "exports 2025-11..2026-03; hashed 2026-06-09",
+      "sha256": "eb9fa9fe87e55b6b1142f9d86208e5c7db447cc90d569f70771978205a403044"
+    },
+    "NKD.5": {
+      "source": "TradingView CSV export (exchange-licensed; not committed)",
+      "identifier": "CME:NKD1!",
+      "file": "CME_NKD1!, 5_f1b66.csv",
+      "coverage": "2025-11-16..2026-03-13",
+      "rows": 20757,
+      "access_date": "exports 2025-11..2026-03; hashed 2026-06-09",
+      "sha256": "52ccdc7ab16bd231131be0c73f318248320f767415add2f282561472910f6411"
+    },
+    "SPX.1M": {
+      "source": "TradingView CSV export (exchange-licensed; not committed)",
+      "identifier": "SP:SPX",
+      "file": "SP_SPX, 1M_9ba20.csv",
+      "coverage": "1871-02-01..2026-03-02",
+      "rows": 1668,
+      "access_date": "exports 2025-11..2026-03; hashed 2026-06-09",
+      "sha256": "895f28d799cda2b1c8971a62964beb95186c3db69f7cebe2f848272f94370206"
+    },
+    "GC.1M": {
+      "source": "TradingView CSV export (exchange-licensed; not committed)",
+      "identifier": "COMEX:GC1!",
+      "file": "COMEX_GC1!, 1M_958cd.csv",
+      "coverage": "1975-01-01..2026-03-02",
+      "rows": 615,
+      "access_date": "exports 2025-11..2026-03; hashed 2026-06-09",
+      "sha256": "998151626467226d5578a9a1e827f5175d4a5854576122f6210cc1b443d1ef1c"
+    }
+  },
+  "claims": [
+    {
+      "id": "LB-001",
+      "text": "Aggregate MA share of gap closure exceeds 50% on all 44 instrument-filter combinations.",
+      "section": "Abstract; 5.1; 7",
+      "script": "analysis/decomposition.py",
+      "output": "analysis/outputs/decomposition.json",
+      "tolerance": {
+        "abs": 0
+      },
+      "checks": [
+        {
+          "json_path": "summary.exceed_50pct",
+          "value": 44
+        },
+        {
+          "json_path": "summary.combinations",
+          "value": 44
+        }
+      ],
+      "cic": {
+        "reexecutes_to_claim": true,
+        "index_row_alignment": true,
+        "nan_gap_handling_explicit": true,
+        "no_look_ahead": true,
+        "overlap_subsample_consistent": true,
+        "no_cross_boundary_computation": true,
+        "input_integrity_vs_claim": true,
+        "signed_by": "Claude (Phase 2/3 build verification); ratified by JAE at commit",
+        "signed": true,
+        "note": "re-executed on two machines (byte-identical rows); expanding threshold min_periods verified no-look-ahead (offsets battery sd 0.21pp); per-instrument series isolated; SHA-256 gated inputs."
+      }
+    },
+    {
+      "id": "LB-002",
+      "text": "Aggregate MA share exceeds 100% on 33 of 44 combinations.",
+      "section": "Abstract; 5.1; 7",
+      "script": "analysis/decomposition.py",
+      "output": "analysis/outputs/decomposition.json",
+      "tolerance": {
+        "abs": 0
+      },
+      "checks": [
+        {
+          "json_path": "summary.exceed_100pct",
+          "value": 33
+        }
+      ],
+      "cic": {
+        "reexecutes_to_claim": true,
+        "index_row_alignment": true,
+        "nan_gap_handling_explicit": true,
+        "no_look_ahead": true,
+        "overlap_subsample_consistent": true,
+        "no_cross_boundary_computation": true,
+        "input_integrity_vs_claim": true,
+        "signed_by": "Claude (Phase 2/3 build verification); ratified by JAE at commit",
+        "signed": true,
+        "note": "re-executed on two machines (byte-identical rows); expanding threshold min_periods verified no-look-ahead (offsets battery sd 0.21pp); per-instrument series isolated; SHA-256 gated inputs."
+      }
+    },
+    {
+      "id": "LB-003",
+      "text": "Aggregate MA share range across the 44 combinations: 63.5% to 166.8%.",
+      "section": "5.1",
+      "script": "analysis/decomposition.py",
+      "output": "analysis/outputs/decomposition.json",
+      "tolerance": {
+        "rel": 1e-12
+      },
+      "checks": [
+        {
+          "json_path": "summary.agg_sw_min_pct",
+          "value": 63.5
+        },
+        {
+          "json_path": "summary.agg_sw_max_pct",
+          "value": 166.8
+        }
+      ],
+      "cic": {
+        "reexecutes_to_claim": true,
+        "index_row_alignment": true,
+        "nan_gap_handling_explicit": true,
+        "no_look_ahead": true,
+        "overlap_subsample_consistent": true,
+        "no_cross_boundary_computation": true,
+        "input_integrity_vs_claim": true,
+        "signed_by": "Claude (Phase 2/3 build verification); ratified by JAE at commit",
+        "signed": true,
+        "note": "re-executed on two machines (byte-identical rows); expanding threshold min_periods verified no-look-ahead (offsets battery sd 0.21pp); per-instrument series isolated; SHA-256 gated inputs."
+      }
+    },
+    {
+      "id": "LB-004",
+      "text": "Flagship combination (SPX, Hull-50, H=63): aggregate S_W 89.9% over 260 events.",
+      "section": "5.1",
+      "script": "analysis/decomposition.py",
+      "output": "analysis/outputs/decomposition.json",
+      "tolerance": {
+        "rel": 1e-12
+      },
+      "checks": [
+        {
+          "json_path": "rows[?instrument=SPX&ma_spec=Hull-50].agg",
+          "value": 0.8985461302819053
+        },
+        {
+          "json_path": "rows[?instrument=SPX&ma_spec=Hull-50].n",
+          "value": 260
+        }
+      ],
+      "cic": {
+        "reexecutes_to_claim": true,
+        "index_row_alignment": true,
+        "nan_gap_handling_explicit": true,
+        "no_look_ahead": true,
+        "overlap_subsample_consistent": true,
+        "no_cross_boundary_computation": true,
+        "input_integrity_vs_claim": true,
+        "signed_by": "Claude (Phase 2/3 build verification); ratified by JAE at commit",
+        "signed": true,
+        "note": "re-executed on two machines (byte-identical rows); expanding threshold min_periods verified no-look-ahead (offsets battery sd 0.21pp); per-instrument series isolated; SHA-256 gated inputs."
+      }
+    },
+    {
+      "id": "LB-005",
+      "text": "Direction test, Hull-50: toward rates near 50% on 8 of 11 instruments; 3 significant (mild attraction) after drift adjustment.",
+      "section": "Abstract; 5.2",
+      "script": "analysis/direction_test.py",
+      "output": "analysis/outputs/direction_test.json",
+      "tolerance": {
+        "abs": 0
+      },
+      "checks": [
+        {
+          "json_path": "summary.Hull-50.near_50",
+          "value": 8
+        },
+        {
+          "json_path": "summary.Hull-50.significant_drift_adjusted",
+          "value": 3
+        }
+      ],
+      "cic": {
+        "reexecutes_to_claim": true,
+        "index_row_alignment": true,
+        "nan_gap_handling_explicit": true,
+        "no_look_ahead": true,
+        "overlap_subsample_consistent": true,
+        "no_cross_boundary_computation": true,
+        "input_integrity_vs_claim": true,
+        "signed_by": "Claude (Phase 2/3 build verification); ratified by JAE at commit",
+        "signed": true,
+        "note": "B.4 operators; drift adjustment verified against manuscript; full-history expanding threshold; cross-machine identical."
+      }
+    },
+    {
+      "id": "LB-006",
+      "text": "Direction test, SMA-200: 3 instruments significant plain (mild repulsion); only 1 retains significance after drift adjustment.",
+      "section": "Abstract; 5.2",
+      "script": "analysis/direction_test.py",
+      "output": "analysis/outputs/direction_test.json",
+      "tolerance": {
+        "abs": 0
+      },
+      "checks": [
+        {
+          "json_path": "summary.SMA-200.significant_plain",
+          "value": 3
+        },
+        {
+          "json_path": "summary.SMA-200.significant_drift_adjusted",
+          "value": 1
+        }
+      ],
+      "cic": {
+        "reexecutes_to_claim": true,
+        "index_row_alignment": true,
+        "nan_gap_handling_explicit": true,
+        "no_look_ahead": true,
+        "overlap_subsample_consistent": true,
+        "no_cross_boundary_computation": true,
+        "input_integrity_vs_claim": true,
+        "signed_by": "Claude (Phase 2/3 build verification); ratified by JAE at commit",
+        "signed": true,
+        "note": "B.4 operators; drift adjustment verified against manuscript; full-history expanding threshold; cross-machine identical."
+      }
+    },
+    {
+      "id": "LB-007",
+      "text": "Synthetic control (200 long random-walk samples): mean aggregate S_W 100.57% (SE 0.89pp) - decomposition approximately unbiased.",
+      "section": "Abstract; 5.3",
+      "script": "analysis/synthetic_control.py",
+      "output": "analysis/outputs/synthetic_control.json",
+      "tolerance": {
+        "rel": 1e-12
+      },
+      "checks": [
+        {
+          "json_path": "summary.large_sample_mean_pct",
+          "value": 100.57
+        },
+        {
+          "json_path": "summary.large_sample_se_pct",
+          "value": 0.89
+        }
+      ],
+      "cic": {
+        "reexecutes_to_claim": true,
+        "index_row_alignment": true,
+        "nan_gap_handling_explicit": true,
+        "no_look_ahead": true,
+        "overlap_subsample_consistent": true,
+        "no_cross_boundary_computation": true,
+        "input_integrity_vs_claim": true,
+        "signed_by": "Claude (Phase 2/3 build verification); ratified by JAE at commit",
+        "signed": true,
+        "note": "seed 42; iid rows byte-identical cross-machine; GARCH rows optimizer-class (DECISIONS tolerance policy); no real-data leakage into synthetic paths."
+      }
+    },
+    {
+      "id": "LB-008",
+      "text": "GARCH-calibrated controls (9 instruments): mean aggregate S_W 99.1%.",
+      "section": "5.3",
+      "script": "analysis/synthetic_control.py",
+      "output": "analysis/outputs/synthetic_control.json",
+      "tolerance": {
+        "abs": 0.1
+      },
+      "checks": [
+        {
+          "json_path": "summary.garch_mean_agg_pct",
+          "value": 99.1
+        }
+      ],
+      "cic": {
+        "reexecutes_to_claim": true,
+        "index_row_alignment": true,
+        "nan_gap_handling_explicit": true,
+        "no_look_ahead": true,
+        "overlap_subsample_consistent": true,
+        "no_cross_boundary_computation": true,
+        "input_integrity_vs_claim": true,
+        "signed_by": "Claude (Phase 2/3 build verification); ratified by JAE at commit",
+        "signed": true,
+        "note": "seed 42; iid rows byte-identical cross-machine; GARCH rows optimizer-class (DECISIONS tolerance policy); no real-data leakage into synthetic paths."
+      }
+    },
+    {
+      "id": "LB-009",
+      "text": "PE-volatility: mean full-sample Spearman rho +0.541 across 11 instruments; all 38 tests significant after Bonferroni.",
+      "section": "Abstract; 5.7; 7",
+      "script": "analysis/pe_volatility.py",
+      "output": "analysis/outputs/pe_volatility.json",
+      "tolerance": {
+        "rel": 1e-12
+      },
+      "checks": [
+        {
+          "json_path": "summary.rho_full_mean",
+          "value": 0.541
+        },
+        {
+          "json_path": "summary.n_significant_after_bonferroni",
+          "value": 38
+        },
+        {
+          "json_path": "summary.bonferroni_n",
+          "value": 38
+        }
+      ],
+      "cic": {
+        "reexecutes_to_claim": true,
+        "index_row_alignment": true,
+        "nan_gap_handling_explicit": true,
+        "no_look_ahead": true,
+        "overlap_subsample_consistent": true,
+        "no_cross_boundary_computation": true,
+        "input_integrity_vs_claim": true,
+        "signed_by": "Claude (Phase 2/3 build verification); ratified by JAE at commit",
+        "signed": true,
+        "note": "non-overlapping blocks per DESIGN; Bonferroni 0.05/38 pre-registered; permutation tests seeded."
+      }
+    },
+    {
+      "id": "LB-010",
+      "text": "Schelling Point: 137 combinations included; no detectable premium (mean delta -0.0051pp, two-sided p 0.779).",
+      "section": "Abstract; 5.9",
+      "script": "analysis/schelling_point.py",
+      "output": "analysis/outputs/schelling_point.json",
+      "tolerance": {
+        "rel": 1e-12
+      },
+      "checks": [
+        {
+          "json_path": "summary.n_included",
+          "value": 137
+        },
+        {
+          "json_path": "summary.overall.mean",
+          "value": -0.005106218626400681
+        },
+        {
+          "json_path": "summary.overall.p_two_sided",
+          "value": 0.7793961906411857
+        }
+      ],
+      "cic": {
+        "reexecutes_to_claim": true,
+        "index_row_alignment": true,
+        "nan_gap_handling_explicit": true,
+        "no_look_ahead": true,
+        "overlap_subsample_consistent": true,
+        "no_cross_boundary_computation": true,
+        "input_integrity_vs_claim": true,
+        "signed_by": "Claude (Phase 2/3 build verification); ratified by JAE at commit",
+        "signed": true,
+        "note": "all 137 workbook rows reproduced (N within 0-6); mixed-format/mixed-offset loader verified byte-identical to committed loader; B.7 no-spacing operator distinct from E1 overlap control by design."
+      }
+    },
+    {
+      "id": "LB-011",
+      "text": "Quarterly reversion (SPX): r = -0.2777 at H=126 (p < 0.001); qualification at a different timescale.",
+      "section": "Abstract; 5.8; 7",
+      "script": "analysis/quarterly_reversion.py",
+      "output": "analysis/outputs/quarterly_reversion.json",
+      "tolerance": {
+        "rel": 1e-12
+      },
+      "checks": [
+        {
+          "json_path": "summary.spx_r_by_horizon.126",
+          "value": -0.2777
+        },
+        {
+          "json_path": "summary.spx_p_by_horizon.126",
+          "value": 7.147088279821935e-05
+        }
+      ],
+      "cic": {
+        "reexecutes_to_claim": true,
+        "index_row_alignment": true,
+        "nan_gap_handling_explicit": true,
+        "no_look_ahead": true,
+        "overlap_subsample_consistent": true,
+        "no_cross_boundary_computation": true,
+        "input_integrity_vs_claim": true,
+        "signed_by": "Claude (Phase 2/3 build verification); ratified by JAE at commit",
+        "signed": true,
+        "note": "non-overlapping blocks; Pearson r with exact t; specificity controls (NI225, GC) null as registered."
+      }
+    },
+    {
+      "id": "LB-012",
+      "text": "Eight-spec sensitivity (SPX): all 8 MA specifications above 50%.",
+      "section": "5.4",
+      "script": "analysis/robustness.py",
+      "output": "analysis/outputs/robustness.json",
+      "tolerance": {
+        "abs": 0
+      },
+      "checks": [
+        {
+          "json_path": "results.eight_spec.n_above_50",
+          "value": 8
+        }
+      ],
+      "cic": {
+        "reexecutes_to_claim": true,
+        "index_row_alignment": true,
+        "nan_gap_handling_explicit": true,
+        "no_look_ahead": true,
+        "overlap_subsample_consistent": true,
+        "no_cross_boundary_computation": true,
+        "input_integrity_vs_claim": true,
+        "signed_by": "Claude (Phase 2/3 build verification); ratified by JAE at commit",
+        "signed": true,
+        "note": "adjudicated row-by-row vs original artifact (DECISIONS 2026-06-09); era chain invariant asserts equality with decompose(); offset 0 asserts equality with E1; cross-machine 8 diffs at 4.4e-16."
+      }
+    },
+    {
+      "id": "LB-013",
+      "text": "Threshold sensitivity (SPX, Hull-50): P50/P75/P90 all above 50%.",
+      "section": "5.4",
+      "script": "analysis/robustness.py",
+      "output": "analysis/outputs/robustness.json",
+      "tolerance": {
+        "abs": 0
+      },
+      "checks": [
+        {
+          "json_path": "results.thresholds.all_above_50",
+          "value": true
+        }
+      ],
+      "cic": {
+        "reexecutes_to_claim": true,
+        "index_row_alignment": true,
+        "nan_gap_handling_explicit": true,
+        "no_look_ahead": true,
+        "overlap_subsample_consistent": true,
+        "no_cross_boundary_computation": true,
+        "input_integrity_vs_claim": true,
+        "signed_by": "Claude (Phase 2/3 build verification); ratified by JAE at commit",
+        "signed": true,
+        "note": "adjudicated row-by-row vs original artifact (DECISIONS 2026-06-09); era chain invariant asserts equality with decompose(); offset 0 asserts equality with E1; cross-machine 8 diffs at 4.4e-16."
+      }
+    },
+    {
+      "id": "LB-014",
+      "text": "Horizon sensitivity: above 50% = 11/11 (H=21), 11/11 (H=63), 10/11 (H=126), 8/11 (H=252).",
+      "section": "5.4",
+      "script": "analysis/robustness.py",
+      "output": "analysis/outputs/robustness.json",
+      "tolerance": {
+        "abs": 0
+      },
+      "checks": [
+        {
+          "json_path": "results.horizons.above_50_by_horizon.21",
+          "value": 11
+        },
+        {
+          "json_path": "results.horizons.above_50_by_horizon.63",
+          "value": 11
+        },
+        {
+          "json_path": "results.horizons.above_50_by_horizon.126",
+          "value": 10
+        },
+        {
+          "json_path": "results.horizons.above_50_by_horizon.252",
+          "value": 8
+        }
+      ],
+      "cic": {
+        "reexecutes_to_claim": true,
+        "index_row_alignment": true,
+        "nan_gap_handling_explicit": true,
+        "no_look_ahead": true,
+        "overlap_subsample_consistent": true,
+        "no_cross_boundary_computation": true,
+        "input_integrity_vs_claim": true,
+        "signed_by": "Claude (Phase 2/3 build verification); ratified by JAE at commit",
+        "signed": true,
+        "note": "adjudicated row-by-row vs original artifact (DECISIONS 2026-06-09); era chain invariant asserts equality with decompose(); offset 0 asserts equality with E1; cross-machine 8 diffs at 4.4e-16."
+      }
+    },
+    {
+      "id": "LB-015",
+      "text": "Starting offsets (SPX, Hull-50): all 63 offsets within 88.3-90.0%, sd 0.21pp.",
+      "section": "5.4",
+      "script": "analysis/robustness.py",
+      "output": "analysis/outputs/robustness.json",
+      "tolerance": {
+        "rel": 1e-12
+      },
+      "checks": [
+        {
+          "json_path": "results.offsets.range_pct[0]",
+          "value": 88.3
+        },
+        {
+          "json_path": "results.offsets.range_pct[1]",
+          "value": 90.0
+        },
+        {
+          "json_path": "results.offsets.sd_pp",
+          "value": 0.21
+        }
+      ],
+      "cic": {
+        "reexecutes_to_claim": true,
+        "index_row_alignment": true,
+        "nan_gap_handling_explicit": true,
+        "no_look_ahead": true,
+        "overlap_subsample_consistent": true,
+        "no_cross_boundary_computation": true,
+        "input_integrity_vs_claim": true,
+        "signed_by": "Claude (Phase 2/3 build verification); ratified by JAE at commit",
+        "signed": true,
+        "note": "adjudicated row-by-row vs original artifact (DECISIONS 2026-06-09); era chain invariant asserts equality with decompose(); offset 0 asserts equality with E1; cross-machine 8 diffs at 4.4e-16."
+      }
+    },
+    {
+      "id": "LB-016",
+      "text": "Filter-matched horizons preserve the conclusion; SMA-200 matched mean 127.8%.",
+      "section": "5.5",
+      "script": "analysis/robustness.py",
+      "output": "analysis/outputs/robustness.json",
+      "tolerance": {
+        "rel": 1e-12
+      },
+      "checks": [
+        {
+          "json_path": "results.filter_matched.summary.SMA-200.mean_agg_matched_pct",
+          "value": 127.8
+        }
+      ],
+      "cic": {
+        "reexecutes_to_claim": true,
+        "index_row_alignment": true,
+        "nan_gap_handling_explicit": true,
+        "no_look_ahead": true,
+        "overlap_subsample_consistent": true,
+        "no_cross_boundary_computation": true,
+        "input_integrity_vs_claim": true,
+        "signed_by": "Claude (Phase 2/3 build verification); ratified by JAE at commit",
+        "signed": true,
+        "note": "adjudicated row-by-row vs original artifact (DECISIONS 2026-06-09); era chain invariant asserts equality with decompose(); offset 0 asserts equality with E1; cross-machine 8 diffs at 4.4e-16."
+      }
+    },
+    {
+      "id": "LB-017",
+      "text": "Era analysis (binned span rule): all interpreted eras above 50% (1930-60 86.8%/63; 1960-90 70.8%/88; 1990-2026 80.6%/104).",
+      "section": "5.6",
+      "script": "analysis/robustness.py",
+      "output": "analysis/outputs/robustness.json",
+      "tolerance": {
+        "rel": 1e-12
+      },
+      "checks": [
+        {
+          "json_path": "results.eras.rows[?era=1930-1960].agg",
+          "value": 0.8676307840267103
+        },
+        {
+          "json_path": "results.eras.rows[?era=1930-1960].n",
+          "value": 63
+        },
+        {
+          "json_path": "results.eras.rows[?era=1960-1990].agg",
+          "value": 0.7084170470637619
+        },
+        {
+          "json_path": "results.eras.rows[?era=1960-1990].n",
+          "value": 88
+        },
+        {
+          "json_path": "results.eras.rows[?era=1990-2026].agg",
+          "value": 0.8059977599233444
+        },
+        {
+          "json_path": "results.eras.rows[?era=1990-2026].n",
+          "value": 104
+        }
+      ],
+      "cic": {
+        "reexecutes_to_claim": true,
+        "index_row_alignment": true,
+        "nan_gap_handling_explicit": true,
+        "no_look_ahead": true,
+        "overlap_subsample_consistent": true,
+        "no_cross_boundary_computation": true,
+        "input_integrity_vs_claim": true,
+        "signed_by": "Claude (Phase 2/3 build verification); ratified by JAE at commit",
+        "signed": true,
+        "note": "adjudicated row-by-row vs original artifact (DECISIONS 2026-06-09); era chain invariant asserts equality with decompose(); offset 0 asserts equality with E1; cross-machine 8 diffs at 4.4e-16."
+      }
+    },
+    {
+      "id": "LB-018",
+      "text": "Modern-era (1990-2026) direction test: toward 53.1% (N=1,832), p = 0.0089.",
+      "section": "5.6",
+      "script": "analysis/robustness.py",
+      "output": "analysis/outputs/robustness.json",
+      "tolerance": {
+        "rel": 1e-12
+      },
+      "checks": [
+        {
+          "json_path": "results.eras.modern_direction.rate",
+          "value": 0.5305676855895196
+        },
+        {
+          "json_path": "results.eras.modern_direction.total",
+          "value": 1832
+        },
+        {
+          "json_path": "results.eras.modern_direction.p",
+          "value": 0.008878221360101746
+        }
+      ],
+      "cic": {
+        "reexecutes_to_claim": true,
+        "index_row_alignment": true,
+        "nan_gap_handling_explicit": true,
+        "no_look_ahead": true,
+        "overlap_subsample_consistent": true,
+        "no_cross_boundary_computation": true,
+        "input_integrity_vs_claim": true,
+        "signed_by": "Claude (Phase 2/3 build verification); ratified by JAE at commit",
+        "signed": true,
+        "note": "adjudicated row-by-row vs original artifact (DECISIONS 2026-06-09); era chain invariant asserts equality with decompose(); offset 0 asserts equality with E1; cross-machine 8 diffs at 4.4e-16."
+      }
+    },
+    {
+      "id": "LB-019",
+      "text": "Rolling windows: 13 of 18 above 50%; worst window 1991-2001 at -8.0% (reported).",
+      "section": "5.6",
+      "script": "analysis/robustness.py",
+      "output": "analysis/outputs/robustness.json",
+      "tolerance": {
+        "rel": 1e-12
+      },
+      "checks": [
+        {
+          "json_path": "results.rolling.n_above_50",
+          "value": 13
+        },
+        {
+          "json_path": "results.rolling.rows[?window=1991-2001].agg",
+          "value": -0.08044631606136787
+        }
+      ],
+      "cic": {
+        "reexecutes_to_claim": true,
+        "index_row_alignment": true,
+        "nan_gap_handling_explicit": true,
+        "no_look_ahead": true,
+        "overlap_subsample_consistent": true,
+        "no_cross_boundary_computation": true,
+        "input_integrity_vs_claim": true,
+        "signed_by": "Claude (Phase 2/3 build verification); ratified by JAE at commit",
+        "signed": true,
+        "note": "adjudicated row-by-row vs original artifact (DECISIONS 2026-06-09); era chain invariant asserts equality with decompose(); offset 0 asserts equality with E1; cross-machine 8 diffs at 4.4e-16."
+      }
+    },
+    {
+      "id": "LB-020",
+      "text": "IS/OOS midpoint split: above 50% in BOTH halves 13/13; mean IS 106.3%, mean OOS 100.9%.",
+      "section": "5.6",
+      "script": "analysis/robustness.py",
+      "output": "analysis/outputs/robustness.json",
+      "tolerance": {
+        "abs": 0
+      },
+      "checks": [
+        {
+          "json_path": "results.is_oos.n_both_above_50",
+          "value": 13
+        },
+        {
+          "json_path": "results.is_oos.mean_is_pct",
+          "value": 106.3
+        },
+        {
+          "json_path": "results.is_oos.mean_oos_pct",
+          "value": 100.9
+        }
+      ],
+      "cic": {
+        "reexecutes_to_claim": true,
+        "index_row_alignment": true,
+        "nan_gap_handling_explicit": true,
+        "no_look_ahead": true,
+        "overlap_subsample_consistent": true,
+        "no_cross_boundary_computation": true,
+        "input_integrity_vs_claim": true,
+        "signed_by": "Claude (Phase 2/3 build verification); ratified by JAE at commit",
+        "signed": true,
+        "note": "adjudicated row-by-row vs original artifact (DECISIONS 2026-06-09); era chain invariant asserts equality with decompose(); offset 0 asserts equality with E1; cross-machine 8 diffs at 4.4e-16."
+      }
+    }
+  ]
+}
