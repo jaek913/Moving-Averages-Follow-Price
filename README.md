@@ -1,10 +1,10 @@
 # Moving Averages Follow Price
 
-Research repository for **"Moving Averages Follow Price: A Proof and Empirical
-Decomposition of Moving-Average Convergence: Adaptation versus Mean Reversion"** —
+Research repository for **"Moving Averages Follow Price: A Mathematical Proof and
+Empirical Validation of the Adaptation Property in Trailing Averages"** —
 a standalone paper under the Discovery Lattice / Lagging Truth program.
 
-Built under the **Research-to-Publication Standard v1.2**. The contract:
+Built under the **Research-to-Publication Standard v1.3**. The contract:
 
 > A number may appear in the paper only if a committed script, run on hashed input
 > data, regenerates it on demand. No script, no number. The script is the truth;
@@ -22,7 +22,7 @@ not mean reversion of price toward the average. The S_W decomposition quantifies
 the mechanical share; the falsifier is a mechanical share below 50% across the
 tested instruments.
 
-## Structure (Standard v1.2 layout)
+## Structure (Standard v1.3 layout)
 
 | Path | Contents |
 |---|---|
@@ -36,13 +36,14 @@ tested instruments.
 | `verify.py`        | Phase 3 — the checker. Green = done. Re-hashes inputs, re-runs scripts, checks the ledger against the paper. |
 | `paper/`           | Phase 4 — the manuscript and the plain-English companion. |
 | `verification/`    | Phase 5 — the capped adversarial review transcript and responses. |
+| `CORRECTIONS.md`   | Public post-publication corrections log (initialized at publication; errors found in the published record are handled here, in the open). |
 | `DECISIONS.md`     | Append-only research notebook: decisions, dead ends, surprises. |
 | `requirements.txt` | Pinned Python environment. |
 
 ## Reproducing the results
 
 ```
-# 1. Environment (Python 3.11)
+# 1. Environment (Python 3.12)
 pip install -r requirements.txt
 
 # 2. Obtain the price data (not committed)
@@ -83,5 +84,10 @@ the **code** MIT. Raw price data is not in this repository (exchange-licensed).
 
 ## Citing
 
-On certification this repository is tagged, archived to Zenodo, and assigned a DOI;
-the recommended citation will be recorded here at release.
+This repository is tagged (v1.0) and archived to Zenodo with DOI
+**10.5281/zenodo.20469741** (reserved; registers on publication). Recommended
+citation:
+
+> Kim, Jae (2026). "Moving Averages Follow Price: A Mathematical Proof and
+> Empirical Validation of the Adaptation Property in Trailing Averages."
+> Working paper, v1.0. doi:10.5281/zenodo.20469741.
