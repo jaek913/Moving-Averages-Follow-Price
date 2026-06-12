@@ -2,7 +2,7 @@
   "schema": "Research-to-Publication Standard v1.2, Phase 3 (claims.lock) -- DELIBERATELY BROKEN SELFTEST FIXTURE",
   "project": "Moving Averages Follow Price",
   "generated": "2026-06-10",
-  "tolerance_policy": "DECISIONS.md 2026-06-09: deterministic floats rel 1e-12; optimizer-dependent (GARCH MLE) abs 0.1 (pp scale); integers/booleans exact. Author-machine JSON canonical. Ledger float values were drawn from the cross-machine-verified canonical outputs and agree with the author's committed analysis/outputs JSONs within the established machine-epsilon class (<= 4.4e-16 on 8 values; DECISIONS.md), far inside every tolerance. LB-021 added at Phase 5a disposition (adversarial review Round 2), ratified by JAE at commit.",
+  "tolerance_policy": "DECISIONS.md 2026-06-09: deterministic floats rel 1e-12; optimizer-dependent (GARCH MLE) abs 0.1 (pp scale); integers/booleans exact. Author-machine JSON canonical. Ledger float values were drawn from the cross-machine-verified canonical outputs and agree with the author's committed analysis/outputs JSONs within the established machine-epsilon class (<= 4.4e-16 on 8 values; DECISIONS.md), far inside every tolerance. LB-021 added at Phase 5a disposition (adversarial review Round 2), ratified by JAE at commit. LB-022..024 added 2026-06-11: the review-born follow-up battery (DESIGN amendment 2026-06-11), values drawn from the committed author-machine output JSONs at build time; ratified by JAE at commit.",
   "json_path_syntax": "dot keys; [int] list index; [?field=value&field2=value] unique list query",
   "datasets": {
     "SPX": {
@@ -1037,6 +1037,166 @@
         "signed_by": "Claude (Phase 2/3 build verification); ratified by JAE at commit",
         "signed": true,
         "note": "added at Phase 5a disposition (review Round 2): registers the falsifier-calibration headline values; B.4 column verified at ~50% under beta=0 (independence check the reviewer prescribed); seed 20260610; deterministic byte-stable output; gap_shrink_rate explicitly labeled as the filter-inclusive statistic it is."
+      }
+    },
+    {
+      "id": "LB-022",
+      "text": "E4 inference corrected for serial dependence: 33 of 38 tests survive Bonferroni (0.05/38) under effective-n correction -- every full-sample and every OOS test; the 5 non-survivors are IS halves, all below 0.05 uncorrected. Circular block permutation (63-504 bar ladder): zero of 5,000 shuffles exceed the real correlation on every rung for all five instruments (p = 0.0002). Sign test unchanged: 11/11, p = 0.00098.",
+      "section": "5.7",
+      "script": "analysis/pe_volatility_blockperm.py",
+      "output": "analysis/outputs/pe_volatility_blockperm.json",
+      "tolerance": {
+        "rel": 1e-12
+      },
+      "checks": [
+        {
+          "json_path": "summary.n_survive_bonferroni_corrected",
+          "value": 33
+        },
+        {
+          "json_path": "summary.n_below_05_corrected",
+          "value": 38
+        },
+        {
+          "json_path": "summary.n_positive_of_11",
+          "value": 11
+        },
+        {
+          "json_path": "summary.sign_test_p",
+          "value": 0.0009765625
+        },
+        {
+          "json_path": "summary.rho_full_mean",
+          "value": 0.541
+        },
+        {
+          "json_path": "summary.median_n_eff_full",
+          "value": 81.6
+        },
+        {
+          "json_path": "summary.block_p_conservative.SPX",
+          "value": 0.0002
+        },
+        {
+          "json_path": "summary.block_p_conservative.NDX",
+          "value": 0.0002
+        },
+        {
+          "json_path": "summary.block_p_conservative.NI225",
+          "value": 0.0002
+        },
+        {
+          "json_path": "summary.block_p_conservative.GC",
+          "value": 0.0002
+        },
+        {
+          "json_path": "summary.block_p_conservative.CL",
+          "value": 0.0002
+        }
+      ],
+      "cic": {
+        "reexecutes_to_claim": true,
+        "index_row_alignment": true,
+        "nan_gap_handling_explicit": true,
+        "no_look_ahead": true,
+        "overlap_subsample_consistent": true,
+        "no_cross_boundary_computation": true,
+        "input_integrity_vs_claim": true,
+        "signed_by": "Claude (follow-up battery build verification); ratified by JAE at commit",
+        "signed": true,
+        "note": "review-born (Finding 3.1), registered in DESIGN amendment 2026-06-11 before first run; same non-overlapping E4 sample; deterministic derived seeds; conservative p = max over the block ladder per the registered decision rule."
+      }
+    },
+    {
+      "id": "LB-023",
+      "text": "Spec-matched SMA-200 synthetic null: zero-attraction processes put the SMA-200 aggregate S_W at ~100% (large-sample 100.7%, SE 0.81; 20-sim i.i.d. 100.22%; GARCH-calibrated mean 103.4% across 9), matching the Hull-50 null and giving the 11 SMA-200 cells a specification-matched null.",
+      "section": "5.3",
+      "script": "analysis/synthetic_control_sma200.py",
+      "output": "analysis/outputs/synthetic_control_sma200.json",
+      "tolerance": {
+        "abs": 0.1
+      },
+      "checks": [
+        {
+          "json_path": "summary.large_sample_mean_pct",
+          "value": 100.7
+        },
+        {
+          "json_path": "summary.large_sample_se_pct",
+          "value": 0.81
+        },
+        {
+          "json_path": "summary.iid_20sim_mean_pct",
+          "value": 100.22
+        },
+        {
+          "json_path": "summary.garch_mean_agg_pct",
+          "value": 103.4
+        },
+        {
+          "json_path": "summary.garch_instruments_included",
+          "value": 9
+        }
+      ],
+      "cic": {
+        "reexecutes_to_claim": true,
+        "index_row_alignment": true,
+        "nan_gap_handling_explicit": true,
+        "no_look_ahead": true,
+        "overlap_subsample_consistent": true,
+        "no_cross_boundary_computation": true,
+        "input_integrity_vs_claim": true,
+        "signed_by": "Claude (follow-up battery build verification); ratified by JAE at commit",
+        "signed": true,
+        "note": "review-born (Finding 4.2), registered in DESIGN amendment 2026-06-11 before first run; operators identical to E3 except spec=SMA-200; abs 0.1 tolerance per the GARCH optimizer-dependence policy (covers the deterministic iid values trivially)."
+      }
+    },
+    {
+      "id": "LB-024",
+      "text": "Ex-1926 decomposition variant (SPX, registered cutoff 1926-01-01, 470 bars dropped): all four SPX cells remain above 50% (Hull-50 86.2%, SMA-50 105.3%, SMA-200 111.4%, EMA-50 114.4%); deltas vs the full series between -3.6 and +9.1 pp; no 50% crossing.",
+      "section": "4.1",
+      "script": "analysis/decomposition_ex1926.py",
+      "output": "analysis/outputs/decomposition_ex1926.json",
+      "tolerance": {
+        "rel": 1e-12
+      },
+      "checks": [
+        {
+          "json_path": "summary.bars_dropped",
+          "value": 470
+        },
+        {
+          "json_path": "summary.max_abs_delta_pp",
+          "value": 9.11
+        },
+        {
+          "json_path": "rows[0].ex1926.agg",
+          "value": 0.8623362925644144
+        },
+        {
+          "json_path": "rows[1].ex1926.agg",
+          "value": 1.0531735145897938
+        },
+        {
+          "json_path": "rows[2].ex1926.agg",
+          "value": 1.1141833667859413
+        },
+        {
+          "json_path": "rows[3].ex1926.agg",
+          "value": 1.143656109067937
+        }
+      ],
+      "cic": {
+        "reexecutes_to_claim": true,
+        "index_row_alignment": true,
+        "nan_gap_handling_explicit": true,
+        "no_look_ahead": true,
+        "overlap_subsample_consistent": true,
+        "no_cross_boundary_computation": true,
+        "input_integrity_vs_claim": true,
+        "signed_by": "Claude (follow-up battery build verification); ratified by JAE at commit",
+        "signed": true,
+        "note": "closes the Section 4.1 future-work note, registered in DESIGN amendment 2026-06-11 before first run; rows indexed in MA_SPECS order [Hull-50, SMA-50, SMA-200, EMA-50] (asserted at build); loader reproduces E1's step for step with dates retained."
       }
     }
   ]
