@@ -1,0 +1,103 @@
+{
+  "design_ref": "DESIGN.md amendment 2026-06-11 (A4)",
+  "experiment": "A4_decomposition_ex1926",
+  "inputs": {
+    "SPX": {
+      "file": "SP_SPX, 1D_5871b.csv",
+      "sha256": "c75e8fb61149f5ba606ebe5a3881db40a1015ff49e322a590cf6e7a7d537cbe7"
+    }
+  },
+  "params": {
+    "H": 63,
+    "cutoff": "1926-01-01",
+    "instrument": "SPX",
+    "ma_specs": [
+      "Hull-50",
+      "SMA-50",
+      "SMA-200",
+      "EMA-50"
+    ],
+    "min_history": 252,
+    "threshold_pct": 75
+  },
+  "rows": [
+    {
+      "delta_agg_pp": -3.62,
+      "ex1926": {
+        "agg": 0.8623362925644144,
+        "mean": -0.5268853993468564,
+        "median": 0.7276473486706208,
+        "n": 277
+      },
+      "ex1926_above_50": true,
+      "full": {
+        "agg": 0.8985461302819053,
+        "mean": 0.48137118549112307,
+        "median": 0.6084900850534991,
+        "n": 260
+      },
+      "ma_spec": "Hull-50"
+    },
+    {
+      "delta_agg_pp": 9.11,
+      "ex1926": {
+        "agg": 1.0531735145897938,
+        "mean": 0.9536986934027556,
+        "median": 0.9745663129445956,
+        "n": 210
+      },
+      "ex1926_above_50": true,
+      "full": {
+        "agg": 0.9621108513104096,
+        "mean": 3.2436871200281536,
+        "median": 0.8653790880028793,
+        "n": 188
+      },
+      "ma_spec": "SMA-50"
+    },
+    {
+      "delta_agg_pp": 2.42,
+      "ex1926": {
+        "agg": 1.1141833667859413,
+        "mean": 2.0525981070145987,
+        "median": 0.5635612030409558,
+        "n": 132
+      },
+      "ex1926_above_50": true,
+      "full": {
+        "agg": 1.0900275377308406,
+        "mean": 0.637753794511922,
+        "median": 0.5625130245218679,
+        "n": 116
+      },
+      "ma_spec": "SMA-200"
+    },
+    {
+      "delta_agg_pp": 5.17,
+      "ex1926": {
+        "agg": 1.143656109067937,
+        "mean": 1.2148789400596194,
+        "median": 0.9333918029717373,
+        "n": 217
+      },
+      "ex1926_above_50": true,
+      "full": {
+        "agg": 1.091927443370543,
+        "mean": 1.47161379415245,
+        "median": 1.0123691724328352,
+        "n": 197
+      },
+      "ma_spec": "EMA-50"
+    }
+  ],
+  "summary": {
+    "all_ex1926_above_50": true,
+    "bars_dropped": 470,
+    "bars_ex1926": 24717,
+    "bars_full": 25187,
+    "crossings": [],
+    "cutoff": "1926-01-01",
+    "first_retained_bar": "1926-01-01",
+    "max_abs_delta_pp": 9.11
+  }
+}
