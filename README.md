@@ -34,7 +34,7 @@ tested instruments.
 | `analysis/outputs/`| Committed JSON results — what the paper quotes. |
 | `claims.lock`      | Phase 3 — the ledger: one row per load-bearing number → script, input hashes, value, tolerance, CIC flags. |
 | `verify.py`        | Phase 3 — the checker. Green = done. Re-hashes inputs, re-runs scripts, checks the ledger against the paper. |
-| `paper/`           | Phase 4 — the manuscript and the plain-English companion. |
+| `paper/`           | Phase 4 — the manuscript and shipping PDF. The plain-English companion lives at LaggingTruth.com (single canonical copy). |
 | `verification/`    | Phase 5 — the capped adversarial review transcript and responses. |
 | `CORRECTIONS.md`   | Public post-publication corrections log (initialized at publication; errors found in the published record are handled here, in the open). |
 | `DECISIONS.md`     | Append-only research notebook: decisions, dead ends, surprises. |
