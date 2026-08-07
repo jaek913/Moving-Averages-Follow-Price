@@ -8,8 +8,9 @@ author: |
   ORCID: [0009-0005-3260-7880](https://orcid.org/0009-0005-3260-7880)\
   jae@laggingtruth.com
 date: |
-  *This version: June 11, 2026 (verified rebuild under the Research-to-Publication Standard)*\
-  *Working paper — preliminary; comments welcome.*
+  *This version: August 2026*\
+  *Working paper — preliminary; comments welcome.*\
+  DOI: [10.5281/zenodo.20469741](https://doi.org/10.5281/zenodo.20469741)
 license: "CC BY-NC-ND 4.0"
 ---
 
@@ -339,7 +340,7 @@ More broadly, this paper aims to bring together two literatures that have develo
 
 ---
 
-## Acknowledgments and AI Disclosure
+## Disclosure
 
 This research was conducted with extensive AI collaboration. Cross-disciplinary connections that motivate parts of this work emerged from iterative dialogue between the author and large language model AI systems, drawing on disciplines outside the author's formal training. AI was used for literature search across these disciplines, for translation of mathematical results between disciplinary notations, for verification of mathematical derivations through symbolic and numerical computation, and for drafting and revision of analytical arguments. The research questions, the choice of methodology, the interpretation of empirical findings, and all final editorial judgments are the author's own. The paper's mathematical results were checked three independent ways — by hand, by a randomized numerical stress test of more than 28,000 cases, and by symbolic machine-checking — and its empirical claims were each reconstructed from the documented methodology and reproduced; the complete replication protocol is given in Appendix B. All of this verification was performed by the author with AI assistance; none of it constitutes independent expert review, and the theoretical results have not yet been independently verified by a domain expert. For this version, the manuscript additionally underwent a two-round adversarial review conducted by an independent AI session under a capped fix-or-rebut protocol; the full record — including a load-bearing challenge to the 50% falsifier answered with a committed calibration experiment, a defect in that fix that the reviewer caught in the second round, and the author's final disposition — is committed verbatim in the repository (verification/adversarial_review.md). This, too, is AI review, not independent domain-expert review. Following certification, three deferred robustness analyses from the review were registered in advance (operators and report-whatever-it-shows decision rules committed before first run) and executed through the same ledger-and-checker gates; their results replaced the corresponding caveats in Sections 4.1, 5.3, and 5.7 (Appendix B.15). Citations were verified in tiers: every reference was checked for existence, bibliographic accuracy, and support for the claim it is cited for, against authoritative sources, with verbatim checking of direct quotes and full-text confirmation where the source was accessible; where a source's exact wording could not be confirmed from the available text, the manuscript paraphrases rather than quotes. For this version, the entire empirical battery was rebuilt under a written research standard: analysis scripts were committed before results were accepted, all 36 input files are pinned by SHA-256 hash, every load-bearing number is registered in a machine-checked ledger (`claims.lock`) with declared tolerances, and an automated checker (`verify.py`) regenerates and re-verifies every value on demand; the rebuild was executed with AI assistance and cross-verified on two independent machines. The author takes full responsibility for the contents of this paper, including any errors that may have originated from AI assistance.
 
@@ -622,4 +623,4 @@ Three analyses from the adversarial review's deferred-limitations backlog were r
 
 ---
 
-*© 2026 Jae Kim. This paper is licensed under [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)](https://creativecommons.org/licenses/by-nc-nd/4.0/). You may share it with attribution, for non-commercial purposes, without modification. The accompanying reconstruction and verification code is released separately under the MIT License; see the repository `LICENSE`.*
+*© 2026 Jae Kim. This paper is licensed under [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)](https://creativecommons.org/licenses/by-nc-nd/4.0/). You may share it with attribution, for non-commercial purposes, without modification. The accompanying plain-English companion is released under CC BY-NC 4.0, and the analysis and verification code is released separately under the MIT License; see the repository `LICENSE`.*
